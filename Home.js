@@ -1,11 +1,12 @@
 import React from 'react';
 import {
-  Text,
-  View,
-  TouchableHighlight,
   Image,
+  Linking,
+  Platform,
   StyleSheet,
-  Linking
+  Text,
+  TouchableHighlight,
+  View,
 } from 'react-native';
 
 const Home = () => {
@@ -37,7 +38,7 @@ const Home = () => {
         underlayColor={"rgb(210,210,210)"}
         style={styles.footer}
       >
-        <Text style={styles.h3}>Made with <Text style={styles.redHeart}>♥</Text> by JoshJoe</Text>
+      <Text style={styles.h3}>Made with <Text style={styles.redHeart}>♥</Text> by JoshJoe</Text>
       </TouchableHighlight>
     </View>
   );
@@ -74,6 +75,7 @@ const styles = StyleSheet.create({
   h3: {
     fontSize: 18,
     textAlign: 'center',
+    marginBottom: Platform.OS === 'ios' ? 85 : 50,
   },
   button: {
     backgroundColor: "firebrick",

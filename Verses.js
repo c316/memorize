@@ -41,7 +41,6 @@ class Verses extends React.Component {
     });
 
     if(!thisVerse){
-      console.log('finding closest greater week verse');
       var nearestGreaterWeekVerse = verses.find((verse) => {
         if( (verse.week > week) && (verse.year === year) ){
           return verse;
@@ -55,7 +54,6 @@ class Verses extends React.Component {
     // TODO: need to refactor this redirect for react native
     // if you still can't find a verse that is greater than, redirect to not-found page
     /*if(!useThisVerse){
-     console.log('redirecting');
      return (
      <Redirect to="/notfound"/>
      );

@@ -1,5 +1,11 @@
 import React from 'react';
-import { ScrollView, Text, StyleSheet, View } from 'react-native';
+import {
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 import { poems } from './assets/poems';
 
@@ -24,7 +30,7 @@ class Poem extends React.Component {
 
     return (
       <View>
-        <List>
+        <List style={{marginTop: Platform.OS === 'ios' ? 20 : 0}}>
           <ListItem
             key={"back"}
             title="Go back"

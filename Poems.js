@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, ScrollView } from 'react-native';
+import { Platform, View, StyleSheet, ScrollView } from 'react-native';
 import { List, ListItem } from 'react-native-elements'
 import { poems } from './assets/poems';
 import Poem from './Poem';
@@ -87,8 +87,8 @@ class Poems extends React.Component {
       <View>
         {
           this.state.showPoems ? ( this.state.poem ? <Poem poem={this.state.poem} onPress={() => {this._clearPoemState()}}/> :
-            <ScrollView>
-                <List>
+            <ScrollView style={{marginTop: Platform.OS === 'ios' ? 20 : 0}}>
+                <List style={{marginTop:0}}>
                   <ListItem
                     key={"back"}
                     title="Go back"
@@ -109,7 +109,7 @@ class Poems extends React.Component {
                   }
               </List>
             </ScrollView>):
-            <List containerStyle={{marginBottom: 20}}>
+            <List style={{marginTop: Platform.OS === 'ios' ? 20 : 0}} containerStyle={{marginTop: Platform.OS === 'ios' ? 20 : 20}}>
               {
                 list.map((l, i) => (
                   <ListItem

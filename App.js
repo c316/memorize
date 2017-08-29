@@ -70,18 +70,21 @@ const MyApp = TabNavigator({
   Home: {
     screen: HomeScreen,
   },
-  Poems: {
-    screen: PoemsScreen,
-  },
   Verses: {
     screen: VersesScreen,
+  },
+  Poems: {
+    screen: PoemsScreen,
   },
 }, {
   tabBarOptions: {
     style: {
       marginTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight
     },
-    activeTintColor: 'firebrick',
+    activeTintColor: Platform.OS === 'ios' ? 'firebrick' : 'white',
+    indicatorStyle: {
+      backgroundColor: 'firebrick'
+    }
   },
 });
 
