@@ -1,0 +1,88 @@
+/* TODO:
+*  Touch book icon shows book about
+*  Add poetry back in
+*  code cleanup
+*    separate components into files, one for each screen
+*    separate screen components to use better parent/child prop passing, so you can reuse components
+*  deep linking verses
+*  use the CPLS app icon
+*  setup the loading screen (if needed, this might be done from xcode and android studio)
+*  add the footer component to the main screen (Made with ♥ by JoshJoe)
+*  add the verse credits to the verses screen (ESV 2001 by Crossway Bibles, a division of Good News Publishers)
+*  test on other devices
+* */
+
+import React from 'react';
+import { Platform, StatusBar } from 'react-native';
+import { Icon } from 'react-native-elements';
+import { TabNavigator } from 'react-navigation';
+import Home from './Home';
+import Poems from './Poems';
+import Verses from './Verses';
+
+class HomeScreen extends React.Component {
+  static navigationOptions = {
+    tabBarLabel: 'Home',
+    // Note: By default the icon is only shown on iOS. Search the showIcon option below.
+    tabBarIcon: ({ tintColor }) => (
+      <Icon name="home" color={tintColor} />
+    ),
+  };
+
+  render() {
+    return (
+      <Home/>
+    );
+  }
+}
+
+class PoemsScreen extends React.Component {
+  static navigationOptions = {
+    tabBarLabel: 'Poems',
+    tabBarIcon: ({ tintColor }) => (
+      <Icon name="create" color={tintColor} />
+    ),
+  };
+
+  render() {
+    return (
+      <Poems/>
+    );
+  }
+}
+
+class VersesScreen extends React.Component {
+  static navigationOptions = {
+    tabBarLabel: 'Verses',
+    tabBarIcon: ({ tintColor }) => (
+      <Icon name="book" color={tintColor} />
+    ),
+  };
+
+  render() {
+    return (
+      <Verses/>
+    );
+  }
+}
+
+const MyApp = TabNavigator({
+  Home: {
+    screen: HomeScreen,
+  },
+  Poems: {
+    screen: PoemsScreen,
+  },
+  Verses: {
+    screen: VersesScreen,
+  },
+}, {
+  tabBarOptions: {
+    style: {
+      marginTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight
+    },
+    activeTintColor: 'firebrick',
+  },
+});
+
+export default MyApp;
