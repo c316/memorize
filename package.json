@@ -1,6 +1,6 @@
 {
   "name": "memorize",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "private": true,
   "devDependencies": {
     "jest-expo": "~20.0.0",
