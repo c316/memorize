@@ -84,10 +84,10 @@ class Poems extends React.Component {
     let grade = this.state.grade;
 
     return(
-      <View>
+      <View style={styles.container}>
         {
           this.state.showPoems ? ( this.state.poem ? <Poem poem={this.state.poem} onPress={() => {this._clearPoemState()}}/> :
-            <ScrollView style={{marginTop: Platform.OS === 'ios' ? 20 : 0}}>
+            <ScrollView style={{marginTop: Platform.OS === 'ios' ? 20 : 0, }}>
                 <List style={{marginTop:0}}>
                   <ListItem
                     key={"back"}
@@ -100,6 +100,10 @@ class Poems extends React.Component {
                     poems.map((l, i) => {
                       if (Number(l.grade) === grade) {
                         return <ListItem
+                          titleStyle={{
+                            color: "rgba(0,0,0,.87)"
+                          }}
+                          chevronColor="#074e86"
                           key={l._id}
                           title={l.title}
                           onPress={() => {this._showPoem(l._id)}}
@@ -113,9 +117,13 @@ class Poems extends React.Component {
               {
                 list.map((l, i) => (
                   <ListItem
+                    titleStyle={{
+                      color: "rgba(0,0,0,.87)"
+                    }}
+                    chevronColor="#074e86"
                     key={i}
                     title={l.name}
-                    leftIcon={{name: l.icon ? l.icon : null, type: l.type ? l.type : null}}
+                    leftIcon={{name: l.icon ? l.icon : null, type: l.type ? l.type : null, color: "#074e86"}}
                     onPress={() => {this._showPoemsForGrade(l.grade)}}
                   />
                 ))
@@ -129,10 +137,6 @@ class Poems extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#F5FCFF',
-    height: "100%"
   }
 });
 

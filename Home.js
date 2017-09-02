@@ -27,7 +27,7 @@ const Home = () => {
         I have stored up your word in my heart, that I might not sin against you.
       </Text>
       <TouchableHighlight
-        onPress={() => {Linking.openURL('http://bible.com/59/psa.119.11').catch(err => console.error('An error occurred', err))}}
+        onPress={() => {Linking.openURL('http://www.bible.com/bible/59/psa.119.11.esv').catch(err => console.error('An error occurred', err))}}
         activeOpacity={75 / 100}
         underlayColor={"rgb(210,210,210)"}>
         <Text style={styles.h3}>Psalm 119:11 (ESV)</Text>
@@ -38,7 +38,7 @@ const Home = () => {
         underlayColor={"rgb(210,210,210)"}
         style={styles.footer}
       >
-      <Text style={styles.h3}>Made with <Text style={styles.redHeart}>♥</Text> by JoshJoe</Text>
+      <Text style={styles.h3}>Made with <Text style={{color: '#b20939'}}>♥</Text> by JoshJoe</Text>
       </TouchableHighlight>
     </View>
   );
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FDFEFE',
     height: "100%"
   },
   welcome: {
@@ -118,9 +118,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 60,
   },
-  redHeart: {
-    color: 'firebrick'
-  }
 });
 
 export default Home;

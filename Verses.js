@@ -51,14 +51,6 @@ class Verses extends React.Component {
 
     const useThisVerse = thisVerse ? thisVerse : nearestGreaterWeekVerse;
 
-    // TODO: need to refactor this redirect for react native
-    // if you still can't find a verse that is greater than, redirect to not-found page
-    /*if(!useThisVerse){
-     return (
-     <Redirect to="/notfound"/>
-     );
-     }*/
-
     const index = verses.findIndex(x => x._id === useThisVerse._id);
 
     // Set the verse to this week's verse
@@ -213,14 +205,14 @@ class Verses extends React.Component {
 
         <View style={styles.nextPreviousContainer}>
           {this.state.showVerse === 0 ? null : <Icon
-            color='#f50'
+            color='#074e86'
             size={60}
             name="chevron-left"
             style={styles.left}
             onPress={() => this._previousVerse()}
           />}
           {this.state.showVerse === (verses.length -1) ? null : <Icon
-            color='#f50'
+            color='#074e86'
             size={60}
             name="chevron-right"
             style={styles.right}
@@ -239,7 +231,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FDFEFE',
     height: "100%"
   },
   welcome: {

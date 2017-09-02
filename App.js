@@ -25,7 +25,7 @@ class HomeScreen extends React.Component {
     tabBarLabel: 'Home',
     // Note: By default the icon is only shown on iOS. Search the showIcon option below.
     tabBarIcon: ({ tintColor }) => (
-      <Icon name="home" color={tintColor} />
+      <Icon name="home" color={tintColor} size={24}  />
     ),
   };
 
@@ -40,7 +40,7 @@ class PoemsScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Poems',
     tabBarIcon: ({ tintColor }) => (
-      <Icon name="create" color={tintColor} />
+      <Icon name="create" color={tintColor} size={24}  />
     ),
   };
 
@@ -55,7 +55,7 @@ class VersesScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Verses',
     tabBarIcon: ({ tintColor }) => (
-      <Icon name="book" color={tintColor} />
+      <Icon name="book" color={tintColor} size={24} />
     ),
   };
 
@@ -79,12 +79,19 @@ const MyApp = TabNavigator({
 }, {
   tabBarOptions: {
     style: {
-      marginTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight
+      paddingBottom: 2,
+      marginTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight,
+      backgroundColor: '#E5E7E9',
     },
-    activeTintColor: Platform.OS === 'ios' ? 'firebrick' : 'white',
+    tabStyle: {
+      backgroundColor: '#FDFEFE',
+    },
+    activeTintColor: 'firebrick',
+    inactiveTintColor: '#074e86',
     indicatorStyle: {
       backgroundColor: 'firebrick'
-    }
+    },
+    showIcon: true,
   },
 });
 
