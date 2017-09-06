@@ -14,8 +14,8 @@ const Home = () => {
     <View style={styles.container}>
       <Image
         style={{
-          width: 225,
-          height: 200,
+          width: 200,
+          height: 204,
         }}
         resizeMode={"contain"}
         source={require('./assets/images/CPLS.png')}
@@ -29,7 +29,9 @@ const Home = () => {
       <TouchableHighlight
         onPress={() => {Linking.openURL('http://www.bible.com/bible/59/psa.119.11.esv').catch(err => console.error('An error occurred', err))}}
         activeOpacity={75 / 100}
-        underlayColor={"rgb(210,210,210)"}>
+        underlayColor={"rgb(210,210,210)"}
+        style={styles.mainVerse}
+      >
         <Text style={styles.h3}>Psalm 119:11 (ESV)</Text>
       </TouchableHighlight>
       <TouchableHighlight
@@ -38,7 +40,7 @@ const Home = () => {
         underlayColor={"rgb(210,210,210)"}
         style={styles.footer}
       >
-      <Text style={styles.h3}>Made with <Text style={{color: '#b20939'}}>♥</Text> by JoshJoe</Text>
+      <Text style={styles.madeBy}>Made with <Text style={{color: '#b20939'}}>♥</Text> by JoshJoe</Text>
       </TouchableHighlight>
     </View>
   );
@@ -69,13 +71,19 @@ const styles = StyleSheet.create({
   h2: {
     fontSize: 20,
     textAlign: 'center',
-    marginTop: 30,
-    margin: 10
+    marginTop: 10,
   },
   h3: {
     fontSize: 18,
     textAlign: 'center',
-    marginBottom: Platform.OS === 'ios' ? 85 : 50,
+  },
+  mainVerse: {
+    top: 10
+  },
+  madeBy: {
+    fontSize: 10,
+    textAlign: 'center',
+    bottom: Platform.OS === 'ios' ? 10 : 0
   },
   button: {
     backgroundColor: "firebrick",
@@ -116,7 +124,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     position: 'absolute',
-    bottom: 60,
+    bottom: Platform.OS === 'ios' ? 0 : 10
   },
 });
 

@@ -152,6 +152,14 @@ export const poems = [
     "poem": "Matthew\nMark\nLuke\nJohn\nActs\nRomans\n1 Corinthians\n2 Corinthians\nGalatians\nEphesians\nPhilippians\nColossians\n1 Thessalonians\n2 Thessalonians\n1 Timothy\n2 Timothy\nTitus\nPhilemon\nHebrews\nJames\n1 Peter\n2 Peter \n1 John\n2 John\n3 John \nJude\nRevelation"
   },
   {
+    "_id": "v4AN3vwbHzsf5wohB",
+    "order": 14,
+    "grade": "1",
+    "author": "Amy Grant",
+    "title": "Psalm 119:105",
+    "poem": "Thy Word is a lamp unto my feet and a light unto my path.  When I am afraid, think I’ve lost my way, still your there right beside me.  Nothing will I fear, as long as you are near, please be near me to the end.  They Word is a lamp unto my feet and a light unto my path.  I will not forget Your love for me and yet, my heart is forever wandering.  Jesus be my guide, hold me to your side and I will love you to the end.  They Word is a lamp unto my feet and a light unto my path."
+  },
+  {
     "_id": "PTr6nshJQW4Kfrvy5",
     "order": 1,
     "grade": "2",
