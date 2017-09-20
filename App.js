@@ -67,11 +67,11 @@ class VersesScreen extends React.Component {
 }
 
 const MyApp = TabNavigator({
-  Home: {
-    screen: HomeScreen,
-  },
   Verses: {
     screen: VersesScreen,
+  },
+  Home: {
+    screen: HomeScreen,
   },
   Poems: {
     screen: PoemsScreen,
