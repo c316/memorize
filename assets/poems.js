@@ -67,9 +67,9 @@ export const poems = [
     "_id": "c2okGeC6tCrMy5PfL",
     "order": 3,
     "grade": "1",
-    "author": "",
+    "author": "Robert Louis Stevenson",
     "title": "Bed in Summer",
-    "poem": "August brings the sheaves of corn,\nThen the harvest home is born.\n\nWarm September brings the fruit,\nSportsmen then begin to shoot.\n\nFresh October brings the pheasant,\nThen to gather nuts is pleasant.\n\nDull November brings the blast’\nThen the leaves are whirling fast.\n\nChill December brings the sleet,\nBlazing fire and Christmas treat."
+    "poem": `In winter I get up at night\nAnd dress by yellow candle-light.\nIn summer quite the other way,\nI have to go to bed by day.\n\nI have to go to bed and see\nThe birds still hopping on the tree,\nOr hear the grown-up people’s feet\nStill going past me in the street.\n\nAnd does it not seem hard to you,\nWhen all the sky is clean and blue,\nAnd I should like so much to play,\nTo have to go to bed by day?`
   },
   {
     "_id": "PTr6nshJQW4Kfrvy6",
