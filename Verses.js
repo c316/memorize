@@ -209,7 +209,7 @@ class Verses extends React.Component {
           />}
         </View>
         <Text style={styles.esvCredit}>
-          ESV 2001 by Crossway Bibles, a division of Good News Publishers
+          ESV brought to you by Crossway (a publishing ministry of Good News Publishers)
         </Text>
       </View>
     );
