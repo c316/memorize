@@ -1,4 +1,6 @@
-export const getWeek = (date) => {
+import { Dimensions } from 'react-native';
+
+const getWeek = (date) => {
   date = date ? new Date(date) : new Date();
   date.setHours(0, 0, 0, 0);
   // Thursday in current week decides the year.
@@ -9,3 +11,15 @@ export const getWeek = (date) => {
   return (1 + Math.round(((date.getTime() - week1.getTime()) / 86400000
     - 3 + (week1.getDay() + 6) % 7) / 7));
 };
+
+const { width, height } = Dimensions.get('window');
+
+//Guideline sizes are based on standard ~5" screen mobile device
+const guidelineBaseWidth = 350;
+const guidelineBaseHeight = 680;
+
+const scale = size => width / guidelineBaseWidth * size;
+const verticalScale = size => height / guidelineBaseHeight * size;
+const moderateScale = (size, factor = 0.5) => size + ( scale(size) - size ) * factor;
+
+export {getWeek, scale, verticalScale, moderateScale};

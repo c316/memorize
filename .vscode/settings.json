@@ -1,0 +1,8 @@
+{
+    "settings": {
+		"editor.formatOnSave": true,
+		"javascript.format.enable": false,
+		"prettier.eslintIntegration": true,
+		"prettier.trailingComma": "es5"
+	}
+}

@@ -113,7 +113,7 @@ class Poems extends React.Component {
                   }
               </List>
             </ScrollView>):
-            <List style={{marginTop: Platform.OS === 'ios' ? 20 : 0}} containerStyle={{marginTop: Platform.OS === 'ios' ? 20 : 20}}>
+            <List style={{marginTop: Platform.OS === 'ios' ? 20 : 0}} containerStyle={{marginTop: 0}}>
               {
                 list.map((l, i) => (
                   <ListItem

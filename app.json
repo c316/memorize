@@ -4,7 +4,7 @@
     "icon": "./assets/images/CPLS-Lion-logo-512x512.png",
     "version": "2.3.3",
     "slug": "cpls-memorize",
-    "sdkVersion": "21.0.0",
+    "sdkVersion": "26.0.0",
     "ios": {
       "bundleIdentifier": "com.joshjoe.memorize"
     },

@@ -10,12 +10,13 @@
 *  add the footer component to the main screen (Made with ♥ by JoshJoe)
 *  add the verse credits to the verses screen (ESV 2001 by Crossway Bibles, a division of Good News Publishers)
 *  test on other devices
+*  test on other devices
 * */
 
 import React from 'react';
 import { Platform, StatusBar } from 'react-native';
 import { Icon } from 'react-native-elements';
-import { TabNavigator } from 'react-navigation';
+import { TabNavigator, SafeAreaView } from 'react-navigation';
 import Home from './Home';
 import Poems from './Poems';
 import Verses from './Verses';
@@ -46,7 +47,9 @@ class PoemsScreen extends React.Component {
 
   render() {
     return (
-      <Poems/>
+      <SafeAreaView>
+        <Poems/>
+      </SafeAreaView>
     );
   }
 }
@@ -55,7 +58,7 @@ class VersesScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Verses',
     tabBarIcon: ({ tintColor }) => (
-      <Icon name="book" color={tintColor} size={24} />
+      <Icon name="book" color={tintColor} size={20} />
     ),
   };
 
@@ -81,7 +84,7 @@ const MyApp = TabNavigator({
     style: {
       paddingBottom: 2,
       marginTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight,
-      backgroundColor: '#E5E7E9',
+      backgroundColor: '#FFF',
     },
     tabStyle: {
       backgroundColor: '#FDFEFE',
