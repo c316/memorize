@@ -5,3 +5,4 @@ npm-debug.*
 .DS_Store
 npm-debug.log
 .keystore
+yarn-error.log
