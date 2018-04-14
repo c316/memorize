@@ -1,144 +1,158 @@
-import React from 'react';
-import { Platform, View, StyleSheet, ScrollView } from 'react-native';
-import { List, ListItem } from 'react-native-elements'
-import { poems } from './assets/poems';
-import Poem from './Poem';
+import React from "react";
+import { Platform, View, ScrollView } from "react-native";
+import { List, ListItem } from "react-native-elements";
+import { poems } from "./assets/poems";
+import Poem from "./Poem";
 
 class Poems extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {showPoems: false, grade: 0, poem: null};
+    this.state = { showPoems: false, grade: 0, poem: null };
   }
 
-  _showPoemsForGrade(grade){
-    this.setState({grade: grade, showPoems: true});
+  _showPoemsForGrade(grade) {
+    this.setState({ grade: grade, showPoems: true });
   }
 
   _clearGradeState() {
-    this.setState({showPoems: false});
+    this.setState({ showPoems: false });
   }
 
-  _showPoem(_id){
-    this.setState({poem: _id});
+  _showPoem(_id) {
+    this.setState({ poem: _id });
   }
 
   _clearPoemState() {
-    this.setState({poem: null});
+    this.setState({ poem: null });
   }
 
-  render(){
+  render() {
     const list = [
       {
-        name: 'Kindergarten',
+        name: "Kindergarten",
         grade: 0,
       },
       {
-        name: 'First Grade',
-        icon: 'numeric-1-box',
-        type: 'material-community',
+        name: "First Grade",
+        icon: "numeric-1-box",
+        type: "material-community",
         grade: 1,
       },
       {
-        name: 'Second Grade',
-        icon: 'numeric-2-box',
-        type: 'material-community',
+        name: "Second Grade",
+        icon: "numeric-2-box",
+        type: "material-community",
         grade: 2,
       },
       {
-        name: 'Third Grade',
-        icon: 'numeric-3-box',
-        type: 'material-community',
+        name: "Third Grade",
+        icon: "numeric-3-box",
+        type: "material-community",
         grade: 3,
       },
       {
-        name: 'Fourth Grade',
-        icon: 'numeric-4-box',
-        type: 'material-community',
+        name: "Fourth Grade",
+        icon: "numeric-4-box",
+        type: "material-community",
         grade: 4,
       },
       {
-        name: 'Fifth Grade',
-        icon: 'numeric-5-box',
-        type: 'material-community',
+        name: "Fifth Grade",
+        icon: "numeric-5-box",
+        type: "material-community",
         grade: 5,
       },
       {
-        name: 'Sixth Grade',
-        icon: 'numeric-6-box',
-        type: 'material-community',
+        name: "Sixth Grade",
+        icon: "numeric-6-box",
+        type: "material-community",
         grade: 6,
       },
       {
-        name: 'Seventh Grade',
-        icon: 'numeric-7-box',
-        type: 'material-community',
+        name: "Seventh Grade",
+        icon: "numeric-7-box",
+        type: "material-community",
         grade: 7,
       },
       {
-        name: 'Eighth Grade',
-        icon: 'numeric-8-box',
-        type: 'material-community',
+        name: "Eighth Grade",
+        icon: "numeric-8-box",
+        type: "material-community",
         grade: 8,
       },
     ];
     let grade = this.state.grade;
 
-    return(
-      <View style={styles.container}>
-        {
-          this.state.showPoems ? ( this.state.poem ? <Poem poem={this.state.poem} onPress={() => {this._clearPoemState()}}/> :
-            <ScrollView style={{marginTop: Platform.OS === 'ios' ? 20 : 0, }}>
-                <List style={{marginTop:0}}>
-                  <ListItem
-                    key={"back"}
-                    title="Go back"
-                    hideChevron={true}
-                    leftIcon={{name: 'chevron-left'}}
-                    onPress={() => {this._clearGradeState()}}
-                  />
-                  {
-                    poems.map((l, i) => {
-                      if (Number(l.grade) === grade) {
-                        return <ListItem
-                          titleStyle={{
-                            color: "rgba(0,0,0,.87)"
-                          }}
-                          chevronColor="#074e86"
-                          key={l._id}
-                          title={l.title}
-                          onPress={() => {this._showPoem(l._id)}}
-                        />
-                      }
-                    })
+    return (
+      <View>
+        {this.state.showPoems ? (
+          this.state.poem ? (
+            <Poem
+              poem={this.state.poem}
+              onPress={() => {
+                this._clearPoemState();
+              }}
+            />
+          ) : (
+            <ScrollView style={{ marginTop: Platform.OS === "ios" ? 20 : 0 }}>
+              <List style={{ marginTop: 0 }}>
+                <ListItem
+                  key={"back"}
+                  title="Go back"
+                  hideChevron={true}
+                  leftIcon={{ name: "chevron-left" }}
+                  onPress={() => {
+                    this._clearGradeState();
+                  }}
+                />
+                {poems.map((l, i) => {
+                  if (Number(l.grade) === grade) {
+                    return (
+                      <ListItem
+                        titleStyle={{
+                          color: "rgba(0,0,0,.87)",
+                        }}
+                        chevronColor="#074e86"
+                        key={l._id}
+                        title={l.title}
+                        onPress={() => {
+                          this._showPoem(l._id);
+                        }}
+                      />
+                    );
                   }
+                })}
               </List>
-            </ScrollView>):
-            <List style={{marginTop: Platform.OS === 'ios' ? 20 : 0}} containerStyle={{marginTop: 0}}>
-              {
-                list.map((l, i) => (
-                  <ListItem
-                    titleStyle={{
-                      color: "rgba(0,0,0,.87)"
-                    }}
-                    chevronColor="#074e86"
-                    key={i}
-                    title={l.name}
-                    leftIcon={{name: l.icon ? l.icon : null, type: l.type ? l.type : null, color: "#074e86"}}
-                    onPress={() => {this._showPoemsForGrade(l.grade)}}
-                  />
-                ))
-              }
-            </List>
-        }
+            </ScrollView>
+          )
+        ) : (
+          <List
+            style={{ marginTop: Platform.OS === "ios" ? 20 : 0 }}
+            containerStyle={{ marginTop: 0 }}
+          >
+            {list.map((l, i) => (
+              <ListItem
+                titleStyle={{
+                  color: "rgba(0,0,0,.87)",
+                }}
+                chevronColor="#074e86"
+                key={i}
+                title={l.name}
+                leftIcon={{
+                  name: l.icon ? l.icon : null,
+                  type: l.type ? l.type : null,
+                  color: "#074e86",
+                }}
+                onPress={() => {
+                  this._showPoemsForGrade(l.grade);
+                }}
+              />
+            ))}
+          </List>
+        )}
       </View>
-    )
+    );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-  }
-});
-
 
 export default Poems;
