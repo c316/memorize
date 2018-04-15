@@ -3,6 +3,10 @@ import { View, Button, Text, StatusBar } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import MathFacts from '../components/MathFacts';
 import { styles } from '../styles/styles';
+import Addition from '../components/Addition';
+import Subtraction from '../components/Subtraction';
+import Multiplication from '../components/Multiplication';
+import Division from '../components/Division';
 
 class MathFactsScreen extends React.Component {
   static navigationOptions = {
@@ -36,27 +40,6 @@ class OtherScreen extends React.Component {
     this.props.navigation.navigate('Auth');
   };
 }
-
-const Addition = () => (
-  <View>
-    <Text>Addition</Text>
-  </View>
-);
-const Subtraction = () => (
-  <View>
-    <Text>Subtraction</Text>
-  </View>
-);
-const Multiplication = () => (
-  <View>
-    <Text>Multiplication</Text>
-  </View>
-);
-const Division = () => (
-  <View>
-    <Text>Division</Text>
-  </View>
-);
 
 const MathScreens = StackNavigator({
   MathFacts: { screen: MathFactsScreen },
