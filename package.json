@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
+    "android": "react-native-scripts android --lan",
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js --watch",
     "mocha": "mocha --compilers js:babel-core/register"
@@ -29,6 +29,7 @@
     "expo": "^26.0.0",
     "react": "16.3.1",
     "react-native": "^0.54.0",
+    "react-native-easy-grid": "^0.1.17",
     "react-native-elements": "^0.19.1",
     "react-navigation": "^1.5.11"
   }
