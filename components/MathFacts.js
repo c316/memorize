@@ -1,6 +1,6 @@
-import React from 'react';
-import { Platform, View, StyleSheet, ScrollView, Text } from 'react-native';
-import { List, ListItem } from 'react-native-elements';
+import React from "react";
+import { Platform, View, StyleSheet, ScrollView, Text } from "react-native";
+import { List, ListItem } from "react-native-elements";
 
 class MathFacts extends React.Component {
   constructor(props) {
@@ -9,30 +9,27 @@ class MathFacts extends React.Component {
   }
 
   _goToPage = name => {
-    this.props.navigation.navigate(name);
+    this.props.navigation.navigate("NumberGrid", {
+      mathCategory: name,
+    });
   };
 
   render() {
     const list = [
       {
-        title: 'Addition',
-        icon: 'plus',
-        type: 'font-awesome',
+        title: "Addition",
+        icon: "plus",
+        type: "font-awesome",
       },
       {
-        title: 'Subtraction',
-        icon: 'minus',
-        type: 'font-awesome',
+        title: "Subtraction",
+        icon: "minus",
+        type: "font-awesome",
       },
       {
-        title: 'Multiplication',
-        icon: 'times',
-        type: 'font-awesome',
-      },
-      {
-        title: 'Division',
-        icon: 'division',
-        type: 'material-community',
+        title: "Multiplication",
+        icon: "times",
+        type: "font-awesome",
       },
     ];
     return (

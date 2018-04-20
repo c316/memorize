@@ -1,16 +1,14 @@
-import React from 'react';
-import { View, Button, Text, StatusBar } from 'react-native';
-import { StackNavigator } from 'react-navigation';
-import MathFacts from '../components/MathFacts';
-import { styles } from '../styles/styles';
-import Addition from '../components/Addition';
-import Subtraction from '../components/Subtraction';
-import Multiplication from '../components/Multiplication';
-import Division from '../components/Division';
+import React from "react";
+import { View, Button, Text, StatusBar } from "react-native";
+import { StackNavigator } from "react-navigation";
+import MathFacts from "../components/MathFacts";
+import { styles } from "../styles/styles";
+import FlashCards from "../components/FlashCards";
+import NumberGrid from "../components/NumberGrid";
 
 class MathFactsScreen extends React.Component {
   static navigationOptions = {
-    title: 'Math',
+    title: "Math",
   };
 
   render() {
@@ -22,50 +20,19 @@ class MathFactsScreen extends React.Component {
   }
 }
 
-class OtherScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Other',
-  };
-  render() {
-    return (
-      <View style={styles.container}>
-        <Button title="I'm done, sign me out" onPress={this._signOutAsync} />
-        <StatusBar barStyle="default" />
-      </View>
-    );
-  }
-
-  _signOutAsync = async () => {
-    await AsyncStorage.clear();
-    this.props.navigation.navigate('Auth');
-  };
-}
-
 const MathScreens = StackNavigator({
   MathFacts: { screen: MathFactsScreen },
-  Addition: {
+  FlashCards: {
     navigationOptions: {
-      title: 'Addition',
+      title: "Flash Cards",
     },
-    screen: Addition,
+    screen: FlashCards,
   },
-  Subtraction: {
+  NumberGrid: {
     navigationOptions: {
-      title: 'Subtraction',
+      title: "Pick a Level",
     },
-    screen: Subtraction,
-  },
-  Multiplication: {
-    navigationOptions: {
-      title: 'Multiplication',
-    },
-    screen: Multiplication,
-  },
-  Division: {
-    navigationOptions: {
-      title: 'Division',
-    },
-    screen: Division,
+    screen: NumberGrid,
   },
 });
 
