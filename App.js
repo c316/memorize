@@ -8,19 +8,19 @@
 *  test on other devices
 * */
 
-import React from 'react';
-import { Button, Platform, StatusBar, StyleSheet, View } from 'react-native';
-import { Icon } from 'react-native-elements';
-import { TabNavigator, SafeAreaView } from 'react-navigation';
-import Home from './Home';
-import Poems from './Poems';
-import Verses from './Verses';
-import MathScreens from './screens/MathScreens';
-import { styles } from './styles/styles';
+import React from "react";
+import { Button, Platform, StatusBar, StyleSheet, View } from "react-native";
+import { Icon } from "react-native-elements";
+import { TabNavigator, SafeAreaView } from "react-navigation";
+import Home from "./Home";
+import Poems from "./Poems";
+import Verses from "./Verses";
+import MathScreens from "./screens/MathScreens";
+import { styles } from "./styles/styles";
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
-    tabBarLabel: 'Home',
+    tabBarLabel: "Home",
     // Note: By default the icon is only shown on iOS. Search the showIcon option below.
     tabBarIcon: ({ tintColor }) => (
       <Icon name="home" color={tintColor} size={24} />
@@ -34,7 +34,7 @@ class HomeScreen extends React.Component {
 
 class PoemsScreen extends React.Component {
   static navigationOptions = {
-    tabBarLabel: 'Poems',
+    tabBarLabel: "Poems",
     tabBarIcon: ({ tintColor }) => (
       <Icon name="create" color={tintColor} size={24} />
     ),
@@ -51,7 +51,7 @@ class PoemsScreen extends React.Component {
 
 class VersesScreen extends React.Component {
   static navigationOptions = {
-    tabBarLabel: 'Verses',
+    tabBarLabel: "Verses",
     tabBarIcon: ({ tintColor }) => (
       <Icon name="book" color={tintColor} size={20} />
     ),
@@ -64,6 +64,15 @@ class VersesScreen extends React.Component {
 
 const MyApp = TabNavigator(
   {
+    MathFacts: {
+      screen: MathScreens,
+      navigationOptions: {
+        tabBarLabel: "Math",
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="add" color={tintColor} size={24} />
+        ),
+      },
+    },
     Verses: {
       screen: VersesScreen,
     },
@@ -73,29 +82,20 @@ const MyApp = TabNavigator(
     Poems: {
       screen: PoemsScreen,
     },
-    MathFacts: {
-      screen: MathScreens,
-      navigationOptions: {
-        tabBarLabel: 'Math',
-        tabBarIcon: ({ tintColor }) => (
-          <Icon name="add" color={tintColor} size={24} />
-        ),
-      },
-    },
   },
   {
     tabBarOptions: {
       style: {
         paddingBottom: 2,
-        backgroundColor: '#FFF',
+        backgroundColor: "#FFF",
       },
       tabStyle: {
-        backgroundColor: '#FDFEFE',
+        backgroundColor: "#FDFEFE",
       },
-      activeTintColor: 'firebrick',
-      inactiveTintColor: '#074e86',
+      activeTintColor: "firebrick",
+      inactiveTintColor: "#074e86",
       indicatorStyle: {
-        backgroundColor: 'firebrick',
+        backgroundColor: "firebrick",
       },
       showIcon: true,
     },
@@ -106,7 +106,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <View>
-        <StatusBar hidden backgroundColor={'transparent'} translucent />
+        <StatusBar hidden backgroundColor={"transparent"} translucent />
       </View>
       <MyApp />
     </View>
