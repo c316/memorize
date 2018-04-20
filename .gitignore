@@ -6,3 +6,4 @@ npm-debug.*
 npm-debug.log
 .keystore
 yarn-error.log
+.vscode/
