@@ -1,43 +1,45 @@
-import React from "react";
-import { StyleSheet } from "react-native";
-import { Button } from "react-native-elements";
-import { Col, Row, Grid } from "react-native-easy-grid";
-import { moderateScale, verticalScale } from "../miscFunctions";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StyleSheet } from 'react-native';
+import { Button } from 'react-native-elements';
+import { Col, Row, Grid } from 'react-native-easy-grid';
+import { moderateScale, verticalScale } from '../miscFunctions';
 
 const styles = StyleSheet.create({
   centerText: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   list: {
-    justifyContent: "center",
-    flexDirection: "row",
-    flexWrap: "wrap",
+    justifyContent: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
   text: {
     flex: 1,
     marginTop: 5,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   columnStyle: {
-    alignItems: "center",
+    alignItems: 'center',
   },
 });
 
-const BigButton = ({ mathCategory, title, onPress }) => (
+const BigButton = ({ title, onPress }) => (
   <Button
     title={title}
     titleStyle={{
-      fontWeight: "900",
+      fontWeight: '900',
     }}
-    textStyle={{ fontSize: 35 }}
+    textStyle={{
+      fontSize: 35,
+    }}
     buttonStyle={{
-      backgroundColor: "#a1002b",
+      backgroundColor: '#1c5fa0',
       width: moderateScale(150),
       height: verticalScale(70),
       marginTop: 15,
-      backgroundColor: "rgba(92, 99,216, 1)",
-      borderColor: "transparent",
+      borderColor: 'transparent',
       borderWidth: 0,
       borderRadius: 5,
     }}
@@ -46,13 +48,14 @@ const BigButton = ({ mathCategory, title, onPress }) => (
   />
 );
 
-class NumberGrid extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+BigButton.propTypes = {
+  title: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
+};
 
+class NumberGrid extends React.Component {
   _goToPage = (mathCategory, selectedLevel) => {
-    this.props.navigation.navigate("FlashCards", {
+    this.props.navigation.navigate('FlashCards', {
       mathCategory,
       selectedLevel,
     });
@@ -181,5 +184,17 @@ class NumberGrid extends React.Component {
     );
   }
 }
+
+NumberGrid.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+    state: PropTypes.shape({
+      params: PropTypes.shape({
+        mathCategory: PropTypes.string,
+        selectedLevel: PropTypes.number,
+      }),
+    }),
+  }).isRequired,
+};
 
 export default NumberGrid;

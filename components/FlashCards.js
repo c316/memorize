@@ -1,27 +1,73 @@
-import React from "react";
-import { View, StyleSheet } from "react-native";
-import { Button, Card, Divider, Text } from "react-native-elements";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { TouchableOpacity, View, StyleSheet } from 'react-native';
+import { Divider, Text } from 'react-native-elements';
+
+const styles = StyleSheet.create({
+  container: {
+    display: 'flex',
+  },
+  titleText: {
+    margin: 20,
+    fontWeight: '200',
+  },
+  problemCardContainer: {
+    justifyContent: 'center',
+    minHeight: '50%',
+  },
+  problemContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  tallContainer: {
+    height: '60%',
+    justifyContent: 'center',
+  },
+  addSomeMargin: {
+    margin: 10,
+  },
+  alignTextRight: {
+    textAlign: 'right',
+  },
+  blueColorText: {
+    color: '#1c5fa0',
+  },
+});
 
 class FlashCards extends React.Component {
+  static navigationOptions = ({ navigation }) => {
+    const {
+      params: { mathCategory, selectedLevel },
+    } = navigation.state;
+
+    return {
+      title: `${mathCategory} level ${selectedLevel}`,
+    };
+  };
   constructor(props) {
     super(props);
     const { mathCategory, selectedLevel } = this.props.navigation.state.params;
 
     const operation = () => {
-      if (mathCategory === "Addition") return "+";
-      if (mathCategory === "Subtraction") return "-";
-      if (mathCategory === "Multiplication") return "x";
+      if (mathCategory === 'Addition') return '+';
+      if (mathCategory === 'Subtraction') return '-';
+      if (mathCategory === 'Multiplication') return 'x';
+      return null;
     };
 
     this.state = {
       showAnswer: false,
-      answer: "",
-      numerator: "",
-      denomenator: "",
+      answer: '',
+      numerator: '',
+      denomenator: '',
       operation: operation(),
       mathCategory,
-      selectedLevel: selectedLevel,
+      selectedLevel,
     };
+  }
+
+  componentWillMount() {
+    this.generateNewProblem();
   }
 
   generateNewProblem() {
@@ -39,12 +85,16 @@ class FlashCards extends React.Component {
     }
 
     const answer = () => {
-      if (this.state.mathCategory === "Addition")
+      if (this.state.mathCategory === 'Addition') {
         return numerator + denomenator;
-      if (this.state.mathCategory === "Subtraction")
+      }
+      if (this.state.mathCategory === 'Subtraction') {
         return numerator - denomenator;
-      if (this.state.mathCategory === "Multiplication")
+      }
+      if (this.state.mathCategory === 'Multiplication') {
         return numerator * denomenator;
+      }
+      return null;
     };
 
     this.setState({
@@ -54,87 +104,69 @@ class FlashCards extends React.Component {
     });
   }
 
-  componentWillMount() {
-    this.generateNewProblem();
+  showAnswerOrGetNextProblem() {
+    const { showAnswer } = this.state;
+    this.setState({ showAnswer: !showAnswer });
+    if (showAnswer) {
+      this.generateNewProblem();
+    }
   }
+
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.problemCardContainer}>
+        <TouchableOpacity
+          style={styles.problemCardContainer}
+          onPress={() => this.showAnswerOrGetNextProblem()}
+        >
           <View style={styles.problemContainer}>
             <View>
-              <Text h1 style={styles.alignTextRight}>
+              <Text h1 style={[styles.alignTextRight, styles.blueColorText]}>
                 {this.state.numerator}
               </Text>
               <Text
                 style={[
-                  { textDecorationLine: "underline" },
+                  { textDecorationLine: 'underline' },
                   styles.alignTextRight,
                 ]}
                 h1
               >
-                <Text>{this.state.operation} </Text> {this.state.denomenator}
+                <Text style={[styles.alignTextRight, styles.blueColorText]}>
+                  {this.state.operation} {this.state.denomenator}
+                </Text>
               </Text>
-              <Text h1 style={styles.alignTextRight}>
-                {this.state.answer}
+              <Text h1 style={[styles.alignTextRight, styles.blueColorText]}>
+                &nbsp;{this.state.showAnswer ? this.state.answer : null}
               </Text>
             </View>
           </View>
-        </View>
+        </TouchableOpacity>
         <View style={styles.addSomeMargin}>
-          <Button
-            title="Next Problem"
-            buttonStyle={{
-              backgroundColor: "rgba(92, 99,216, 1)",
-              height: 45,
-              borderColor: "transparent",
-              borderWidth: 0,
-              borderRadius: 5,
+          <Divider
+            style={{
+              backgroundColor: 'grey',
+              marginBottom: 10,
             }}
-            onPress={() => this.generateNewProblem()}
           />
-          <Text />
-          <Divider style={{ backgroundColor: "grey" }} />
-          <Text h3 style={styles.titleText}>
-            {" "}
-            {`${this.state.mathCategory} with ${this.state.selectedLevel}'s`}
+          <Text h4 style={styles.titleText}>
+            Touch anywhere above the line to see the solution, touch again to go
+            to the next problem.
           </Text>
-          <Text
-            h4
-            style={styles.titleText}
-          >{`Touch anywhere on the problem to see the solution`}</Text>
         </View>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    display: "flex",
-  },
-  titleText: {
-    margin: 20,
-    fontWeight: "200",
-  },
-  problemCardContainer: {
-    justifyContent: "center",
-    minHeight: "50%",
-  },
-  problemContainer: {
-    flexDirection: "row",
-    justifyContent: "center",
-  },
-  tallContainer: {
-    height: "60%",
-    justifyContent: "center",
-  },
-  addSomeMargin: {
-    margin: 10,
-  },
-  alignTextRight: {
-    textAlign: "right",
-  },
-});
+FlashCards.propTypes = {
+  navigation: PropTypes.shape({
+    state: PropTypes.shape({
+      params: PropTypes.shape({
+        mathCategory: PropTypes.string,
+        selectedLevel: PropTypes.number,
+      }),
+    }),
+  }).isRequired,
+};
 
 export default FlashCards;
