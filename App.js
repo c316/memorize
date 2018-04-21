@@ -4,8 +4,6 @@
 *    separate components into files, one for each screen
 *    separate screen components to use better parent/child prop passing, so you can reuse components
 *  deep linking verses
-*  setup the loading screen (if needed, this might be done from xcode and android studio)
-*  test on other devices
 * */
 
 import React from 'react';
@@ -21,6 +19,12 @@ import { styles } from './styles/styles';
 /* eslint new-cap: "off" */
 const MyApp = TabNavigator(
   {
+    Verses: {
+      screen: VersesScreen,
+    },
+    Poems: {
+      screen: PoemsScreen,
+    },
     MathFacts: {
       screen: MathScreens,
       navigationOptions: {
@@ -30,14 +34,8 @@ const MyApp = TabNavigator(
         ),
       },
     },
-    Verses: {
-      screen: VersesScreen,
-    },
     Home: {
       screen: HomeScreen,
-    },
-    Poems: {
-      screen: PoemsScreen,
     },
   },
   {
