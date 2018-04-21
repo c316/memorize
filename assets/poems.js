@@ -1,187 +1,210 @@
 export const poems = [
   {
-    "_id": "fFjk4wdWCWoQaDfQA",
-    "order": 1,
-    "grade": "0",
-    "author": "T.H. Palmer",
-    "title": "Try, Try Again",
-    "poem": "'Tis a lesson you should heed:\nTry, try again.\n\nIf at first you don’t succeed,\nTry, try again.\n\nThen your courage should appear,\nFor if you would persevere,\nYou will conquer, never fear!\nTry, try again."
+    _id: 'fFjk4wdWCWoQaDfQA',
+    order: 1,
+    grade: '0',
+    author: 'T.H. Palmer',
+    title: 'Try, Try Again',
+    poem:
+      "'Tis a lesson you should heed:\nTry, try again.\n\nIf at first you don’t succeed,\nTry, try again.\n\nThen your courage should appear,\nFor if you would persevere,\nYou will conquer, never fear!\nTry, try again.",
   },
   {
-    "_id": "ZrAcwjG25WyT5kHyN",
-    "order": 2,
-    "grade": "0",
-    "author": "Galatians 5:22-23 (NIV)",
-    "title": "Fruit of the Spirit",
-    "poem": "But the fruit of the Spirit is\nlove, joy, peace, forbearance,\nkindness, goodness, faithfulness,\ngentleness and self-control.\nAgainst such things there is no law.\n"
+    _id: 'ZrAcwjG25WyT5kHyN',
+    order: 2,
+    grade: '0',
+    author: 'Galatians 5:22-23 (NIV)',
+    title: 'Fruit of the Spirit',
+    poem:
+      'But the fruit of the Spirit is\nlove, joy, peace, forbearance,\nkindness, goodness, faithfulness,\ngentleness and self-control.\nAgainst such things there is no law.\n',
   },
   {
-    "_id": "on4npk3N53gjzeRLX",
-    "order": 3,
-    "grade": "0",
-    "author": "Martin Luther",
-    "title": "Cradle Hymn",
-    "poem": "Away in a manger, no crib for a bed,\nThe little Lord Jesus laid down his\n\tsweet head.\nThe stars in the bright sky looked\n\tdown where he lay-\nThe little Lord Jesus asleep on the\n\thay.The cattle are lowing, the baby\n\tawakes,\nBut the little Lord Jesus no crying\n\the makes.\nI love Thee, Lord Jesus! Look\n\tdown from the sky.\nAnd stay by my cradle till morning\n\tis nigh.\nBe near me, Lord Jesus, I ask Thee\n\tto stay,\nClose by me forever and love me, I\n\tpray;\nBless all the dear children in Thy\n\ttender care.\nAnd fit us for heaven, to live with\n\tThee there."
+    _id: 'on4npk3N53gjzeRLX',
+    order: 3,
+    grade: '0',
+    author: 'Martin Luther',
+    title: 'Cradle Hymn',
+    poem:
+      'Away in a manger, no crib for a bed,\nThe little Lord Jesus laid down his\n\tsweet head.\nThe stars in the bright sky looked\n\tdown where he lay-\nThe little Lord Jesus asleep on the\n\thay.The cattle are lowing, the baby\n\tawakes,\nBut the little Lord Jesus no crying\n\the makes.\nI love Thee, Lord Jesus! Look\n\tdown from the sky.\nAnd stay by my cradle till morning\n\tis nigh.\nBe near me, Lord Jesus, I ask Thee\n\tto stay,\nClose by me forever and love me, I\n\tpray;\nBless all the dear children in Thy\n\ttender care.\nAnd fit us for heaven, to live with\n\tThee there.',
   },
   {
-    "_id": "QtsQyniiDduRW7KeZ",
-    "order": 4,
-    "grade": "0",
-    "author": "Rev. Samuel Smith",
-    "title": "America",
-    "poem": "My country ‘tis of thee\nSweet land of liberty:\n   Of thee I sing.\nLand where my fathers died\nLand of the Pilgrims’ pride\nFrom every mountainside\n   Let freedom ring.\n\nOur fathers’ God to thee\nAuthor of liberty\n   To thee we sing.\nLong may our land be bright\nWith freedom’s holy light\nProtect us by thy might\n   Great God, our King."
+    _id: 'QtsQyniiDduRW7KeZ',
+    order: 4,
+    grade: '0',
+    author: 'Rev. Samuel Smith',
+    title: 'America',
+    poem:
+      'My country ‘tis of thee\nSweet land of liberty:\n   Of thee I sing.\nLand where my fathers died\nLand of the Pilgrims’ pride\nFrom every mountainside\n   Let freedom ring.\n\nOur fathers’ God to thee\nAuthor of liberty\n   To thee we sing.\nLong may our land be bright\nWith freedom’s holy light\nProtect us by thy might\n   Great God, our King.',
   },
   {
-    "_id": "NowSz4q9xvcRhSFsF",
-    "order": 5,
-    "grade": "0",
-    "author": "Sara J. Hale",
-    "title": "Mary's Lamb",
-    "poem": "Mary had a little lamb,\nIt’s fleece was white as snow;\nAnd everywhere that Mary went,\nthe lamb was sure to go.\n\nHe followed her to school one day.\nWhich was against the rule;\nIt made the children laugh and play\nto see a lamb at school.\n\nAnd so the teacher turned him out,\nbut still he lingered near,\nAnd waited patiently about\ntill Mary did appear.\n\n“What makes the lamb love Mary\nso?”\nThe eager children cried,\n“Oh, Mary loves the lamb, you\nknow,”\nthe teacher quick replied."
+    _id: 'NowSz4q9xvcRhSFsF',
+    order: 5,
+    grade: '0',
+    author: 'Sara J. Hale',
+    title: "Mary's Lamb",
+    poem:
+      'Mary had a little lamb,\nIt’s fleece was white as snow;\nAnd everywhere that Mary went,\nthe lamb was sure to go.\n\nHe followed her to school one day.\nWhich was against the rule;\nIt made the children laugh and play\nto see a lamb at school.\n\nAnd so the teacher turned him out,\nbut still he lingered near,\nAnd waited patiently about\ntill Mary did appear.\n\n“What makes the lamb love Mary\nso?”\nThe eager children cried,\n“Oh, Mary loves the lamb, you\nknow,”\nthe teacher quick replied.',
   },
   {
-    "_id": "afesaZpD4BGGGKDtr",
-    "order": 6,
-    "grade": "0",
-    "author": "Robert Lewis Stevenson",
-    "title": "The Swing",
-    "poem": "How do you like to go up in a swing,\n   Up in the air so blue?\nOh, I do think it the pleasantest \n   thing\n   Ever a child can do!\n\nUp in the air and over the wall,\n   Till I can see so wide,\nRivers and trees and cattle and all\n   Over the countryside-\n\nTill I look down on the garden\n   green\n  Down on the roof so brown-\nUp in the air I go flying again,\n   Up in the air and down!"
+    _id: 'afesaZpD4BGGGKDtr',
+    order: 6,
+    grade: '0',
+    author: 'Robert Lewis Stevenson',
+    title: 'The Swing',
+    poem:
+      'How do you like to go up in a swing,\n   Up in the air so blue?\nOh, I do think it the pleasantest \n   thing\n   Ever a child can do!\n\nUp in the air and over the wall,\n   Till I can see so wide,\nRivers and trees and cattle and all\n   Over the countryside-\n\nTill I look down on the garden\n   green\n  Down on the roof so brown-\nUp in the air I go flying again,\n   Up in the air and down!',
   },
   {
-    "_id": "tFLRviCxbgpLcMx98",
-    "order": 1,
-    "grade": "1",
-    "author": "Robert Louis Stevenson",
-    "title": "Autumn Fires",
-    "poem": "In the other gardens \nAnd all up the vale, \nFrom the autumn bonfires \nSee the smoke trail! \n\nPleasant summer over \nAnd all the summer flowers, \nThe red fire blazes, \nThe grey smoke towers. \nSing a song of seasons! \n\nSomething bright in all! \nFlowers in the summer, \nFires in the fall! "
+    _id: 'tFLRviCxbgpLcMx98',
+    order: 1,
+    grade: '1',
+    author: 'Robert Louis Stevenson',
+    title: 'Autumn Fires',
+    poem:
+      'In the other gardens \nAnd all up the vale, \nFrom the autumn bonfires \nSee the smoke trail! \n\nPleasant summer over \nAnd all the summer flowers, \nThe red fire blazes, \nThe grey smoke towers. \nSing a song of seasons! \n\nSomething bright in all! \nFlowers in the summer, \nFires in the fall! ',
   },
   {
-    "_id": "dJ5fpxTNopa8zcgLQ",
-    "order": 2,
-    "grade": "1",
-    "author": "Mcguffy Reader",
-    "title": "Work While You Work",
-    "poem": "Work while you work,\nPlay while you play,\nOne thing each time,\nThat is the way.\n\nAll that you do,\nDo with your might,\nThings done by halves,\nAre not done right."
+    _id: 'dJ5fpxTNopa8zcgLQ',
+    order: 2,
+    grade: '1',
+    author: 'Mcguffy Reader',
+    title: 'Work While You Work',
+    poem:
+      'Work while you work,\nPlay while you play,\nOne thing each time,\nThat is the way.\n\nAll that you do,\nDo with your might,\nThings done by halves,\nAre not done right.',
   },
   {
-    "_id": "c2okGeC6tCrMy5PfL",
-    "order": 3,
-    "grade": "1",
-    "author": "Robert Louis Stevenson",
-    "title": "Bed in Summer",
-    "poem": `In winter I get up at night\nAnd dress by yellow candle-light.\nIn summer quite the other way,\nI have to go to bed by day.\n\nI have to go to bed and see\nThe birds still hopping on the tree,\nOr hear the grown-up people’s feet\nStill going past me in the street.\n\nAnd does it not seem hard to you,\nWhen all the sky is clean and blue,\nAnd I should like so much to play,\nTo have to go to bed by day?`
+    _id: 'c2okGeC6tCrMy5PfL',
+    order: 3,
+    grade: '1',
+    author: 'Robert Louis Stevenson',
+    title: 'Bed in Summer',
+    poem:
+      'In winter I get up at night\nAnd dress by yellow candle-light.\nIn summer quite the other way,\nI have to go to bed by day.\n\nI have to go to bed and see\nThe birds still hopping on the tree,\nOr hear the grown-up people’s feet\nStill going past me in the street.\n\nAnd does it not seem hard to you,\nWhen all the sky is clean and blue,\nAnd I should like so much to play,\nTo have to go to bed by day?',
   },
   {
-    "_id": "PTr6nshJQW4Kfrvy6",
-    "order": 4,
-    "grade": "1",
-    "author": "Robert Louis Stevenson",
-    "title": "Whole Duty of Children",
-    "poem": "A child should always say what's true \nAnd speak when he is spoken to, \nAnd behave mannerly at table; \nAt least as far as he is able."
+    _id: 'PTr6nshJQW4Kfrvy6',
+    order: 4,
+    grade: '1',
+    author: 'Robert Louis Stevenson',
+    title: 'Whole Duty of Children',
+    poem:
+      "A child should always say what's true \nAnd speak when he is spoken to, \nAnd behave mannerly at table; \nAt least as far as he is able.",
   },
   {
-    "_id": "6YpBWQfvuSdqMLWga",
-    "order": 5,
-    "grade": "1",
-    "author": "R.L. Stevenson",
-    "title": "At the Seaside",
-    "poem": "When I was down beside the sea,\nA wooden spade they gave to me\nTo dig the sandy shore.\nMy holes were empty like a cup,\nIn every hole the sea came up,\nTill it could come no more."
+    _id: '6YpBWQfvuSdqMLWga',
+    order: 5,
+    grade: '1',
+    author: 'R.L. Stevenson',
+    title: 'At the Seaside',
+    poem:
+      'When I was down beside the sea,\nA wooden spade they gave to me\nTo dig the sandy shore.\nMy holes were empty like a cup,\nIn every hole the sea came up,\nTill it could come no more.',
   },
   {
-    "_id": "TadTbwpL8zK2JKsHd",
-    "order": 6,
-    "grade": "1",
-    "author": "Bible",
-    "title": "Shepherd's Song - Psalm 23 (KJV)",
-    "poem": "The LORD Is My Shepherd\nA Psalm of David\nThe Holy Bible:  King James Version\n\nv.1  The LORD is my shepherd; I shall not want.\nv.2  He maketh me to lie down in green pastures;\nHe leadeth me beside the still waters.\nv.3  He restoreth my soul;\nHe leadeth me in the paths of righteousness \nfor his name’s sake.\nv.4  Yea, though I walk through the valley of the shadow of death,\nI will fear no evil: for thou art with me;\nThy rod and thy staff they comfort me.\nv. 5  Thou preparest a table before me in the presence of mine enemies:\nThou anointest my head with oil;\nMy cup runneth over.\nv.6  Surely goodness and mercy shall follow me all the days of My life;\nand I will dwell in the house of the Lord forever."
+    _id: 'TadTbwpL8zK2JKsHd',
+    order: 6,
+    grade: '1',
+    author: 'Bible',
+    title: "Shepherd's Song - Psalm 23 (KJV)",
+    poem:
+      'The LORD Is My Shepherd\nA Psalm of David\nThe Holy Bible:  King James Version\n\nv.1  The LORD is my shepherd; I shall not want.\nv.2  He maketh me to lie down in green pastures;\nHe leadeth me beside the still waters.\nv.3  He restoreth my soul;\nHe leadeth me in the paths of righteousness \nfor his name’s sake.\nv.4  Yea, though I walk through the valley of the shadow of death,\nI will fear no evil: for thou art with me;\nThy rod and thy staff they comfort me.\nv. 5  Thou preparest a table before me in the presence of mine enemies:\nThou anointest my head with oil;\nMy cup runneth over.\nv.6  Surely goodness and mercy shall follow me all the days of My life;\nand I will dwell in the house of the Lord forever.',
   },
   {
-    "_id": "NbZe6rkM7Zjs8Z3XR",
-    "order": 7,
-    "grade": "1",
-    "author": "Sara Coleridge",
-    "title": "The Months",
-    "poem": "August brings the sheaves of corn,\nThen the harvest home is born.\n\nWarm September brings the fruit,\nSportsmen then begin to shoot.\n\nFresh October brings the pheasant,\nThen to gather nuts is pleasant.\n\nDull November brings the blast’\nThen the leaves are whirling fast.\n\nChill December brings the sleet,\nBlazing fire and Christmas treat.\n\nJanuary brings the snow,\nMakes our feet and fingers glow.\n\nFebruary brings the rain,\nThaws the frozen lake again.\n\nMarch brings breezes, loud and shrill,\nStir the dancing daffodil.\n\nApril brings the primrose sweet,\nScatters daisies at our feet.\n\nMay brings flocks of pretty lambs,\nSkipping by their fleecy dams."
+    _id: 'NbZe6rkM7Zjs8Z3XR',
+    order: 7,
+    grade: '1',
+    author: 'Sara Coleridge',
+    title: 'The Months',
+    poem:
+      'August brings the sheaves of corn,\nThen the harvest home is born.\n\nWarm September brings the fruit,\nSportsmen then begin to shoot.\n\nFresh October brings the pheasant,\nThen to gather nuts is pleasant.\n\nDull November brings the blast’\nThen the leaves are whirling fast.\n\nChill December brings the sleet,\nBlazing fire and Christmas treat.\n\nJanuary brings the snow,\nMakes our feet and fingers glow.\n\nFebruary brings the rain,\nThaws the frozen lake again.\n\nMarch brings breezes, loud and shrill,\nStir the dancing daffodil.\n\nApril brings the primrose sweet,\nScatters daisies at our feet.\n\nMay brings flocks of pretty lambs,\nSkipping by their fleecy dams.',
   },
   {
-    "_id": "9tpQz43wSbG4ThHdW",
-    "order": 8,
-    "grade": "1",
-    "author": "Katherine Lee Bates",
-    "title": "America the Beautiful",
-    "poem": "O beautiful for spacious skies,\nFor amber waves of grain,\nFor purple mountain majesties\nAbove the fruited plain!\n\nAmerica! America!\nGod shed His grace on thee,\nAnd crown thy good with brotherhood\nFrom sea to shining sea!"
+    _id: '9tpQz43wSbG4ThHdW',
+    order: 8,
+    grade: '1',
+    author: 'Katherine Lee Bates',
+    title: 'America the Beautiful',
+    poem:
+      'O beautiful for spacious skies,\nFor amber waves of grain,\nFor purple mountain majesties\nAbove the fruited plain!\n\nAmerica! America!\nGod shed His grace on thee,\nAnd crown thy good with brotherhood\nFrom sea to shining sea!',
   },
   {
-    "_id": "5u9Fw49c5r34r8o3a",
-    "order": 9,
-    "grade": "1",
-    "author": null,
-    "title": "Song based on\nPsalm 119:105 (KJV)",
-    "poem": "Thy Word is a LAMP unto my \nfeet and a LIGHT unto my path.\nWhen I am afraid, think I’ve lost my way,\n still your there right beside me.\nNothing will I FEAR, as long as you are near,\n please be near me to the end.\nThy Word is a LAMP unto my\n feet and a LIGHT unto my path.\nI will not forget Your love for me and yet,\n my heart is forever wandering.\nJesus be my guide, hold me to your side, \nand I will love you to the end.\nThy Word is a LAMP unto my\n feet and a LIGHT unto my path."
+    _id: '5u9Fw49c5r34r8o3a',
+    order: 9,
+    grade: '1',
+    author: null,
+    title: 'Song based on\nPsalm 119:105 (KJV)',
+    poem:
+      'Thy Word is a LAMP unto my \nfeet and a LIGHT unto my path.\nWhen I am afraid, think I’ve lost my way,\n still your there right beside me.\nNothing will I FEAR, as long as you are near,\n please be near me to the end.\nThy Word is a LAMP unto my\n feet and a LIGHT unto my path.\nI will not forget Your love for me and yet,\n my heart is forever wandering.\nJesus be my guide, hold me to your side, \nand I will love you to the end.\nThy Word is a LAMP unto my\n feet and a LIGHT unto my path.',
   },
   {
-    "_id": "SvhrYn2PruWLkKafo",
-    "order": 10,
-    "grade": "1",
-    "author": null,
-    "title": "Aesop’s Fable—taken from Proverbs 16:18\n\"Pride goeth before destruction.\"",
-    "poem": "One hot day, a stag came to a lake to drink. \n\nThe water was so clear that he could see himself in it. \n\n“Oh what beautiful antlers I have!” he cried. “How strong and graceful they are!  And they spread out like the branches of a tree!  But what homely legs I have!   So long and so thin!” \n\nJust then the stag heard the horn of the hunters.  \n\nAway flew the stag.  How swiftly his long legs carried him!\n\nBut the beautiful antlers caught in the tree.  And before he could get them free, the hunters caught up with him. \n\n “These miserable antlers!”  cried he, as the hunter shot him.  “I was so proud of them but they have been the death of me.” "
+    _id: 'SvhrYn2PruWLkKafo',
+    order: 10,
+    grade: '1',
+    author: null,
+    title:
+      'Aesop’s Fable—taken from Proverbs 16:18\n"Pride goeth before destruction."',
+    poem:
+      'One hot day, a stag came to a lake to drink. \n\nThe water was so clear that he could see himself in it. \n\n“Oh what beautiful antlers I have!” he cried. “How strong and graceful they are!  And they spread out like the branches of a tree!  But what homely legs I have!   So long and so thin!” \n\nJust then the stag heard the horn of the hunters.  \n\nAway flew the stag.  How swiftly his long legs carried him!\n\nBut the beautiful antlers caught in the tree.  And before he could get them free, the hunters caught up with him. \n\n “These miserable antlers!”  cried he, as the hunter shot him.  “I was so proud of them but they have been the death of me.” ',
   },
   {
-    "_id": "DG62uJ4WDvFPRM6fs",
-    "order": 11,
-    "grade": "1",
-    "author": "Francis Scott Key",
-    "title": "Star Spangled Banner",
-    "poem": "National Anthem of the United States of America\n\nOh, say, can you see, by the dawn's early light, \nWhat so proudly we hail'd at the twilight's last gleaming? \nWhose broad stripes and bright stars, thro' the perilous fight, \nO'er the ramparts we watch'd, were so gallantly streaming? \nAnd the rockets' red glare, the bombs bursting in air, \nGave proof thro' the night that our flag was still there. \nO say, does that star-spangled banner yet wave \nO'er the land of the free and the home of the brave."
+    _id: 'DG62uJ4WDvFPRM6fs',
+    order: 11,
+    grade: '1',
+    author: 'Francis Scott Key',
+    title: 'Star Spangled Banner',
+    poem:
+      "National Anthem of the United States of America\n\nOh, say, can you see, by the dawn's early light, \nWhat so proudly we hail'd at the twilight's last gleaming? \nWhose broad stripes and bright stars, thro' the perilous fight, \nO'er the ramparts we watch'd, were so gallantly streaming? \nAnd the rockets' red glare, the bombs bursting in air, \nGave proof thro' the night that our flag was still there. \nO say, does that star-spangled banner yet wave \nO'er the land of the free and the home of the brave.",
   },
   {
-    "_id": "5r9vFjgF3nARG29BA",
-    "order": 12,
-    "grade": "1",
-    "author": "Bible",
-    "title": "Old Testament Books",
-    "poem": "Genesis\nExodus\nLeviticus\nNumbers\nDeuteronomy\nJoshua\nJudges\nRuth\n1 Samuel\n2 Samuel\n1 Kings\n2 Kings \n1 Chronicles\n2 Chronicles \nEzra\nNehemiah\nEsther\nJob\nPsalms\nProverbs\nEcclesiastes\nSong of Solomon\nIsaiah\nJeremiah\nLamentations\nEzekiel\nDaniel\nHosea\nJoel\nAmos\nObadiah\nJonah\nMicah\nNahum\nHabakkuk\nZephaniah\nHaggai\nZechariah\nMalachi "
+    _id: '5r9vFjgF3nARG29BA',
+    order: 12,
+    grade: '1',
+    author: 'Bible',
+    title: 'Old Testament Books',
+    poem:
+      'Genesis\nExodus\nLeviticus\nNumbers\nDeuteronomy\nJoshua\nJudges\nRuth\n1 Samuel\n2 Samuel\n1 Kings\n2 Kings \n1 Chronicles\n2 Chronicles \nEzra\nNehemiah\nEsther\nJob\nPsalms\nProverbs\nEcclesiastes\nSong of Solomon\nIsaiah\nJeremiah\nLamentations\nEzekiel\nDaniel\nHosea\nJoel\nAmos\nObadiah\nJonah\nMicah\nNahum\nHabakkuk\nZephaniah\nHaggai\nZechariah\nMalachi ',
   },
   {
-    "_id": "v4AN3vwbHzHN7KohB",
-    "order": 13,
-    "grade": "1",
-    "author": "Bible",
-    "title": "New Testament Books",
-    "poem": "Matthew\nMark\nLuke\nJohn\nActs\nRomans\n1 Corinthians\n2 Corinthians\nGalatians\nEphesians\nPhilippians\nColossians\n1 Thessalonians\n2 Thessalonians\n1 Timothy\n2 Timothy\nTitus\nPhilemon\nHebrews\nJames\n1 Peter\n2 Peter \n1 John\n2 John\n3 John \nJude\nRevelation"
+    _id: 'v4AN3vwbHzHN7KohB',
+    order: 13,
+    grade: '1',
+    author: 'Bible',
+    title: 'New Testament Books',
+    poem:
+      'Matthew\nMark\nLuke\nJohn\nActs\nRomans\n1 Corinthians\n2 Corinthians\nGalatians\nEphesians\nPhilippians\nColossians\n1 Thessalonians\n2 Thessalonians\n1 Timothy\n2 Timothy\nTitus\nPhilemon\nHebrews\nJames\n1 Peter\n2 Peter \n1 John\n2 John\n3 John \nJude\nRevelation',
   },
   {
-    "_id": "v4AN3vwbHzsf5wohB",
-    "order": 14,
-    "grade": "1",
-    "author": "Amy Grant",
-    "title": "Psalm 119:105",
-    "poem": "Thy Word is a lamp unto my feet and a light unto my path.  When I am afraid, think I’ve lost my way, still your there right beside me.  Nothing will I fear, as long as you are near, please be near me to the end.  They Word is a lamp unto my feet and a light unto my path.  I will not forget Your love for me and yet, my heart is forever wandering.  Jesus be my guide, hold me to your side and I will love you to the end.  They Word is a lamp unto my feet and a light unto my path."
+    _id: 'v4AN3vwbHzsf5wohB',
+    order: 14,
+    grade: '1',
+    author: 'Amy Grant',
+    title: 'Psalm 119:105',
+    poem:
+      'Thy Word is a lamp unto my feet and a light unto my path.  When I am afraid, think I’ve lost my way, still your there right beside me.  Nothing will I fear, as long as you are near, please be near me to the end.  They Word is a lamp unto my feet and a light unto my path.  I will not forget Your love for me and yet, my heart is forever wandering.  Jesus be my guide, hold me to your side and I will love you to the end.  They Word is a lamp unto my feet and a light unto my path.',
   },
   {
-    "_id": "PTr6nshJQW4Kfrvy5",
-    "order": 1,
-    "grade": "2",
-    "author": "Robert Louis Stevenson",
-    "title": "Whole Duty of Children",
-    "poem": "A child should always say what's true\n \nAnd speak when he is spoken to,\n \nAnd behave mannerly at table;\n \nAt least as far as he is able."
+    _id: 'PTr6nshJQW4Kfrvy5',
+    order: 1,
+    grade: '2',
+    author: 'Robert Louis Stevenson',
+    title: 'Whole Duty of Children',
+    poem:
+      "A child should always say what's true\n \nAnd speak when he is spoken to,\n \nAnd behave mannerly at table;\n \nAt least as far as he is able.",
   },
   {
-    "_id": "ZSZFJrGuntuCH53iG",
-    "order": 2,
-    "grade": "2",
-    "author": "",
-    "title": "I'm a little Brown Toad",
-    "poem": "I’m a little brown toad,\nAnd I live all alone,\nI hop, hop, and hop,\nFrom stone to stone.\n \nI have a happy grin\nAs I hop down the road,\nFor I’m glad, glad, glad\nI’m a little brown toad."
+    _id: 'ZSZFJrGuntuCH53iG',
+    order: 2,
+    grade: '2',
+    author: '',
+    title: "I'm a little Brown Toad",
+    poem:
+      'I’m a little brown toad,\nAnd I live all alone,\nI hop, hop, and hop,\nFrom stone to stone.\n \nI have a happy grin\nAs I hop down the road,\nFor I’m glad, glad, glad\nI’m a little brown toad.',
   },
   {
-    "_id": "wQbnJdTd6Sb5tayBd",
-    "order": 3,
-    "grade": "2",
-    "author": "",
-    "title": "Apple",
-    "poem": `I know a fruit that grows on trees,
+    _id: 'wQbnJdTd6Sb5tayBd',
+    order: 3,
+    grade: '2',
+    author: '',
+    title: 'Apple',
+    poem: `I know a fruit that grows on trees,
 An apple is its name, oh!
 A-P-P-L-E,
 A-P-P-L-E,
@@ -217,15 +240,15 @@ Or apple pie with apples!
 A-P-P-L-E,
 A-P-P-L-E,
 A-P-P-L-E,
-An apple is its name, oh!`
+An apple is its name, oh!`,
   },
   {
-    "_id": "DiLPyT2JZwft6H9sB",
-    "order": 4,
-    "grade": "2",
-    "author": "",
-    "title": "Pyramids",
-    "poem": `How did they build the pyramids
+    _id: 'DiLPyT2JZwft6H9sB',
+    order: 4,
+    grade: '2',
+    author: '',
+    title: 'Pyramids',
+    poem: `How did they build the pyramids
 Without bulldozers, forklifts, or cranes?
 How did they move those mountains of stone?
 The mystery boggles our brains.
@@ -240,15 +263,15 @@ Erected as tombs for pharaohs of old,
 These wonderful structures still stand.
  
 Created 5,000 years in the past,
-Their secrets are lost in the sand.`
+Their secrets are lost in the sand.`,
   },
   {
-    "_id": "6Yxg6M59Ft6BGbwM8",
-    "order": 5,
-    "grade": "2",
-    "author": "William Blake",
-    "title": "The Lamb",
-    "poem": `Little Lamb, who made thee?
+    _id: '6Yxg6M59Ft6BGbwM8',
+    order: 5,
+    grade: '2',
+    author: 'William Blake',
+    title: 'The Lamb',
+    poem: `Little Lamb, who made thee?
 Dost thou know who made thee;
 Gave thee life and bid thee feed
 By the stream and o’er the mead;
@@ -266,27 +289,27 @@ He is meek and He is mild;
 He became a little child.
 We are called by His name.
 Little Lamb, God bless thee.
-Little Lamb, God bless thee.`
+Little Lamb, God bless thee.`,
   },
   {
-    "_id": "yMEsGQMui7ZnaGnPq",
-    "order": 6,
-    "grade": "2",
-    "author": "A Psalm of Praise",
-    "title": "Psalm 100 (KJV)",
-    "poem": `Make a joyful noise unto the LORD, all ye lands.
+    _id: 'yMEsGQMui7ZnaGnPq',
+    order: 6,
+    grade: '2',
+    author: 'A Psalm of Praise',
+    title: 'Psalm 100 (KJV)',
+    poem: `Make a joyful noise unto the LORD, all ye lands.
 2  Serve the LORD with gladness: come before his presence with singing.
 3  Know ye that the LORD he is God: it is he that hath made us, and not we ourselves; we are his people, and the sheep of his pasture.
 4 Enter into his gates with thanksgiving, and into his courts with praise: be thankful unto him, and bless his name.
-5  For the LORD is good: his mercy is everlasting; and his truth endureth to all generations.`
+5  For the LORD is good: his mercy is everlasting; and his truth endureth to all generations.`,
   },
   {
-    "_id": "NQhEFZPZQsSv55goF",
-    "order": 7,
-    "grade": "2",
-    "author": "Matthew 6:9-13",
-    "title": "The Lord's Prayer (KJV)",
-    "poem": `9       Our Father which art in heaven, Hallowed be they name.
+    _id: 'NQhEFZPZQsSv55goF',
+    order: 7,
+    grade: '2',
+    author: 'Matthew 6:9-13',
+    title: "The Lord's Prayer (KJV)",
+    poem: `9       Our Father which art in heaven, Hallowed be they name.
  
 10   Thy kingdom come, Thy will be done in earth, as it is in heaven.
  
@@ -294,30 +317,30 @@ Little Lamb, God bless thee.`
  
 12   And forgive us our debts, as we forgive our debtors.
  
-13   And lead us not into temptation, but deliver us from evil:  For thine             is the kingdom, and the power and the glory forever.  Amen.`
+13   And lead us not into temptation, but deliver us from evil:  For thine             is the kingdom, and the power and the glory forever.  Amen.`,
   },
   {
-    "_id": "26mm8vcfjuH5xZGmu",
-    "order": 8,
-    "grade": "2",
-    "author": "Matthew 5:3-10",
-    "title": "The Beatitudes (KJV)",
-    "poem": `3  Blessed are the poor in spirit, for theirs is the kingdom of heaven.
+    _id: '26mm8vcfjuH5xZGmu',
+    order: 8,
+    grade: '2',
+    author: 'Matthew 5:3-10',
+    title: 'The Beatitudes (KJV)',
+    poem: `3  Blessed are the poor in spirit, for theirs is the kingdom of heaven.
 4  Blessed are they that mourn, for they shall be comforted.
 5  Blessed are the meek, for they shall inherit the earth.
 6  Blessed are they which do hunger and thirst after righteousness, for they shall be filled.
 7  Blessed are the merciful, for they shall obtain mercy.
 8  Blessed are the pure in heart, for they shall see God.
 9  Blessed are the peacemakers, for they shall be called the children of God.
-10 Blessed are they which are persecuted for righteousness’ sake, for theirs is the kingdom of heaven.`
+10 Blessed are they which are persecuted for righteousness’ sake, for theirs is the kingdom of heaven.`,
   },
   {
-    "_id": "qpucZWpBfkNvMhNxM",
-    "order": 9,
-    "grade": "2",
-    "author": "1 Corinthians 13:4-8, 13",
-    "title": "The Love Chapter (NIV)",
-    "poem": ` 4   Love is patient, love is kind.  It does not Envy, it does not boast, it is not proud.
+    _id: 'qpucZWpBfkNvMhNxM',
+    order: 9,
+    grade: '2',
+    author: '1 Corinthians 13:4-8, 13',
+    title: 'The Love Chapter (NIV)',
+    poem: ` 4   Love is patient, love is kind.  It does not Envy, it does not boast, it is not proud.
  
 5   It is not rude, it is not self-seeking, it is not easily angered, it keeps no record
 of wrongs.
@@ -328,15 +351,15 @@ of wrongs.
  
 8   Love never fails.
  
-13   And now these three remain: faith, hope and love. But the greatest of these is love.`
+13   And now these three remain: faith, hope and love. But the greatest of these is love.`,
   },
   {
-    "_id": "gQRyBGfbQTwRpZPZw",
-    "order": 10,
-    "grade": "2",
-    "author": "Rosemary Carr & Stephen V. Benet",
-    "title": "Thomas Jefferson (Part 1)",
-    "poem": `Thomas Jefferson,
+    _id: 'gQRyBGfbQTwRpZPZw',
+    order: 10,
+    grade: '2',
+    author: 'Rosemary Carr & Stephen V. Benet',
+    title: 'Thomas Jefferson (Part 1)',
+    poem: `Thomas Jefferson,
 What do you say
 Under the gravestone
 Hidden away?
@@ -362,15 +385,15 @@ From buying empires
  
 To planting ‘taters,
 From Declarations
-To trick dumb-waiters.`
+To trick dumb-waiters.`,
   },
   {
-    "_id": "nJrYEBh9toC4pfscM",
-    "order": 11,
-    "grade": "2",
-    "author": "Rosemary Carr & Stephen V. Benet",
-    "title": "Thomas Jefferson (Part 2)",
-    "poem": `“I liked the people,
+    _id: 'nJrYEBh9toC4pfscM',
+    order: 11,
+    grade: '2',
+    author: 'Rosemary Carr & Stephen V. Benet',
+    title: 'Thomas Jefferson (Part 2)',
+    poem: `“I liked the people,
 The sweat and crowd of them,
 Trusted them always
 And spoke aloud of them.”
@@ -403,15 +426,15 @@ You little men!”
 “Design my plow, sirs,
 They use it still,
 Or found my college
-At Charlottesville.”`
+At Charlottesville.”`,
   },
   {
-    "_id": "GE8qnaNnyEvJGriJB",
-    "order": 12,
-    "grade": "2",
-    "author": "Rosemary Carr & Stephen V. Benet",
-    "title": "Thomas Jefferson (Part 3)",
-    "poem": `“And still go questing
+    _id: 'GE8qnaNnyEvJGriJB',
+    order: 12,
+    grade: '2',
+    author: 'Rosemary Carr & Stephen V. Benet',
+    title: 'Thomas Jefferson (Part 3)',
+    poem: `“And still go questing
 New things and thinkers,
 And keep as busy
 As twenty tinkers.”
@@ -439,15 +462,15 @@ Life’s willing servant.”
 “Life, life’s too weighty?
 Too long a haul, sir?
 I lived past eighty.
-I liked it all, sir.”`
+I liked it all, sir.”`,
   },
   {
-    "_id": "jq33yFfQ3CrWwdSXg",
-    "order": 13,
-    "grade": "2",
-    "author": "",
-    "title": "King Tut",
-    "poem": `In 1922,
+    _id: 'jq33yFfQ3CrWwdSXg',
+    order: 13,
+    grade: '2',
+    author: '',
+    title: 'King Tut',
+    poem: `In 1922,
 In the Valley of the Kings,
 They found his tomb still hidden,
 And filled with wondrous things.
@@ -469,15 +492,15 @@ His name was Tutankhamen,
  
 But folks call him King Tut.
 ‘Cause Tutankhamen’s just too long
-To say without a cut.`
+To say without a cut.`,
   },
   {
-    "_id": "pwFqCSP2oMBEprmKC",
-    "order": 14,
-    "grade": "2",
-    "author": "Robert Louis Stevenson",
-    "title": "The Land of Counterpane",
-    "poem": `When I was sick and lay abed,
+    _id: 'pwFqCSP2oMBEprmKC',
+    order: 14,
+    grade: '2',
+    author: 'Robert Louis Stevenson',
+    title: 'The Land of Counterpane',
+    poem: `When I was sick and lay abed,
 I had two pillows at my head,
 And all my toys beside me lay
 To keep me happy all the day.
@@ -495,15 +518,15 @@ And planted cities all about.
 I was the giant great and still
 That sits upon the pillow-hill,
 And sees before him, dale and plain,
-The pleasant land of counterpane.`
+The pleasant land of counterpane.`,
   },
   {
-    "_id": "QjnHvKD2hoLbYsTSr",
-    "order": 1,
-    "grade": "3",
-    "author": "Unknown",
-    "title": "Being Third",
-    "poem": `If we all tried to be 3rd
+    _id: 'QjnHvKD2hoLbYsTSr',
+    order: 1,
+    grade: '3',
+    author: 'Unknown',
+    title: 'Being Third',
+    poem: `If we all tried to be 3rd
 
 instead of number one
 
@@ -525,15 +548,15 @@ and watch the year unfold…
 
 And see how many blessings
 
-that being 3rd will hold!!!`
+that being 3rd will hold!!!`,
   },
   {
-    "_id": "eivXmZ5ePpRz2YrL6",
-    "order": 2,
-    "grade": "3",
-    "author": "James T. Fields",
-    "title": "The Captain's Daughter",
-    "poem": `We were crowded in the cabin  
+    _id: 'eivXmZ5ePpRz2YrL6',
+    order: 2,
+    grade: '3',
+    author: 'James T. Fields',
+    title: "The Captain's Daughter",
+    poem: `We were crowded in the cabin  
 Not a soul would dare to sleep-
 It was midnight on the waters, 
 And a storm was on the deep.  
@@ -556,30 +579,30 @@ Just the same as on the land?”
 Then we kissed the little maiden,
 And we spoke in better cheer,
 And we anchored safe in harbor
-When the morn was shining clear.`
+When the morn was shining clear.`,
   },
   {
-    "_id": "ZwMWZSPFooEXu72CW",
-    "order": 3,
-    "grade": "3",
-    "author": "Emily Dickinson",
-    "title": "I Never Saw A Moor",
-    "poem": `I never saw a moor,
+    _id: 'ZwMWZSPFooEXu72CW',
+    order: 3,
+    grade: '3',
+    author: 'Emily Dickinson',
+    title: 'I Never Saw A Moor',
+    poem: `I never saw a moor,
 I never saw the sea;
 Yet know I how the heather looks,
 And what a wave must be.
 I never spoke with God,
 Nor visited in Heaven;
 Yet certain am I of the spot
-As if the chart were given.`
+As if the chart were given.`,
   },
   {
-    "_id": "SLkh5xRxHS86KDLiR",
-    "order": 4,
-    "grade": "3",
-    "author": "",
-    "title": "Psalm 121 (KJV)",
-    "poem": `1. I will lift up mine eyes unto the hills,
+    _id: 'SLkh5xRxHS86KDLiR',
+    order: 4,
+    grade: '3',
+    author: '',
+    title: 'Psalm 121 (KJV)',
+    poem: `1. I will lift up mine eyes unto the hills,
     From whence cometh my help.
 2. My help cometh from the Lord, which
     Made heaven and earth.
@@ -595,15 +618,15 @@ As if the chart were given.`
      evil: He shall preserve thy soul.
 8.  The Lord shall preserve thy going out
      And thy coming in from this time forth
-     And even for ever more.`
+     And even for ever more.`,
   },
   {
-    "_id": "JGEvKHQstrpgb2SHM",
-    "order": 5,
-    "grade": "3",
-    "author": "Robert Frost",
-    "title": "Stopping By Woods On A Snowy Evening",
-    "poem": `Whose woods these are I think I know,
+    _id: 'JGEvKHQstrpgb2SHM',
+    order: 5,
+    grade: '3',
+    author: 'Robert Frost',
+    title: 'Stopping By Woods On A Snowy Evening',
+    poem: `Whose woods these are I think I know,
 His house is in the village though;
 He will not see me stopping here
 To watch his woods fill up with snow.     
@@ -621,30 +644,30 @@ Of easy wind and downy flake.
 The woods are lovely, dark and deep,
 But I have promises to keep.
 And miles to go before I sleep.
-And miles to go before I sleep.`
+And miles to go before I sleep.`,
   },
   {
-    "_id": "GLzxfX9SWXKTPcgik",
-    "order": 6,
-    "grade": "3",
-    "author": "Christina Rosetti",
-    "title": "My Gift",
-    "poem": `What can I give Him
+    _id: 'GLzxfX9SWXKTPcgik',
+    order: 6,
+    grade: '3',
+    author: 'Christina Rosetti',
+    title: 'My Gift',
+    poem: `What can I give Him
 Poor as I am?
 If I were a shepherd,
 I would give Him a lamb.
 If I were a wise man,
 I would do my part.
 But what can I give Him?
-I will give Him my heart.`
+I will give Him my heart.`,
   },
   {
-    "_id": "6DgJq9hXKqwfQRaP6",
-    "order": 7,
-    "grade": "3",
-    "author": "Robert Louis Stevenson",
-    "title": "The Land of Story Books",
-    "poem": `At evening when the lamp is lit,              
+    _id: '6DgJq9hXKqwfQRaP6',
+    order: 7,
+    grade: '3',
+    author: 'Robert Louis Stevenson',
+    title: 'The Land of Story Books',
+    poem: `At evening when the lamp is lit,              
 Around the fire my parents sit;               
 They sit at home and talk and sing,        
 And do not play at anything.                  
@@ -667,15 +690,15 @@ Around their party prowled about.
 So, when my nurse comes in for me,
 Home I return across the sea,
 And go to bed with backward looks
-At my dear Land of Story Books. `
+At my dear Land of Story Books. `,
   },
   {
-    "_id": "Ybd95wwQ2m2pfnrkE",
-    "order": 8,
-    "grade": "3",
-    "author": "From “The Song of Hiawatha” By Henry Wadsworth Longfellow",
-    "title": "Hiawatha's Childhood",
-    "poem": `By the shores of Gitche Gumee,
+    _id: 'Ybd95wwQ2m2pfnrkE',
+    order: 8,
+    grade: '3',
+    author: 'From “The Song of Hiawatha” By Henry Wadsworth Longfellow',
+    title: "Hiawatha's Childhood",
+    poem: `By the shores of Gitche Gumee,
 By the shining Big-Sea-Water,
 Stood the wigwam of Nokomis,
 Daughter of the Moon, Nokomis.
@@ -709,15 +732,15 @@ In the frosty nights of winter;
 Showed the broad, white road in heaven,
 Pathway of the ghosts, the shadows,
 Running straight across the heavens,
-Crowded with the ghosts, the shadows.`
+Crowded with the ghosts, the shadows.`,
   },
   {
-    "_id": "RQWkKchpbFtu7YW6d",
-    "order": 9,
-    "grade": "3",
-    "author": "Edward Lear",
-    "title": "The Owl and the Pussy Cat",
-    "poem": `The Owl and the Pussy cat went to sea
+    _id: 'RQWkKchpbFtu7YW6d',
+    order: 9,
+    grade: '3',
+    author: 'Edward Lear',
+    title: 'The Owl and the Pussy Cat',
+    poem: `The Owl and the Pussy cat went to sea
 In a beautiful pea-green boat,
 They took some honey, and plenty of money,
 Wrapped up in a five-pound note.
@@ -751,15 +774,15 @@ And hand in hand, on the edge of the sand,
 They danced by the light of the moon,
 The moon,
 The moon,
-They danced by the light of the moon.`
+They danced by the light of the moon.`,
   },
   {
-    "_id": "NK5t8eZdATwqjeK7j",
-    "order": 10,
-    "grade": "3",
-    "author": "Robert Lewis Stevenson",
-    "title": "My Shadow",
-    "poem": `I have a little shadow that goes in and out with me,
+    _id: 'NK5t8eZdATwqjeK7j',
+    order: 10,
+    grade: '3',
+    author: 'Robert Lewis Stevenson',
+    title: 'My Shadow',
+    poem: `I have a little shadow that goes in and out with me,
 And what can be the use of him is more than I can see.
 He is very, very like me from the heels up to the head;
 And I see him jump before me, when I jump into my bed.
@@ -777,15 +800,15 @@ I'd think shame to stick to nursie as that shadow sticks to me!
 One morning, very early, before the sun was up,
 I rose and found the shining dew on every buttercup;
 But my lazy little shadow, like an arrant sleepy-head,
-Had stayed at home behind me and was fast asleep in bed.`
+Had stayed at home behind me and was fast asleep in bed.`,
   },
   {
-    "_id": "ddNd3L72ip6vYuSiM",
-    "order": 1,
-    "grade": "4",
-    "author": "Bible",
-    "title": "Psalm 1:1-3",
-    "poem": `Blessed is the man
+    _id: 'ddNd3L72ip6vYuSiM',
+    order: 1,
+    grade: '4',
+    author: 'Bible',
+    title: 'Psalm 1:1-3',
+    poem: `Blessed is the man
 who does not walk in the counsel of the wicked
 or stand in the way of sinners
 or sit in the seat of mockers.
@@ -796,15 +819,15 @@ and on his law he meditates day and night.
 He is like a tree planted by streams of water,
 which yields its fruit in season
 and whose leaf does not wither.
-Whatever he does prospers.`
+Whatever he does prospers.`,
   },
   {
-    "_id": "ETuMz8rKgWTmLcRA9",
-    "order": 2,
-    "grade": "4",
-    "author": "Eugene Field",
-    "title": "The Duel",
-    "poem": `THE GINGHAM dog and the calico cat
+    _id: 'ETuMz8rKgWTmLcRA9',
+    order: 2,
+    grade: '4',
+    author: 'Eugene Field',
+    title: 'The Duel',
+    poem: `THE GINGHAM dog and the calico cat
 Side by side on the table sat;
 'T was half-past twelve, and (what do you think!)
 Nor one nor t' other had slept a wink!
@@ -842,15 +865,15 @@ That burglars stole that pair away!
   Is this: they ate each other up!
 Now what do you really think of that!
   (The old Dutch clock it told me so,
-  And that is how I came to know.)`
+  And that is how I came to know.)`,
   },
   {
-    "_id": "JQNwhXqPu52EyhdSf",
-    "order": 3,
-    "grade": "4",
-    "author": "Rachel Field",
-    "title": "Something Told the Wild Geese",
-    "poem": `Something told the wild geese 
+    _id: 'JQNwhXqPu52EyhdSf',
+    order: 3,
+    grade: '4',
+    author: 'Rachel Field',
+    title: 'Something Told the Wild Geese',
+    poem: `Something told the wild geese 
 It was time to go; 
 Though the fields lay golden 
 Something whispered, - 'snow'. 
@@ -867,15 +890,15 @@ At remembered ice.
 Something told the wild geese 
 It was time to fly - 
 Summer sun was on their wings, 
-Winter in their cry.`
+Winter in their cry.`,
   },
   {
-    "_id": "7ERhnNk6XaWNbikKG",
-    "order": 4,
-    "grade": "4",
-    "author": "Luke 2:1-14",
-    "title": "Luke 2",
-    "poem": `1And it came to pass in those days, that there went out a decree from Caesar Augustus, that all the world should be taxed.
+    _id: '7ERhnNk6XaWNbikKG',
+    order: 4,
+    grade: '4',
+    author: 'Luke 2:1-14',
+    title: 'Luke 2',
+    poem: `1And it came to pass in those days, that there went out a decree from Caesar Augustus, that all the world should be taxed.
  
 2(And this taxing was first made when Cyrenius was governor of Syria.)
  
@@ -901,15 +924,15 @@ Winter in their cry.`
  
 13And suddenly there was with the angel a multitude of the heavenly host praising God, and saying,
  
-14”Glory to God in the highest, and on earth peace, good will toward men.”`
+14”Glory to God in the highest, and on earth peace, good will toward men.”`,
   },
   {
-    "_id": "eykga6Y5E4NJXy7PM",
-    "order": 5,
-    "grade": "4",
-    "author": "Julie Conroy",
-    "title": "The High Calling",
-    "poem": `We are the Ladies of Cair Paravel
+    _id: 'eykga6Y5E4NJXy7PM',
+    order: 5,
+    grade: '4',
+    author: 'Julie Conroy',
+    title: 'The High Calling',
+    poem: `We are the Ladies of Cair Paravel
 We are the Knights of Narnia
 We gather here at the Stone Table
 To be about the Master’s business
@@ -1000,15 +1023,15 @@ So that in the end He will say,” Well Done”
 We are the Ladies of Cair Paravel
 We are the Knights of Narnia
  
-We serve but One`
+We serve but One`,
   },
   {
-    "_id": "EchcKjmhJ2aJtWRZz",
-    "order": 6,
-    "grade": "4",
-    "author": "",
-    "title": "Prayer of St. Francis",
-    "poem": `Lord, make me an instrument of Thy peace;
+    _id: 'EchcKjmhJ2aJtWRZz',
+    order: 6,
+    grade: '4',
+    author: '',
+    title: 'Prayer of St. Francis',
+    poem: `Lord, make me an instrument of Thy peace;
          where there is hatred, let me sow love;
          where there is injury, pardon;
          where there is doubt, faith;
@@ -1016,15 +1039,15 @@ We serve but One`
          where there is darkness, light;
          where there is sadness, joy.
  
-O Divine Master: Grant that I may not so much seek to be consoled as to console; to be understood as to understand; to be loved as to love; for it is in giving that we receive; it is in pardoning that we are pardoned; and it is in dying that we are born to eternal life.`
+O Divine Master: Grant that I may not so much seek to be consoled as to console; to be understood as to understand; to be loved as to love; for it is in giving that we receive; it is in pardoning that we are pardoned; and it is in dying that we are born to eternal life.`,
   },
   {
-    "_id": "C9vjZYz68cNZ7EB96",
-    "order": 7,
-    "grade": "4",
-    "author": "",
-    "title": "I Corinthians 13",
-    "poem": `1 If I speak in the tongues of men and of angels, but have not love,
+    _id: 'C9vjZYz68cNZ7EB96',
+    order: 7,
+    grade: '4',
+    author: '',
+    title: 'I Corinthians 13',
+    poem: `1 If I speak in the tongues of men and of angels, but have not love,
 I am only a resounding gong or a clanging cymbal.
  
 2 If I have the gift of prophecy
@@ -1064,15 +1087,15 @@ Now I know in part; then I shall know fully,
 even as I am fully known.
  
 13 And now these three remain: faith, hope and love.
-But the greatest of these is love.`
+But the greatest of these is love.`,
   },
   {
-    "_id": "8aBjG7NXowC5NcQz5",
-    "order": 8,
-    "grade": "4",
-    "author": "",
-    "title": "May the Road Rise Up to Meet You",
-    "poem": `May the road rise to meet you.
+    _id: '8aBjG7NXowC5NcQz5',
+    order: 8,
+    grade: '4',
+    author: '',
+    title: 'May the Road Rise Up to Meet You',
+    poem: `May the road rise to meet you.
 May the wind be always at your back.
 May the sun shine warm upon your face.
 The rains fall soft upon your fields
@@ -1092,15 +1115,15 @@ And may the hand of your friend always be near.
 May green be the grass you walk on.
 May blue be the skies above you.
 May pure be the joys that surround you.
-May true be the hearts that love you.`
+May true be the hearts that love you.`,
   },
   {
-    "_id": "toypTeiTcX2XQ8JGq",
-    "order": 9,
-    "grade": "4",
-    "author": "Rudyard Kipling",
-    "title": "If",
-    "poem": `If you can keep your head when all about you
+    _id: 'toypTeiTcX2XQ8JGq',
+    order: 9,
+    grade: '4',
+    author: 'Rudyard Kipling',
+    title: 'If',
+    poem: `If you can keep your head when all about you
 Are losing theirs and blaming it on you;
 If you can trust yourself when all men doubt you,
 But make allowance for their doubting too:
@@ -1134,15 +1157,15 @@ If all men count with you, but none too much:
 If you can fill the unforgiving minute
 With sixty seconds' worth of distance run,
 Yours is the Earth and everything that's in it,
-And - which is more - you'll be a Man, my son!`
+And - which is more - you'll be a Man, my son!`,
   },
   {
-    "_id": "TwL7fxrAwFrED66jL",
-    "order": 10,
-    "grade": "4",
-    "author": "Lyrics by Ray Charles",
-    "title": "Fifty Nifty United States",
-    "poem": `Fifty Nifty United States from thirteen original colonies, 
+    _id: 'TwL7fxrAwFrED66jL',
+    order: 10,
+    grade: '4',
+    author: 'Lyrics by Ray Charles',
+    title: 'Fifty Nifty United States',
+    poem: `Fifty Nifty United States from thirteen original colonies, 
 Fifty Nifty stars in the flag that billows so beautifully in the breeze.
 Each individual state contributes a quality that is great! 
 Each individual state deserves a bow: We salute them now! 
@@ -1168,15 +1191,15 @@ Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin, Wyoming
 North, South, East, West in a common objective opinion KANSAS
 Is the Best of the Fifty Nifty United States from thirteen original colonies
 Shout 'em, scout 'em, tell all about 'em
-One by One, till we've given a day to every state in the good ol' U…S…A…`
+One by One, till we've given a day to every state in the good ol' U…S…A…`,
   },
   {
-    "_id": "Zd9agaTMiMpdxfkun",
-    "order": 1,
-    "grade": "5",
-    "author": "Henry Wadsworth Longfellow",
-    "title": "The Children's Hour",
-    "poem": `Between the dark and the daylight,
+    _id: 'Zd9agaTMiMpdxfkun',
+    order: 1,
+    grade: '5',
+    author: 'Henry Wadsworth Longfellow',
+    title: "The Children's Hour",
+    poem: `Between the dark and the daylight,
 When the night is beginning to lower,
 Comes a pause in the day’s occupations
 That is known as the Children’s Hour.
@@ -1224,15 +1247,15 @@ In the round-tower of my heart.
 And there I will keep you forever,
 Yes, forever and a day,
 Till the wall shall crumb to ruin,
-And molder in dust away!`
+And molder in dust away!`,
   },
   {
-    "_id": "KQg9n7c6iNpan78q5",
-    "order": 3,
-    "grade": "5",
-    "author": "Proverbs 3:1-18",
-    "title": "Proverbs 3",
-    "poem": `1 My son, do not forget my teaching, 
+    _id: 'KQg9n7c6iNpan78q5',
+    order: 3,
+    grade: '5',
+    author: 'Proverbs 3:1-18',
+    title: 'Proverbs 3',
+    poem: `1 My son, do not forget my teaching, 
        but keep my commands in your heart,
  2 for they will prolong your life many years 
        and bring you prosperity.
@@ -1268,15 +1291,15 @@ And molder in dust away!`
  17 Her ways are pleasant ways, 
        and all her paths are peace.
  18 She is a tree of life to those who embrace her; 
-       those who lay hold of her will be blessed.`
+       those who lay hold of her will be blessed.`,
   },
   {
-    "_id": "Yj8JeZZLeSAXJjbeC",
-    "order": 4,
-    "grade": "5",
-    "author": "Cecil Frances Alexander",
-    "title": "The Creation",
-    "poem": `All things bright and beautiful,
+    _id: 'Yj8JeZZLeSAXJjbeC',
+    order: 4,
+    grade: '5',
+    author: 'Cecil Frances Alexander',
+    title: 'The Creation',
+    poem: `All things bright and beautiful,
 All creatures, great and small
 All things wise and wonderful,
 The Lord God made them all.
@@ -1309,15 +1332,15 @@ We gather every day,
 He gave us eyes to see them,
 And lips that we might tell
 How great is God Almighty,
-Who has made all things well`
+Who has made all things well`,
   },
   {
-    "_id": "DXN6JZJBK7FSTorrh",
-    "order": 5,
-    "grade": "5",
-    "author": "Henry Wadsworth Longfellow",
-    "title": "Paul Revere’s Ride",
-    "poem": `Listen my children and you shall hear
+    _id: 'DXN6JZJBK7FSTorrh',
+    order: 5,
+    grade: '5',
+    author: 'Henry Wadsworth Longfellow',
+    title: 'Paul Revere’s Ride',
+    poem: `Listen my children and you shall hear
 Of the midnight ride of Paul Revere,
 On the eighteenth of April, in Seventy-five;
 Hardly a man is now alive
@@ -1403,48 +1426,49 @@ Struck out by a steed flying fearless and fleet;
 That was all! And yet, through the gloom and the light,
 The fate of a nation was riding that night;
 And the spark struck out by that steed, in his flight,
-Kindled the land into flame with its heat.`
+Kindled the land into flame with its heat.`,
   },
   {
-    "_id": "XfiTGtvyJLmb7QsPh",
-    "order": 1,
-    "grade": "6",
-    "author": "",
-    "title": "A Morning Prayer",
-    "poem": `Almighty God, I am thankful for this breath You have given me today.  Guide my steps, because I can’t do this on my own.  Open my eyes today so I can see You and the hurting who need Your hand.  Open my ears so I can hear You in the cries of the lonely and broken.  Place me in Your service today, God.  Give me the wisdom to say the right things.  Fill me with the courage to act.  Don’t let me stall.  Remind me to follow through.  Prod me to be Your hands and Your words to each life You present to me today.  Through Christ’s sacrifice, I pray to You, Father God.`
+    _id: 'XfiTGtvyJLmb7QsPh',
+    order: 1,
+    grade: '6',
+    author: '',
+    title: 'A Morning Prayer',
+    poem:
+      'Almighty God, I am thankful for this breath You have given me today.  Guide my steps, because I can’t do this on my own.  Open my eyes today so I can see You and the hurting who need Your hand.  Open my ears so I can hear You in the cries of the lonely and broken.  Place me in Your service today, God.  Give me the wisdom to say the right things.  Fill me with the courage to act.  Don’t let me stall.  Remind me to follow through.  Prod me to be Your hands and Your words to each life You present to me today.  Through Christ’s sacrifice, I pray to You, Father God.',
   },
   {
-    "_id": "J2AEHq6T7toKe6Aca",
-    "order": 2,
-    "grade": "6",
-    "author": "Abraham Lincoln",
-    "title": "The Gettysburg Address",
-    "poem": `Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
+    _id: 'J2AEHq6T7toKe6Aca',
+    order: 2,
+    grade: '6',
+    author: 'Abraham Lincoln',
+    title: 'The Gettysburg Address',
+    poem: `Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
 Now we are engaged in a great civil war, testing whether that nation or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.
-But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.`
+But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.`,
   },
   {
-    "_id": "mWSMfLCyrsnHLZLXC",
-    "order": 3,
-    "grade": "6",
-    "author": "Emily Dickinson",
-    "title": "A Book",
-    "poem": `There is no frigate like a book
+    _id: 'mWSMfLCyrsnHLZLXC',
+    order: 3,
+    grade: '6',
+    author: 'Emily Dickinson',
+    title: 'A Book',
+    poem: `There is no frigate like a book
 To take us lands away,
 Nor any coursers like a page
 Of prancing poetry.
 This traverse may the poorest take
 Without oppress of toll; 
 How frugal is the chariot
-That bears a human soul!`
+That bears a human soul!`,
   },
   {
-    "_id": "PEreYwooiFsFdDQL8",
-    "order": 4,
-    "grade": "6",
-    "author": "Edgar A. Guest",
-    "title": "Equipment",
-    "poem": `As read by Dr. Carver during a commencement address at Selma University in 1942
+    _id: 'PEreYwooiFsFdDQL8',
+    order: 4,
+    grade: '6',
+    author: 'Edgar A. Guest',
+    title: 'Equipment',
+    poem: `As read by Dr. Carver during a commencement address at Selma University in 1942
 Figure it out for yourself, my lad,
 You’ve all that the greatest of men have had,
 Two arms, two hands, two legs, two eyes
@@ -1478,15 +1502,15 @@ The man must furnish the will to win.
 So figure it out for yourself, my lad.
 You were born with all that the great have had,
 With your equipment they all began,
-Get hold of yourself and say, “I can.”`
+Get hold of yourself and say, “I can.”`,
   },
   {
-    "_id": "G7ZozozTeNuXXvSsn",
-    "order": 5,
-    "grade": "6",
-    "author": "By: Lieutenant Colonel John McCrae, MD (1872-1918)  Canadian Army",
-    "title": "In Flanders Fields",
-    "poem": `IN FLANDERS FIELDS the poppies blow 
+    _id: 'G7ZozozTeNuXXvSsn',
+    order: 5,
+    grade: '6',
+    author: 'By: Lieutenant Colonel John McCrae, MD (1872-1918)  Canadian Army',
+    title: 'In Flanders Fields',
+    poem: `IN FLANDERS FIELDS the poppies blow 
 Between the crosses row on row, 
 That mark our place; and in the sky 
 The larks, still bravely singing, fly 
@@ -1500,15 +1524,15 @@ To you from failing hands we throw
 The torch; be yours to hold it high. 
 If ye break faith with us who die 
 We shall not sleep, though poppies grow 
-In Flanders fields.`
+In Flanders fields.`,
   },
   {
-    "_id": "BTX9YhNwNiRtLYEmk",
-    "order": 6,
-    "grade": "6",
-    "author": "William Wordsworth",
-    "title": "Daffodils",
-    "poem": `I wander’d lonely as a cloud
+    _id: 'BTX9YhNwNiRtLYEmk',
+    order: 6,
+    grade: '6',
+    author: 'William Wordsworth',
+    title: 'Daffodils',
+    poem: `I wander’d lonely as a cloud
 That floats on high o'er vales and hills,
 When all at once I saw a crowd,
 A host, of golden daffodils;
@@ -1531,15 +1555,15 @@ In vacant or in pensive mood,
 They flash upon that inward eye
 Which is the bliss of solitude;
 And then my heart with pleasure fills,
-And dances with the daffodils.`
+And dances with the daffodils.`,
   },
   {
-    "_id": "tf9ginQ5hpFFQ3GCf",
-    "order": 7,
-    "grade": "6",
-    "author": "William Wordsworth",
-    "title": "My Heart Leaps Up",
-    "poem": `My heart leaps up when I behold
+    _id: 'tf9ginQ5hpFFQ3GCf',
+    order: 7,
+    grade: '6',
+    author: 'William Wordsworth',
+    title: 'My Heart Leaps Up',
+    poem: `My heart leaps up when I behold
 A rainbow in the sky:
 So was it when my life began;
 So is it now I am a man;
@@ -1547,15 +1571,15 @@ So be it when I shall grow old,
 Or let me die!
 The Child is father of the man;
 And I could wish my days to be
-Bound each to each by natural piety.`
+Bound each to each by natural piety.`,
   },
   {
-    "_id": "dAejzZiG4csYjtJEM",
-    "order": 8,
-    "grade": "6",
-    "author": "",
-    "title": "Psalm 27:1-5, 14",
-    "poem": `The Lord is my light and my salvation;
+    _id: 'dAejzZiG4csYjtJEM',
+    order: 8,
+    grade: '6',
+    author: '',
+    title: 'Psalm 27:1-5, 14',
+    poem: `The Lord is my light and my salvation;
 Whom shall I fear?
 The Lord is the strength of my life;
 Of whom shall I be afraid?
@@ -1582,15 +1606,15 @@ He shall set me high upon rock.
 Wait on the Lord;
 Be of good courage,
 And He shall strengthen your heart;
-Wait, I say, on the Lord!`
+Wait, I say, on the Lord!`,
   },
   {
-    "_id": "8mJ6iRc3RxySecYpE",
-    "order": 9,
-    "grade": "6",
-    "author": "By Henry Wadsworth Longfellow",
-    "title": "THE VILLAGE BLACKSMITH",
-    "poem": `Under a spreading chestnut-tree
+    _id: '8mJ6iRc3RxySecYpE',
+    order: 9,
+    grade: '6',
+    author: 'By Henry Wadsworth Longfellow',
+    title: 'THE VILLAGE BLACKSMITH',
+    poem: `Under a spreading chestnut-tree
 The village smithy stands;                    
 The smith, a mighty man is he,
 With large and sinewy hands;
@@ -1644,15 +1668,15 @@ For the lesson thou hast taught!
 Thus at the flaming forge of life
 Our fortunes must be wrought;
 Thus on its sounding anvil shaped
-Each burning deed and thought!`
+Each burning deed and thought!`,
   },
   {
-    "_id": "Yqwe62FtTvBw6dh6f",
-    "order": 10,
-    "grade": "6",
-    "author": "By Henry Wadsworth Longfellow",
-    "title": "The Arrow and the Song",
-    "poem": `I shot an arrow into the air,
+    _id: 'Yqwe62FtTvBw6dh6f',
+    order: 10,
+    grade: '6',
+    author: 'By Henry Wadsworth Longfellow',
+    title: 'The Arrow and the Song',
+    poem: `I shot an arrow into the air,
 It fell to earth, I know not where;
 For, so swiftly it flew, the sight
 Could not follow it in its flight.
@@ -1665,24 +1689,24 @@ That it can follow the flight of song?
 Long, long afterward, in an oak
 I found the arrow, still unbroke;
 And the song, from beginning to end,
-I found again in the heart of a friend.`
+I found again in the heart of a friend.`,
   },
   {
-    "_id": "bHceAZcgGvYeRqrhR",
-    "order": 11,
-    "grade": "6",
-    "author": "William Tyler Page",
-    "title": "The American’s Creed",
-    "poem": `"I believe in the United States of America as a government of the people, by the people, for the people; whose just powers are derived from the consent of the governed; a democracy in a republic; a sovereign Nation of many sovereign States; a perfect union, one and inseparable; established upon those principles of freedom, equality, justice, and humanity for which American patriots sacrificed their lives and fortunes.
-I therefore believe it is my duty to my country to love it, to support its Constitution, to obey its laws, to respect its flag, and to defend it against all enemies."`
+    _id: 'bHceAZcgGvYeRqrhR',
+    order: 11,
+    grade: '6',
+    author: 'William Tyler Page',
+    title: 'The American’s Creed',
+    poem: `"I believe in the United States of America as a government of the people, by the people, for the people; whose just powers are derived from the consent of the governed; a democracy in a republic; a sovereign Nation of many sovereign States; a perfect union, one and inseparable; established upon those principles of freedom, equality, justice, and humanity for which American patriots sacrificed their lives and fortunes.
+I therefore believe it is my duty to my country to love it, to support its Constitution, to obey its laws, to respect its flag, and to defend it against all enemies."`,
   },
   {
-    "_id": "SseMSTD49kPNRt8ne",
-    "order": 12,
-    "grade": "6",
-    "author": "Ben Johnson (1573-1637)",
-    "title": "It Is Not Growing Like a Tree",
-    "poem": `It is not growing like a tree
+    _id: 'SseMSTD49kPNRt8ne',
+    order: 12,
+    grade: '6',
+    author: 'Ben Johnson (1573-1637)',
+    title: 'It Is Not Growing Like a Tree',
+    poem: `It is not growing like a tree
 In bulk, doth make Man better be;
 Or standing long an oak, three hundred year,
 To fall a log at last, dry, bald, and sere;
@@ -1691,15 +1715,15 @@ Is fairer far in May,
 Although it fall and die that night-
 It was the plant and flower of Light.
 In small proportions we just beauties see;
-And in short measures life may perfect be`
+And in short measures life may perfect be`,
   },
   {
-    "_id": "sJgqtvcTqDjNPMGx5",
-    "order": 13,
-    "grade": "6",
-    "author": "Lewis Carroll",
-    "title": "How Doth the Little Crocodile",
-    "poem": `How doth the little crocodile
+    _id: 'sJgqtvcTqDjNPMGx5',
+    order: 13,
+    grade: '6',
+    author: 'Lewis Carroll',
+    title: 'How Doth the Little Crocodile',
+    poem: `How doth the little crocodile
 Improve his shining tail,
 And pour the waters of the Nile
 On every golden scale!
@@ -1707,15 +1731,15 @@ On every golden scale!
 How cheerfully he seems to grin,
 How neatly spread his claws,
 And welcome little fishes in
-With gently smiling jaws!`
+With gently smiling jaws!`,
   },
   {
-    "_id": "kXgSbtcEBA2ejpn7j",
-    "order": 1,
-    "grade": "7",
-    "author": "Emily Dickinson",
-    "title": "The Goal",
-    "poem": `Each life converges to some centre
+    _id: 'kXgSbtcEBA2ejpn7j',
+    order: 1,
+    grade: '7',
+    author: 'Emily Dickinson',
+    title: 'The Goal',
+    poem: `Each life converges to some centre
 Expressed or still;
 Exists in every human nature
 A goal,
@@ -1738,15 +1762,15 @@ The sky!
 Ungained, it may be, by a life's low venture,
 But then,
 Eternity enables the endeavoring
-Again.`
+Again.`,
   },
   {
-    "_id": "uW5iYWjTmjt3oc4GT",
-    "order": 2,
-    "grade": "7",
-    "author": "A. E. HOUSMAN",
-    "title": "To an Athlete Dying Young",
-    "poem": `The time you won your town the race 
+    _id: 'uW5iYWjTmjt3oc4GT',
+    order: 2,
+    grade: '7',
+    author: 'A. E. HOUSMAN',
+    title: 'To an Athlete Dying Young',
+    poem: `The time you won your town the race 
 We chaired you through the market-place; 
 Man and boy stood cheering by, 
 And home we brought you shoulder-high. 
@@ -1779,15 +1803,16 @@ The still-defended challenge-cup.
 And round that early-laurelled head 
 Will flock to gaze the strengthless dead, 
 And find unwithered on its curls
-The garland briefer than a girl's`
+The garland briefer than a girl's`,
   },
   {
-    "_id": "snyyr2Au63dKknMwE",
-    "order": 3,
-    "grade": "7",
-    "author": "Lewis Carrol (from Through the Looking-Glass and What Alice Found There, 1872)",
-    "title": "JABBERWOCKY",
-    "poem": `\`Twas brillig, and the slithy toves
+    _id: 'snyyr2Au63dKknMwE',
+    order: 3,
+    grade: '7',
+    author:
+      'Lewis Carrol (from Through the Looking-Glass and What Alice Found There, 1872)',
+    title: 'JABBERWOCKY',
+    poem: `\`Twas brillig, and the slithy toves
     Did gyre and gimble in the wabe:
   All mimsy were the borogoves,
     And the mome raths outgrabe.
@@ -1816,15 +1841,15 @@ He chortled in his joy.
   \`Twas brillig, and the slithy toves
   Did gyre and gimble in the wabe;
 All mimsy were the borogoves,
-  And the mome raths outgrabe.`
+  And the mome raths outgrabe.`,
   },
   {
-    "_id": "LXtGb2oscap5YFaZ2",
-    "order": 4,
-    "grade": "7",
-    "author": "by Robert Frost",
-    "title": "Carpe Diem",
-    "poem": `Age saw two quiet children 
+    _id: 'LXtGb2oscap5YFaZ2',
+    order: 4,
+    grade: '7',
+    author: 'by Robert Frost',
+    title: 'Carpe Diem',
+    poem: `Age saw two quiet children 
 Go loving by at twilight, 
 He knew not whether homeward, 
 Or outward from the village, 
@@ -1849,15 +1874,15 @@ And less in both together
 Than in the past. The present 
 Is too much for the senses, 
 Too crowding, too confusing- 
-Too present to imagine.`
+Too present to imagine.`,
   },
   {
-    "_id": "geRasqoMY69frd9wN",
-    "order": 5,
-    "grade": "7",
-    "author": "Lord Byron (1788–1824).  Poetry of Byron.  1881",
-    "title": "Vision of Belshazzar",
-    "poem": `THE KING was on his throne,
+    _id: 'geRasqoMY69frd9wN',
+    order: 5,
+    grade: '7',
+    author: 'Lord Byron (1788–1824).  Poetry of Byron.  1881',
+    title: 'Vision of Belshazzar',
+    poem: `THE KING was on his throne,
   The Satraps throng’d the hall;
 A thousand bright lamps shone
   O’er that high festival.
@@ -1909,15 +1934,15 @@ He, in the balance weigh’d,
 The shroud, his robe of state,
   His canopy the stone;
 The Mede is at his gate!
-  The Persian on his throne!”`
+  The Persian on his throne!”`,
   },
   {
-    "_id": "Tn5DNaiyPCNQgJrMX",
-    "order": 6,
-    "grade": "7",
-    "author": "by Edgar Allan Poe",
-    "title": "The Coliseum",
-    "poem": `Type of the antique Rome! Rich reliquary
+    _id: 'Tn5DNaiyPCNQgJrMX',
+    order: 6,
+    grade: '7',
+    author: 'by Edgar Allan Poe',
+    title: 'The Coliseum',
+    poem: `Type of the antique Rome! Rich reliquary
 Of lofty contemplation left to Time
 By buried centuries of pomp and power!
 At length- at length- after so many days
@@ -1966,15 +1991,15 @@ Not all the wonder that encircles us-
 Not all the mysteries that in us lie-
 Not all the memories that hang upon
 And cling around about us as a garment,
-Clothing us in a robe of more than glory.' `
+Clothing us in a robe of more than glory.' `,
   },
   {
-    "_id": "WdDTNJfeRE9dQTp6v",
-    "order": 7,
-    "grade": "7",
-    "author": "by LORD BYRON (GEORGE GORDON)",
-    "title": "The Destruction of Sennacherib",
-    "poem": `The Assyrian came down like the wolf on the fold, 
+    _id: 'WdDTNJfeRE9dQTp6v',
+    order: 7,
+    grade: '7',
+    author: 'by LORD BYRON (GEORGE GORDON)',
+    title: 'The Destruction of Sennacherib',
+    poem: `The Assyrian came down like the wolf on the fold, 
 And his cohorts were gleaming in purple and gold; 
 And the sheen of their spears was like stars on the sea, 
 When the blue wave rolls nightly on deep Galilee. 
@@ -2002,15 +2027,15 @@ The lances unlifted, the trumpet unblown.
    And the widows of Ashur are loud in their wail, 
 And the idols are broke in the temple of Baal; 
 And the might of the Gentile, unsmote by the sword, 
-Hath melted like snow in the glance of the Lord!`
+Hath melted like snow in the glance of the Lord!`,
   },
   {
-    "_id": "z4Xfm362Dh4mhTZru",
-    "order": 1,
-    "grade": "8",
-    "author": "Robert Burns",
-    "title": "A Red, Red Rose",
-    "poem": `Oh my luve is like a red, red rose,
+    _id: 'z4Xfm362Dh4mhTZru',
+    order: 1,
+    grade: '8',
+    author: 'Robert Burns',
+    title: 'A Red, Red Rose',
+    poem: `Oh my luve is like a red, red rose,
 That's newly sprung in June: 
 Oh my luve is like the melodie, 
 That's sweetly play'd in tune. 
@@ -2031,15 +2056,15 @@ While the sands o' life shall run.
 And fare thee weel, my only luve! 
 And fare thee weel a while! 
 And I will come again, my luve, 
-Tho' it were ten thousand mile`
+Tho' it were ten thousand mile`,
   },
   {
-    "_id": "tcXFsZeECF6TdGSXb",
-    "order": 2,
-    "grade": "8",
-    "author": "Rudyard Kipling",
-    "title": "If",
-    "poem": `If you can keep your head when all about you 
+    _id: 'tcXFsZeECF6TdGSXb',
+    order: 2,
+    grade: '8',
+    author: 'Rudyard Kipling',
+    title: 'If',
+    poem: `If you can keep your head when all about you 
 Are losing theirs and blaming it on you; 
 If you can trust yourself when all men doubt you, 
 But make allowance for their doubting too; 
@@ -2073,15 +2098,15 @@ If all men count with you, but none too much;
 If you can fill the unforgiving minute 
 With sixty seconds' worth of distance run - 
 Yours is the Earth and everything that's in it, 
-And - which is more - you'll be a Man my son!`
+And - which is more - you'll be a Man my son!`,
   },
   {
-    "_id": "sorywZCz8j7FAJSEL",
-    "order": 3,
-    "grade": "8",
-    "author": "Emily Dickinson",
-    "title": "I Never Saw A Moor",
-    "poem": `I never saw a moor,
+    _id: 'sorywZCz8j7FAJSEL',
+    order: 3,
+    grade: '8',
+    author: 'Emily Dickinson',
+    title: 'I Never Saw A Moor',
+    poem: `I never saw a moor,
 I never saw the sea;
 Yet know I how the heather looks
 And what a wave must be.
@@ -2089,15 +2114,15 @@ And what a wave must be.
 I never spoke with God,
 Nor visited in heaven;
 Yet certain am I of the spot
-As if the chart were given.`
+As if the chart were given.`,
   },
   {
-    "_id": "juTykQQCzoTQpvwnj",
-    "order": 4,
-    "grade": "8",
-    "author": "William Wordsworth",
-    "title": "My Heart Leaps Up",
-    "poem": `My heart leaps up when I behold
+    _id: 'juTykQQCzoTQpvwnj',
+    order: 4,
+    grade: '8',
+    author: 'William Wordsworth',
+    title: 'My Heart Leaps Up',
+    poem: `My heart leaps up when I behold
 A rainbow in the sky.
 So was it when my life began;
 So is it now I am a man;
@@ -2105,15 +2130,15 @@ So be it when I grow old,
 Or let me die!
 The Child is father of the Man;
 And I could wish my days to be
-Bound each to each by natural piety.`
+Bound each to each by natural piety.`,
   },
   {
-    "_id": "kuJJomnR3sQBAyhji",
-    "order": 5,
-    "grade": "8",
-    "author": "Anonymous",
-    "title": "Try, Try Again",
-    "poem": `'Tis a lesson you should heed,
+    _id: 'kuJJomnR3sQBAyhji',
+    order: 5,
+    grade: '8',
+    author: 'Anonymous',
+    title: 'Try, Try Again',
+    poem: `'Tis a lesson you should heed,
 Try, try again;
 If at first you don't succeed,
 Try, try again;
@@ -2136,15 +2161,15 @@ Try, try again.
 All that other folks can do,
 Why, with patience, should not you?
 Only keep this rule in view;
-Try, try again.`
+Try, try again.`,
   },
   {
-    "_id": "GLtTouCqP4sM7npA5",
-    "order": 6,
-    "grade": "8",
-    "author": "J.R.R. Tolkien",
-    "title": "I Sit and Think",
-    "poem": `I sit beside the fire and think 
+    _id: 'GLtTouCqP4sM7npA5',
+    order: 6,
+    grade: '8',
+    author: 'J.R.R. Tolkien',
+    title: 'I Sit and Think',
+    poem: `I sit beside the fire and think 
 of all that I have seen, 
 of meadow-flowers and butterflies 
 in summers that have been; 
@@ -2171,15 +2196,15 @@ that I shall never know.
 But all the while I sit and think 
 of times there were before, 
 I listen for returning feet 
-and voices at the door.`
+and voices at the door.`,
   },
   {
-    "_id": "P5AaX6jeNjiMKgZ4C",
-    "order": 7,
-    "grade": "8",
-    "author": "James R. Lowell",
-    "title": "Once To Every Man and Nation",
-    "poem": `Once to every man and nation, comes the moment to decide,
+    _id: 'P5AaX6jeNjiMKgZ4C',
+    order: 7,
+    grade: '8',
+    author: 'James R. Lowell',
+    title: 'Once To Every Man and Nation',
+    poem: `Once to every man and nation, comes the moment to decide,
 In the strife of truth with falsehood, for the good or evil side;
 Some great cause, some great decision, offering each the bloom or blight,
 And the choice goes by forever, ’twixt that darkness and that light.
@@ -2197,6 +2222,6 @@ They must upward still and onward, who would keep abreast of truth.
 Though the cause of evil prosper, yet the truth alone is strong;
 Though her portion be the scaffold, and upon the throne be wrong;
 Yet that scaffold sways the future, and behind the dim unknown,
-Standeth God within the shadow, keeping watch above His own.`
-  }
-]
+Standeth God within the shadow, keeping watch above His own.`,
+  },
+];

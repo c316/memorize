@@ -10,9 +10,9 @@ import {
   Linking
 } from 'react-native';
 import { Icon } from 'react-native-elements';
-import { verses } from './assets/verses';
+import { verses } from '../assets/verses';
 
-import { getWeek, scale, moderateScale, verticalScale } from './miscFunctions';
+import { getWeek, moderateScale, verticalScale } from '../miscFunctions';
 
 const { width, height } = Dimensions.get('window');
 
@@ -21,7 +21,7 @@ class Verses extends React.Component {
     super(props);
     this.state = { showVerse: 0 };
   }
-  componentDidMount() {
+  componentWillMount() {
     const week = getWeek();
     const year = new Date().getFullYear();
     // Find the first verse that matches today's year and week
@@ -32,8 +32,9 @@ class Verses extends React.Component {
       return null;
     });
 
+    let nearestGreaterWeekVerse;
     if (!thisVerse) {
-      var nearestGreaterWeekVerse = verses.find((verse) => {
+      nearestGreaterWeekVerse = verses.find((verse) => {
         if (verse.week > week && verse.year === year) {
           return verse;
         }
@@ -88,8 +89,9 @@ class Verses extends React.Component {
       useThisVerse.dateRange.end.day
     }/${useThisVerse.year}`);
 
-    const dateFrom =
-      `${monthNames[startDate.getMonth()]} ${startDate.getDate()}`;
+    const dateFrom = `${
+      monthNames[startDate.getMonth()]
+    } ${startDate.getDate()}`;
 
     let dateTo;
     if (
@@ -108,82 +110,82 @@ class Verses extends React.Component {
     let bookImagePath;
     switch (useThisVerse.book) {
     case '1 Corinthians':
-      bookImagePath = require('./assets/images/bible/1Corinthians.png');
+      bookImagePath = require('../assets/images/bible/1Corinthians.png');
       break;
     case '1 John':
-      bookImagePath = require('./assets/images/bible/1John.png');
+      bookImagePath = require('../assets/images/bible/1John.png');
       break;
     case '1 Peter':
-      bookImagePath = require('./assets/images/bible/1Peter.png');
+      bookImagePath = require('../assets/images/bible/1Peter.png');
       break;
     case '1 Thessalonians':
-      bookImagePath = require('./assets/images/bible/1Thessalonians.png');
+      bookImagePath = require('../assets/images/bible/1Thessalonians.png');
       break;
     case '2 Corinthians':
-      bookImagePath = require('./assets/images/bible/1Corinthians.png');
+      bookImagePath = require('../assets/images/bible/1Corinthians.png');
       break;
     case '2 Thessalonians':
-      bookImagePath = require('./assets/images/bible/2Thessalonians.png');
+      bookImagePath = require('../assets/images/bible/2Thessalonians.png');
       break;
     case '2 Timothy':
-      bookImagePath = require('./assets/images/bible/2Timothy.png');
+      bookImagePath = require('../assets/images/bible/2Timothy.png');
       break;
     case 'Acts':
-      bookImagePath = require('./assets/images/bible/Acts.png');
+      bookImagePath = require('../assets/images/bible/Acts.png');
       break;
     case 'Colossians':
-      bookImagePath = require('./assets/images/bible/Colossians.png');
+      bookImagePath = require('../assets/images/bible/Colossians.png');
       break;
     case 'Ephesians':
-      bookImagePath = require('./assets/images/bible/Ephesians.png');
+      bookImagePath = require('../assets/images/bible/Ephesians.png');
       break;
     case 'Galatians':
-      bookImagePath = require('./assets/images/bible/Galatians.png');
+      bookImagePath = require('../assets/images/bible/Galatians.png');
       break;
     case 'Genesis':
-      bookImagePath = require('./assets/images/bible/Genesis.png');
+      bookImagePath = require('../assets/images/bible/Genesis.png');
       break;
     case 'Hebrews':
-      bookImagePath = require('./assets/images/bible/Hebrews.png');
+      bookImagePath = require('../assets/images/bible/Hebrews.png');
       break;
     case 'Isaiah':
-      bookImagePath = require('./assets/images/bible/Isaiah.png');
+      bookImagePath = require('../assets/images/bible/Isaiah.png');
       break;
     case 'James':
-      bookImagePath = require('./assets/images/bible/James.png');
+      bookImagePath = require('../assets/images/bible/James.png');
       break;
     case 'John':
-      bookImagePath = require('./assets/images/bible/John.png');
+      bookImagePath = require('../assets/images/bible/John.png');
       break;
     case 'Leviticus':
-      bookImagePath = require('./assets/images/bible/Leviticus.png');
+      bookImagePath = require('../assets/images/bible/Leviticus.png');
       break;
     case 'Luke':
-      bookImagePath = require('./assets/images/bible/Luke.png');
+      bookImagePath = require('../assets/images/bible/Luke.png');
       break;
     case 'Mark':
-      bookImagePath = require('./assets/images/bible/Mark.png');
+      bookImagePath = require('../assets/images/bible/Mark.png');
       break;
     case 'Matthew':
-      bookImagePath = require('./assets/images/bible/Matthew.png');
+      bookImagePath = require('../assets/images/bible/Matthew.png');
       break;
     case 'Nahum':
-      bookImagePath = require('./assets/images/bible/Nahum.png');
+      bookImagePath = require('../assets/images/bible/Nahum.png');
       break;
     case 'Numbers':
-      bookImagePath = require('./assets/images/bible/Numbers.png');
+      bookImagePath = require('../assets/images/bible/Numbers.png');
       break;
     case 'Philippians':
-      bookImagePath = require('./assets/images/bible/Philippians.png');
+      bookImagePath = require('../assets/images/bible/Philippians.png');
       break;
     case 'Proverbs':
-      bookImagePath = require('./assets/images/bible/Proverbs.png');
+      bookImagePath = require('../assets/images/bible/Proverbs.png');
       break;
     case 'Psalm':
-      bookImagePath = require('./assets/images/bible/Psalm.png');
+      bookImagePath = require('../assets/images/bible/Psalm.png');
       break;
     case 'Romans':
-      bookImagePath = require('./assets/images/bible/Romans.png');
+      bookImagePath = require('../assets/images/bible/Romans.png');
       break;
     }
 
@@ -208,9 +210,10 @@ class Verses extends React.Component {
             activeOpacity={75 / 100}
             underlayColor="rgb(210,210,210)"
           >
-            <Text style={styles.h3}>{`${useThisVerse.book} ${
-              useThisVerse.chapter
-            }:${useThisVerse.startVerse}${endVerse} (ESV)`}
+            <Text style={styles.h3}>
+              {`${useThisVerse.book} ${useThisVerse.chapter}:${
+                useThisVerse.startVerse
+              }${endVerse} (ESV)`}
             </Text>
           </TouchableHighlight>
         </View>

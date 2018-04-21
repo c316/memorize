@@ -8,68 +8,25 @@
 *  test on other devices
 * */
 
-import React from "react";
-import { Button, Platform, StatusBar, StyleSheet, View } from "react-native";
-import { Icon } from "react-native-elements";
-import { TabNavigator, SafeAreaView } from "react-navigation";
-import Home from "./Home";
-import Poems from "./Poems";
-import Verses from "./Verses";
-import MathScreens from "./screens/MathScreens";
-import { styles } from "./styles/styles";
+import React from 'react';
+import { StatusBar, View } from 'react-native';
+import { Icon } from 'react-native-elements';
+import { TabNavigator } from 'react-navigation';
+import HomeScreen from './screens/HomeScreen';
+import PoemsScreen from './screens/PoemsScreen';
+import VersesScreen from './screens/VersesScreen';
+import MathScreens from './screens/MathScreens';
+import { styles } from './styles/styles';
 
-class HomeScreen extends React.Component {
-  static navigationOptions = {
-    tabBarLabel: "Home",
-    // Note: By default the icon is only shown on iOS. Search the showIcon option below.
-    tabBarIcon: ({ tintColor }) => (
-      <Icon name="home" color={tintColor} size={24} />
-    ),
-  };
-
-  render() {
-    return <Home />;
-  }
-}
-
-class PoemsScreen extends React.Component {
-  static navigationOptions = {
-    tabBarLabel: "Poems",
-    tabBarIcon: ({ tintColor }) => (
-      <Icon name="create" color={tintColor} size={24} />
-    ),
-  };
-
-  render() {
-    return (
-      <SafeAreaView>
-        <Poems />
-      </SafeAreaView>
-    );
-  }
-}
-
-class VersesScreen extends React.Component {
-  static navigationOptions = {
-    tabBarLabel: "Verses",
-    tabBarIcon: ({ tintColor }) => (
-      <Icon name="book" color={tintColor} size={20} />
-    ),
-  };
-
-  render() {
-    return <Verses />;
-  }
-}
-
+/* eslint new-cap: "off" */
 const MyApp = TabNavigator(
   {
     MathFacts: {
       screen: MathScreens,
       navigationOptions: {
-        tabBarLabel: "Math",
+        tabBarLabel: 'Math',
         tabBarIcon: ({ tintColor }) => (
-          <Icon name="add" color={tintColor} size={24} />
+          <Icon name="add" color={tintColor} size={20} />
         ),
       },
     },
@@ -87,30 +44,28 @@ const MyApp = TabNavigator(
     tabBarOptions: {
       style: {
         paddingBottom: 2,
-        backgroundColor: "#FFF",
+        backgroundColor: '#FFF',
       },
       tabStyle: {
-        backgroundColor: "#FDFEFE",
+        backgroundColor: '#FDFEFE',
       },
-      activeTintColor: "firebrick",
-      inactiveTintColor: "#074e86",
+      activeTintColor: 'firebrick',
+      inactiveTintColor: '#1c5fa0',
       indicatorStyle: {
-        backgroundColor: "firebrick",
+        backgroundColor: 'firebrick',
       },
       showIcon: true,
     },
   }
 );
 
-const App = () => {
-  return (
-    <View style={styles.container}>
-      <View>
-        <StatusBar hidden backgroundColor={"transparent"} translucent />
-      </View>
-      <MyApp />
+const App = () => (
+  <View style={styles.container}>
+    <View>
+      <StatusBar hidden backgroundColor="transparent" translucent />
     </View>
-  );
-};
+    <MyApp />
+  </View>
+);
 
 export default App;
