@@ -13,6 +13,11 @@ const styles = StyleSheet.create({
     padding: 0,
     borderWidth: 0,
     borderRadius: 5,
+    elevation: 8,
+    shadowOpacity: 0.75,
+    shadowRadius: 5,
+    shadowColor: '#000000',
+    shadowOffset: { height: 2, width: 0 },
   },
   textCenter: {
     textAlign: 'center',

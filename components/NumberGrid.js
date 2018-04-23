@@ -42,6 +42,11 @@ const BigButton = ({ title, onPress }) => (
       borderColor: 'transparent',
       borderWidth: 0,
       borderRadius: 5,
+      shadowOpacity: 0.75,
+      shadowRadius: 5,
+      shadowColor: '#000000',
+      shadowOffset: { height: 2, width: 0 },
+      elevation: 8,
     }}
     containerStyle={{ marginTop: 20 }}
     onPress={onPress}
