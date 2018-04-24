@@ -6,7 +6,7 @@ export default class VersesScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Verses',
     tabBarIcon: ({ tintColor }) => (
-      <Icon name="book" color={tintColor} size={20} />
+      <Icon name="book" color={tintColor} size={18} />
     ),
   };
 
