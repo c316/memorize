@@ -7,7 +7,7 @@
 * */
 
 import React from 'react';
-import { StatusBar, View } from 'react-native';
+import { Platform, StatusBar, View } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { TabNavigator } from 'react-navigation';
 import HomeScreen from './screens/HomeScreen';
@@ -16,9 +16,20 @@ import VersesScreen from './screens/VersesScreen';
 import MathScreens from './screens/MathScreens';
 import { styles } from './styles/styles';
 
+import History from './components/History';
+
 /* eslint new-cap: "off" */
 const MyApp = TabNavigator(
   {
+    Historys: {
+      screen: History,
+      navigationOptions: {
+        tabBarLabel: 'History',
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="history" color={tintColor} size={18} />
+        ),
+      },
+    },
     Verses: {
       screen: VersesScreen,
     },
@@ -30,7 +41,7 @@ const MyApp = TabNavigator(
       navigationOptions: {
         tabBarLabel: 'Math',
         tabBarIcon: ({ tintColor }) => (
-          <Icon name="add" color={tintColor} size={20} />
+          <Icon name="add" color={tintColor} size={18} />
         ),
       },
     },
@@ -46,6 +57,9 @@ const MyApp = TabNavigator(
       },
       tabStyle: {
         backgroundColor: '#FDFEFE',
+      },
+      labelStyle: {
+        fontSize: Platform.OS === 'ios' ? 12 : 9,
       },
       activeTintColor: 'firebrick',
       inactiveTintColor: '#1c5fa0',
