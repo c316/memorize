@@ -1,4 +1,4 @@
-export const poems = [
+const poems = [
   {
     _id: 'fFjk4wdWCWoQaDfQA',
     order: 1,
@@ -2225,3 +2225,5 @@ Yet that scaffold sways the future, and behind the dim unknown,
 Standeth God within the shadow, keeping watch above His own.`,
   },
 ];
+
+export default poems;

@@ -1,24 +1,17 @@
 import React from 'react';
 import PropType from 'prop-types';
-import { Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
-import { List, ListItem } from 'react-native-elements';
-import { poems } from '../assets/poems';
+import { ScrollView, StyleSheet, Text } from 'react-native';
+import { Icon } from 'react-native-elements';
+import poems from '../assets/poems';
 
 const styles = StyleSheet.create({
   center: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 40,
-  },
-  scroll: {
-    marginTop: 0,
-    marginBottom: 140,
   },
   poemTitle: {
     fontSize: 28,
     margin: 10,
-    marginTop: 15,
   },
   poemAuthor: {
     fontSize: 24,
@@ -28,7 +21,10 @@ const styles = StyleSheet.create({
   poem: {
     fontSize: 22,
     margin: 10,
-    marginTop: 30,
+  },
+  leftContainer: {
+    alignSelf: 'flex-start',
+    marginLeft: 10,
   },
 });
 
@@ -43,26 +39,23 @@ class Poem extends React.Component {
     });
 
     return (
-      <View>
-        <List style={{ marginTop: Platform.OS === 'ios' ? 20 : 0 }}>
-          <ListItem
-            key="back"
-            title="Go back"
-            hideChevron
-            leftIcon={{ name: 'chevron-left' }}
+      <React.Fragment>
+        <ScrollView contentContainerStyle={styles.center}>
+          <Icon
+            containerStyle={styles.leftContainer}
+            raised
+            name="chevron-left"
+            type="font-awesome"
+            color="#f50"
             onPress={this.props.onPress}
           />
-        </List>
-        <ScrollView style={styles.scroll}>
-          <View style={styles.center}>
-            <Text style={styles.poemTitle}>{poemObject.title}</Text>
-            {poemObject.author ? (
-              <Text style={styles.poemAuthor}>{poemObject.author}</Text>
-            ) : null}
-            <Text style={styles.poem}>{poemObject.poem}</Text>
-          </View>
+          <Text style={styles.poemTitle}>{poemObject.title}</Text>
+          {poemObject.author ? (
+            <Text style={styles.poemAuthor}>{poemObject.author}</Text>
+          ) : null}
+          <Text style={styles.poem}>{poemObject.poem}</Text>
         </ScrollView>
-      </View>
+      </React.Fragment>
     );
   }
 }

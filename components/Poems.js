@@ -1,8 +1,15 @@
 import React from 'react';
-import { Platform, View, ScrollView } from 'react-native';
-import { List, ListItem } from 'react-native-elements';
-import { poems } from '../assets/poems';
+import { View, ScrollView } from 'react-native';
+import { Icon, List, ListItem } from 'react-native-elements';
+import poems from '../assets/poems';
 import Poem from './Poem';
+
+const styles = {
+  leftContainer: {
+    alignSelf: 'flex-start',
+    marginLeft: 10,
+  },
+};
 
 class Poems extends React.Component {
   constructor(props) {
@@ -95,17 +102,18 @@ class Poems extends React.Component {
         );
       }
       return (
-        <ScrollView style={{ marginTop: Platform.OS === 'ios' ? 20 : 0 }}>
-          <List style={{ marginTop: 0 }}>
-            <ListItem
-              key="back"
-              title="Go back"
-              hideChevron
-              leftIcon={{ name: 'chevron-left' }}
-              onPress={() => {
-                this._clearGradeState();
-              }}
-            />
+        <ScrollView>
+          <Icon
+            containerStyle={styles.leftContainer}
+            raised
+            name="chevron-left"
+            type="font-awesome"
+            color="#f50"
+            onPress={() => {
+              this._clearGradeState();
+            }}
+          />
+          <List>
             {poems.map((l) => {
               if (Number(l.grade) === grade) {
                 return (
@@ -130,10 +138,7 @@ class Poems extends React.Component {
     };
 
     const secondCondition = () => (
-      <List
-        style={{ marginTop: Platform.OS === 'ios' ? 20 : 0 }}
-        containerStyle={{ marginTop: 0 }}
-      >
+      <List containerStyle={{ marginTop: 0 }}>
         {list.map((l, i) => (
           <ListItem
             titleStyle={{

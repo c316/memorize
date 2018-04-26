@@ -21,7 +21,7 @@ import History from './components/History';
 /* eslint new-cap: "off" */
 const MyApp = TabNavigator(
   {
-    Historys: {
+    /*     Historys: {
       screen: History,
       navigationOptions: {
         tabBarLabel: 'History',
@@ -29,7 +29,7 @@ const MyApp = TabNavigator(
           <Icon name="history" color={tintColor} size={18} />
         ),
       },
-    },
+    }, */
     Verses: {
       screen: VersesScreen,
     },
@@ -73,9 +73,7 @@ const MyApp = TabNavigator(
 
 const App = () => (
   <View style={styles.container}>
-    <View>
-      <StatusBar hidden backgroundColor="transparent" translucent />
-    </View>
+    <StatusBar hidden backgroundColor="transparent" translucent />
     <MyApp />
   </View>
 );
