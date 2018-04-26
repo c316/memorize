@@ -2,7 +2,7 @@
   "expo": {
     "name": "CPLS Memorize",
     "icon": "./assets/images/CPLS-Lion-logo-512x512.png",
-    "version": "2.3.5",
+    "version": "2.3.6",
     "slug": "cpls-memorize",
     "sdkVersion": "26.0.0",
     "ios": {
@@ -10,7 +10,7 @@
     },
     "android": {
       "package": "com.joshjoe.memorize",
-      "versionCode": 102026,
+      "versionCode": 102027,
       "permissions": ["com.android.launcher.permission.INSTALL_SHORTCUT"]
     },
     "loading": {

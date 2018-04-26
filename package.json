@@ -1,6 +1,6 @@
 {
   "name": "memorize",
-  "version": "2.3.4",
+  "version": "2.3.6",
   "private": true,
   "devDependencies": {
     "babel-eslint": "8",
@@ -30,7 +30,8 @@
     "expo": "26.0.0",
     "prop-types": "^15.6.1",
     "react": "16.3.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-26.0.0.tar.gz",
+    "react-native":
+      "https://github.com/expo/react-native/archive/sdk-26.0.0.tar.gz",
     "react-native-easy-grid": "^0.1.17",
     "react-native-elements": "^0.19.1",
     "react-navigation": "^1.5.11"
