@@ -16,7 +16,7 @@ import VersesScreen from './screens/VersesScreen';
 import MathScreens from './screens/MathScreens';
 import { styles } from './styles/styles';
 
-import History from './components/History';
+// import History from './components/History';
 
 /* eslint new-cap: "off" */
 const MyApp = TabNavigator(
