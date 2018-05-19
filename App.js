@@ -7,8 +7,8 @@
 * */
 
 import React from 'react';
-import { Platform, StatusBar, View } from 'react-native';
-import { Icon } from 'react-native-elements';
+import { Platform, StatusBar, Text, View } from 'react-native';
+import { Font } from 'expo';
 import { TabNavigator } from 'react-navigation';
 import HomeScreen from './screens/HomeScreen';
 import PoemsScreen from './screens/PoemsScreen';
@@ -16,20 +16,24 @@ import VersesScreen from './screens/VersesScreen';
 import MathScreens from './screens/MathScreens';
 import { styles } from './styles/styles';
 
-// import History from './components/History';
+import History from './components/History';
 
 /* eslint new-cap: "off" */
 const MyApp = TabNavigator(
   {
-    /*     Historys: {
+    Historys: {
       screen: History,
       navigationOptions: {
         tabBarLabel: 'History',
         tabBarIcon: ({ tintColor }) => (
-          <Icon name="history" color={tintColor} size={18} />
+          <Text
+            style={{ fontFamily: 'icomoon', fontSize: 16, color: tintColor }}
+          >
+            &#xe901;
+          </Text>
         ),
       },
-    }, */
+    },
     Verses: {
       screen: VersesScreen,
     },
@@ -41,7 +45,11 @@ const MyApp = TabNavigator(
       navigationOptions: {
         tabBarLabel: 'Math',
         tabBarIcon: ({ tintColor }) => (
-          <Icon name="add" color={tintColor} size={18} />
+          <Text
+            style={{ fontFamily: 'icomoon', fontSize: 16, color: tintColor }}
+          >
+            &#xe900;
+          </Text>
         ),
       },
     },
@@ -67,15 +75,28 @@ const MyApp = TabNavigator(
         backgroundColor: 'firebrick',
       },
       showIcon: true,
+      showLabel: false,
     },
   }
 );
 
-const App = () => (
-  <View style={styles.container}>
-    <StatusBar hidden backgroundColor="transparent" translucent />
-    <MyApp />
-  </View>
-);
+export default class App extends React.Component {
+  state = {
+    fontLoaded: false,
+  };
 
-export default App;
+  async componentDidMount() {
+    await Font.loadAsync({
+      icomoon: require('./assets/fonts/icomoon.ttf'),
+    });
+    this.setState({ fontLoaded: true });
+  }
+  render() {
+    return this.state.fontLoaded ? (
+      <View style={styles.container}>
+        <StatusBar hidden backgroundColor="transparent" translucent />
+        <MyApp />
+      </View>
+    ) : null;
+  }
+}
