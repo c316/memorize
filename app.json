@@ -18,6 +18,10 @@
     },
     "packagerOpts": {
       "assetExts": ["ttf"]
+    },
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "backgroundColor": "#D0021B"
     }
   }
 }

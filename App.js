@@ -14,14 +14,13 @@ import HomeScreen from './screens/HomeScreen';
 import PoemsScreen from './screens/PoemsScreen';
 import VersesScreen from './screens/VersesScreen';
 import MathScreens from './screens/MathScreens';
+// import History from './screens/History';
 import { styles } from './styles/styles';
-
-import History from './components/History';
 
 /* eslint new-cap: "off" */
 const MyApp = TabNavigator(
   {
-    Historys: {
+    /* Historys: {
       screen: History,
       navigationOptions: {
         tabBarLabel: 'History',
@@ -33,7 +32,7 @@ const MyApp = TabNavigator(
           </Text>
         ),
       },
-    },
+    }, */
     Verses: {
       screen: VersesScreen,
     },
@@ -75,7 +74,7 @@ const MyApp = TabNavigator(
         backgroundColor: 'firebrick',
       },
       showIcon: true,
-      showLabel: false,
+      showLabel: true,
     },
   }
 );
@@ -88,6 +87,12 @@ export default class App extends React.Component {
   async componentDidMount() {
     await Font.loadAsync({
       icomoon: require('./assets/fonts/icomoon.ttf'),
+    });
+    await Font.loadAsync({
+      'sf-pro-display': require('./assets/fonts/SF-Pro-Display-Regular.otf'),
+    });
+    await Font.loadAsync({
+      'sf-pro-text': require('./assets/fonts/SF-Pro-Text-Regular.otf'),
     });
     this.setState({ fontLoaded: true });
   }

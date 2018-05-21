@@ -42,9 +42,14 @@ class Verses extends React.Component {
       });
     }
 
-    const useThisVerse = thisVerse || nearestGreaterWeekVerse;
+    const useThisVerse = thisVerse || nearestGreaterWeekVerse || null;
 
-    const index = verses.findIndex(x => x._id === useThisVerse._id);
+    let index;
+    if (useThisVerse) {
+      index = verses.findIndex(x => x._id === useThisVerse._id);
+    } else {
+      index = verses.length - 1;
+    }
 
     // Set the verse to this week's verse
     this.setState({ showVerse: index });
