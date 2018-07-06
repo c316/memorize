@@ -9,16 +9,50 @@
 import React from 'react';
 import { StatusBar, View } from 'react-native';
 import { Icon } from 'react-native-elements';
-import { TabNavigator } from 'react-navigation';
+import { StackNavigator, TabNavigator } from 'react-navigation';
 import HomeScreen from './screens/HomeScreen';
 import PoemsScreen from './screens/PoemsScreen';
 import VersesScreen from './screens/VersesScreen';
 import MathScreens from './screens/MathScreens';
+import TimelineGradeSelectionScreen from './screens/TimelineGradeSelectionScreen';
 import { styles } from './styles/styles';
+import TimelineForGradeScreen from './screens/TimelineForGradeScreen';
+
+const TimelineStack = StackNavigator(
+  {
+    TimelineGradeSelectionScreen: {
+      screen: TimelineGradeSelectionScreen,
+    },
+    TimelineGradeScreen: {
+      screen: TimelineForGradeScreen,
+    },
+  },
+  {
+    initialRouteName: 'TimelineGradeSelectionScreen',
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#2DC76D',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+  }
+);
 
 /* eslint new-cap: "off" */
 const MyApp = TabNavigator(
   {
+    Timeline: {
+      screen: TimelineStack,
+      navigationOptions: {
+        tabBarLabel: 'Timelines',
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="history" color={tintColor} size={20} />
+        ),
+      },
+    },
     Verses: {
       screen: VersesScreen,
     },

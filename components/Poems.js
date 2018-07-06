@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform, View, ScrollView } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
-import { poems } from '../assets/poems';
+import poems from '../assets/poems';
 import Poem from './Poem';
 
 class Poems extends React.Component {
@@ -27,7 +27,7 @@ class Poems extends React.Component {
   }
 
   render() {
-    const list = [
+    const grades = [
       {
         name: 'Kindergarten',
         grade: 0,
@@ -134,7 +134,7 @@ class Poems extends React.Component {
         style={{ marginTop: Platform.OS === 'ios' ? 20 : 0 }}
         containerStyle={{ marginTop: 0 }}
       >
-        {list.map((l, i) => (
+        {grades.map((l, i) => (
           <ListItem
             titleStyle={{
               color: 'rgba(0,0,0,.87)',

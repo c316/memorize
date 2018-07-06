@@ -33,6 +33,7 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-26.0.0.tar.gz",
     "react-native-easy-grid": "^0.1.17",
     "react-native-elements": "^0.19.1",
+    "react-native-timeline-listview": "^0.2.3",
     "react-navigation": "^1.5.11"
   }
 }

@@ -1,4 +1,4 @@
-export const poems = [
+export default [
   {
     _id: 'fFjk4wdWCWoQaDfQA',
     order: 1,
