@@ -44,20 +44,11 @@ const TimelineStack = StackNavigator(
 /* eslint new-cap: "off" */
 const MyApp = TabNavigator(
   {
-    Timeline: {
-      screen: TimelineStack,
-      navigationOptions: {
-        tabBarLabel: 'Timelines',
-        tabBarIcon: ({ tintColor }) => (
-          <Icon name="history" color={tintColor} size={20} />
-        ),
-      },
+    Home: {
+      screen: HomeScreen,
     },
     Verses: {
       screen: VersesScreen,
-    },
-    Poems: {
-      screen: PoemsScreen,
     },
     MathFacts: {
       screen: MathScreens,
@@ -68,8 +59,17 @@ const MyApp = TabNavigator(
         ),
       },
     },
-    Home: {
-      screen: HomeScreen,
+    Timeline: {
+      screen: TimelineStack,
+      navigationOptions: {
+        tabBarLabel: 'Timelines',
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="history" color={tintColor} size={20} />
+        ),
+      },
+    },
+    Poems: {
+      screen: PoemsScreen,
     },
   },
   {
