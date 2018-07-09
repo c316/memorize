@@ -200,6 +200,166 @@ export default [
     grade: 3,
   },
   {
+    time: '386',
+    title: 'St. Augustine Converts to Christianity',
+    grade: 4,
+  },
+  {
+    time: 'c. 400 - 1000',
+    title: 'Barbarian Invasion and Vikings',
+    grade: 4,
+  },
+  {
+    time: '405',
+    title: 'St. Jerome Completes the Vulgate',
+    grade: 4,
+  },
+  {
+    time: '451',
+    title: 'The Council of Chalcedon',
+    grade: 4,
+  },
+  {
+    time: '* c. 540',
+    title: 'St. Benedict and Monasticism',
+    grade: 4,
+  },
+  {
+    time: '527 - 565',
+    title: 'Justinian the Great',
+    grade: 4,
+  },
+  {
+    time: '570 - 632',
+    title: 'Mohammed and Islam',
+    grade: 4,
+  },
+  {
+    time: '714 - 814',
+    title: 'Charles Martel, Pepin the Short, and Charlemagne',
+    grade: 4,
+  },
+  {
+    time: '871 - 901',
+    title: 'Alfred the Great',
+    grade: 4,
+  },
+  {
+    time: '962 - 973',
+    title: 'Otto the I and the Holy Roman Empire',
+    grade: 4,
+  },
+  {
+    time: '1054',
+    title: 'The East-West Schism',
+    grade: 4,
+  },
+  {
+    time: '* c. 1000 - 1400',
+    title: 'The Feudal System',
+    grade: 4,
+  },
+  {
+    time: '1066',
+    title: 'William the Conqueror and the Battle of Hastings',
+    grade: 4,
+  },
+  {
+    time: 'c. 1100',
+    title: 'Cathedrals in Europe',
+    grade: 4,
+  },
+  {
+    time: '* 1095 - c. 1250',
+    title: 'The Crusades',
+    grade: 4,
+  },
+  {
+    time: '1182 - 1224',
+    title: 'St. Francis of Assisi',
+    grade: 4,
+  },
+  {
+    time: '1215',
+    title: 'The Magna Carta',
+    grade: 4,
+  },
+  {
+    time: '1225 - 1274',
+    title: 'St. Thomas Aquinas',
+    grade: 4,
+  },
+  {
+    time: '1254 - 1324',
+    title: 'Marco Polo',
+    grade: 4,
+  },
+  {
+    time: '1337 - 1453',
+    title: 'The Hundred Years War,\nThe Black Death,\nJoan of Arc',
+    grade: 4,
+  },
+  {
+    time: '1376 - 1417',
+    title: 'The Great Papal Schism',
+    grade: 4,
+  },
+  {
+    time: 'c. 1380',
+    title: 'John Wycliffe and John Huss',
+    grade: 4,
+  },
+  {
+    time: '1453',
+    title: 'The Fall of Constantinople to Mohammed the II',
+    grade: 4,
+  },
+  {
+    time: '1456',
+    title: 'Gutenberg Prints the Bible',
+    grade: 4,
+  },
+  {
+    time: '* c. 1300 - 1517',
+    title: 'The Renaissance',
+    grade: 4,
+  },
+  {
+    time: '1478',
+    title: 'The Inquisition',
+    grade: 4,
+  },
+  {
+    time: '1517',
+    title: 'Martin Luther Begins the Reformation',
+    grade: 4,
+  },
+  {
+    time: '1525',
+    title: 'Ulrich Zwingli and the Anabaptists',
+    grade: 4,
+  },
+  {
+    time: '1534',
+    title: 'The Act of Supremacy',
+    grade: 4,
+  },
+  {
+    time: '1536',
+    title: 'John Calvin and the Institutes',
+    grade: 4,
+  },
+  {
+    time: '1545 - 1563',
+    title: 'The Council of Trent',
+    grade: 4,
+  },
+  {
+    time: '1560',
+    title: 'John Knox, the Scottish Reformer',
+    grade: 4,
+  },
+  {
     time: '4 B.C.',
     title: 'Zecharias Learns of John’s Birth',
     description: 'Luke 1:5-25',
