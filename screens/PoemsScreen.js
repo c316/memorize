@@ -6,8 +6,8 @@ import Poems from '../components/Poems';
 export default class PoemsScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Poems',
-    tabBarIcon: ({ tintColor }) => (
-      <Icon name="create" color={tintColor} size={24} />
+    tabBarIcon: () => (
+      <Icon name="create" color="rgba(0, 0, 0, 0.5)" size={24} />
     ),
   };
 

@@ -5,9 +5,7 @@ import Verses from '../components/Verses';
 export default class VersesScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Verses',
-    tabBarIcon: ({ tintColor }) => (
-      <Icon name="book" color={tintColor} size={20} />
-    ),
+    tabBarIcon: () => <Icon name="book" color="#7540EE" size={20} />,
   };
 
   render() {

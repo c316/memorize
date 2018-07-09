@@ -54,18 +54,14 @@ const MyApp = TabNavigator(
       screen: MathScreens,
       navigationOptions: {
         tabBarLabel: 'Math',
-        tabBarIcon: ({ tintColor }) => (
-          <Icon name="add" color={tintColor} size={20} />
-        ),
+        tabBarIcon: () => <Icon name="add" color="#5A95FF" size={20} />,
       },
     },
     Timeline: {
       screen: TimelineStack,
       navigationOptions: {
         tabBarLabel: 'Timelines',
-        tabBarIcon: ({ tintColor }) => (
-          <Icon name="history" color={tintColor} size={20} />
-        ),
+        tabBarIcon: () => <Icon name="history" color="#2DC76D" size={20} />,
       },
     },
     Poems: {

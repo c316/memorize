@@ -6,9 +6,7 @@ export default class HomeScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Home',
     // Note: By default the icon is only shown on iOS. Search the showIcon option below.
-    tabBarIcon: ({ tintColor }) => (
-      <Icon name="home" color={tintColor} size={24} />
-    ),
+    tabBarIcon: () => <Icon name="home" color="#D0021B" size={24} />,
   };
 
   render() {
