@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Dimensions,
   Image,
+  ImageBackground,
   Linking,
   StyleSheet,
   Text,
@@ -15,7 +16,6 @@ const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    backgroundColor: '#FDFEFE',
     height: '100%',
   },
   welcome: {
@@ -146,57 +146,66 @@ const styles = StyleSheet.create({
 });
 
 const Home = () => (
-  <SafeAreaView style={styles.container}>
-    <TouchableHighlight
-      onPress={() => {
-        Linking.openURL('https://joshjoe.com').catch(err =>
-          console.error('An error occurred', err));
-      }}
-      activeOpacity={75 / 100}
-      underlayColor="rgb(210,210,210)"
-      style={styles.top}
-    >
-      <Text style={styles.madeBy}>
-        Made with{' '}
-        <Text style={{ color: 'rgba(208, 2, 27, 0.6)', fontSize: 14 }}>♥</Text>{' '}
-        by JoshJoe
-      </Text>
-    </TouchableHighlight>
-    <View style={styles.headerBox}>
-      <View style={[styles.headerTitle]}>
-        <Text style={[styles.headerText]}>CPLS Memorize</Text>
+  <ImageBackground
+    source={require('../assets/images/circles.png')}
+    style={{ width: '100%', height: '100%' }}
+    imageStyle={{ opacity: 0.1 }}
+  >
+    <SafeAreaView style={styles.container}>
+      <TouchableHighlight
+        onPress={() => {
+          Linking.openURL('https://joshjoe.com').catch(err =>
+            console.error('An error occurred', err));
+        }}
+        activeOpacity={75 / 100}
+        underlayColor="rgb(210,210,210)"
+        style={styles.top}
+      >
+        <Text style={styles.madeBy}>
+          Made with{' '}
+          <Text style={{ color: 'rgba(208, 2, 27, 0.6)', fontSize: 14 }}>
+            ♥
+          </Text>{' '}
+          by JoshJoe
+        </Text>
+      </TouchableHighlight>
+      <View style={styles.headerBox}>
+        <View style={[styles.headerTitle]}>
+          <Text style={[styles.headerText]}>CPLS Memorize</Text>
+        </View>
+        <View style={styles.headerUnderline} />
+        <Text style={styles.subText}>Hide His Word in Your Heart</Text>
       </View>
-      <View style={styles.headerUnderline} />
-      <Text style={styles.subText}>Hide His Word in Your Heart</Text>
-    </View>
-    <Image
-      style={{
-        width: 250,
-        height: 259,
-        shadowOffset: { height: 6 },
-        shadowColor: 'grey',
-        shadowOpacity: 0.5,
-      }}
-      resizeMode="contain"
-      source={require('../assets/images/CPLS.png')}
-    />
-    <Text style={styles.verse}>
-      I have stored up your word in my heart, that I might not sin against you.
-    </Text>
-
-    <TouchableHighlight
-      onPress={() => {
-        Linking.openURL('http://www.bible.com/bible/59/psa.119.11.esv').catch(err => console.error('An error occurred', err));
-      }}
-      activeOpacity={75 / 100}
-      underlayColor="rgb(210,210,210)"
-      style={styles.mainVerse}
-    >
-      <Text style={[styles.right, styles.verseReference]}>
-        Psalm 119:11 (ESV)
+      <Image
+        style={{
+          width: 250,
+          height: 259,
+          shadowOffset: { height: 6 },
+          shadowColor: 'grey',
+          shadowOpacity: 0.5,
+        }}
+        resizeMode="contain"
+        source={require('../assets/images/CPLS.png')}
+      />
+      <Text style={styles.verse}>
+        I have stored up your word in my heart, that I might not sin against
+        you.
       </Text>
-    </TouchableHighlight>
-  </SafeAreaView>
+
+      <TouchableHighlight
+        onPress={() => {
+          Linking.openURL('http://www.bible.com/bible/59/psa.119.11.esv').catch(err => console.error('An error occurred', err));
+        }}
+        activeOpacity={75 / 100}
+        underlayColor="rgb(210,210,210)"
+        style={styles.mainVerse}
+      >
+        <Text style={[styles.right, styles.verseReference]}>
+          Psalm 119:11 (ESV)
+        </Text>
+      </TouchableHighlight>
+    </SafeAreaView>
+  </ImageBackground>
 );
 
 export default Home;
