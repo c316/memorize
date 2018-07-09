@@ -2,6 +2,10 @@
   "expo": {
     "name": "CPLS Memorize",
     "icon": "./assets/images/CPLS-Lion-logo-512x512.png",
+    "splash": {
+      "resizeMode": "cover",
+      "image": "./assets/images/splashScreen.png"
+    },
     "version": "2.3.5",
     "slug": "cpls-memorize",
     "sdkVersion": "26.0.0",
