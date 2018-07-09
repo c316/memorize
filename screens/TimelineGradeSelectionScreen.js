@@ -14,9 +14,10 @@ export default class TimelineGradeSelectionScreen extends React.Component {
       headerTintColor: navigationOptions.headerStyle.backgroundColor,
     };
   };
-  _showTimelinesForGrade(grade) {
+  _showTimelinesForGrade(grade, type) {
     this.props.navigation.navigate('TimelineGradeScreen', {
       grade,
+      type,
     });
   }
 
@@ -35,16 +36,32 @@ export default class TimelineGradeSelectionScreen extends React.Component {
         grade: 4,
       },
       {
-        name: 'Fifth Grade',
-        icon: 'numeric-5-box',
+        name: 'Fifth Grade Bible',
+        icon: 'book',
         type: 'material-community',
         grade: 5,
+        timelineType: 'bible',
       },
       {
-        name: 'Sixth Grade',
-        icon: 'numeric-6-box',
+        name: 'Fifth Grade History',
+        icon: 'history',
+        type: 'material-community',
+        grade: 5,
+        timelineType: 'history',
+      },
+      {
+        name: 'Sixth Grade Bible',
+        icon: 'book',
         type: 'material-community',
         grade: 6,
+        timelineType: 'bible',
+      },
+      {
+        name: 'Sixth Grade History',
+        icon: 'history',
+        type: 'material-community',
+        grade: 6,
+        timelineType: 'history',
       },
     ];
 
@@ -67,7 +84,7 @@ export default class TimelineGradeSelectionScreen extends React.Component {
               color: '#074e86',
             }}
             onPress={() => {
-              this._showTimelinesForGrade(l.grade);
+              this._showTimelinesForGrade(l.grade, l.timelineType);
             }}
           />
         ))}

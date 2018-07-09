@@ -8,24 +8,51 @@ const LogoTitle = () => (
 );
 
 export default class TimelineForGradeScreen extends React.Component {
-  static navigationOptions = {
-    tabBarLabel: 'Timelines',
-    tabBarIcon: ({ tintColor }) => (
-      <Icon name="history" color={tintColor} size={20} />
-    ),
-    headerTitle: <LogoTitle />,
-    headerRight: (
-      <Button
-        onPress={() => alert('This is a button!')}
-        title="Hide All"
-        color="white"
-      />
-    ),
+  static navigationOptions = ({ navigation }) => {
+    const params = navigation.state.params || {};
+
+    return {
+      tabBarLabel: 'Timelines',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name="history" color={tintColor} size={20} />
+      ),
+      headerRight: (
+        <React.Fragment>
+          <Button
+            onPress={
+              params.showHideAllEvents || (() => console.log('placeholder'))
+            }
+            title="Show/Hide All"
+            color="white"
+          />
+        </React.Fragment>
+      ),
+    };
+  };
+  state = {
+    showAllEvents: false,
+  };
+
+  componentWillMount() {
+    this.props.navigation.setParams({
+      showHideAllEvents: this._showHideAllEvents,
+    });
+  }
+
+  _showHideAllEvents = () => {
+    this.setState({ showAllEvents: !this.state.showAllEvents });
   };
 
   render() {
-    const { params } = this.props.navigation.state;
-    const grade = params ? params.grade : null;
-    return <Timelines grade={grade} />;
+    const {
+      params: { grade, type },
+    } = this.props.navigation.state;
+    return (
+      <Timelines
+        grade={grade}
+        showAllEvents={this.state.showAllEvents}
+        type={type}
+      />
+    );
   }
 }

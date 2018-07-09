@@ -50,7 +50,7 @@ const headerStyles = StyleSheet.create({
   },
   titleText: {
     color: 'white',
-    fontSize: 28,
+    fontSize: 20,
   },
   dateText: {
     color: 'white',
@@ -63,32 +63,32 @@ const headerStyles = StyleSheet.create({
   },
 });
 
-const Header = () => (
+const Header = ({ currentEvent, nextEvent, previousEvent }) => (
   <View style={headerStyles.headerBox}>
     <View style={[headerStyles.headerTitle]}>
       <Icon
         color="white"
         size={30}
         name="chevron-left"
-        onPress={() => console.log('pressed')}
+        onPress={() => previousEvent()}
         containerStyle={{ right: 5 }}
       />
-      <Text style={[headerStyles.titleText]}>The Mycenaean Culture</Text>
+      <Text style={[headerStyles.titleText]}>{currentEvent.title}</Text>
       <Icon
         color="white"
         size={30}
         name="chevron-right"
-        onPress={() => console.log('pressed')}
+        onPress={() => nextEvent()}
         containerStyle={{ left: 5 }}
       />
     </View>
     <View style={headerStyles.headerUnderline} />
     <View style={headerStyles.date}>
-      <Text style={headerStyles.dateText}>c. 1450 - 1200 B.C.</Text>
+      <Text style={headerStyles.dateText}>{currentEvent.time}</Text>
     </View>
     <View style={headerStyles.scriptureReference}>
       <Text style={headerStyles.scriptureReferenceText}>
-        no scripture reference
+        {currentEvent.description || 'no scripture reference'}
       </Text>
     </View>
   </View>

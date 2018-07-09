@@ -7,9 +7,8 @@ export default [
   },
   {
     id: 2,
-    time: "You're here",
-    title: 'c. 1450 - 1200 B.C.',
-    placeholder: 'The Mycenaean Culture',
+    time: 'c. 1450 - 1200 B.C.',
+    title: 'The Mycenaean Culture',
     grade: 3,
   },
   {
