@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform } from 'react-native';
+import { ImageBackground, Platform } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
 export default class TimelineGradeSelectionScreen extends React.Component {
@@ -66,29 +66,35 @@ export default class TimelineGradeSelectionScreen extends React.Component {
     ];
 
     return (
-      <List
-        style={{ marginTop: Platform.OS === 'ios' ? 20 : 0 }}
-        containerStyle={{ marginTop: 0 }}
+      <ImageBackground
+        source={require('../assets/images/circles.png')}
+        style={{ width: '100%', height: '100%', backgroundColor: 'white' }}
+        imageStyle={{ opacity: 0.1 }}
       >
-        {grades.map((l, i) => (
-          <ListItem
-            titleStyle={{
-              color: 'rgba(0,0,0,.87)',
-            }}
-            chevronColor="#074e86"
-            key={i}
-            title={l.name}
-            leftIcon={{
-              name: l.icon ? l.icon : null,
-              type: l.type ? l.type : null,
-              color: '#074e86',
-            }}
-            onPress={() => {
-              this._showTimelinesForGrade(l.grade, l.timelineType);
-            }}
-          />
-        ))}
-      </List>
+        <List
+          style={{ marginTop: Platform.OS === 'ios' ? 20 : 0 }}
+          containerStyle={{ marginTop: 0 }}
+        >
+          {grades.map((l, i) => (
+            <ListItem
+              titleStyle={{
+                color: 'rgba(0,0,0,.87)',
+              }}
+              chevronColor="#074e86"
+              key={i}
+              title={l.name}
+              leftIcon={{
+                name: l.icon ? l.icon : null,
+                type: l.type ? l.type : null,
+                color: '#074e86',
+              }}
+              onPress={() => {
+                this._showTimelinesForGrade(l.grade, l.timelineType);
+              }}
+            />
+          ))}
+        </List>
+      </ImageBackground>
     );
   }
 }

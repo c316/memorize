@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet } from 'react-native';
+import { ImageBackground, StyleSheet } from 'react-native';
 import { Button } from 'react-native-elements';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { moderateScale, verticalScale } from '../miscFunctions';
@@ -68,124 +68,130 @@ class NumberGrid extends React.Component {
 
   render() {
     return (
-      <Grid>
-        <Row size={6}>
-          <Col style={styles.columnStyle}>
-            <Row>
-              <BigButton
-                title="3"
-                onPress={() =>
-                  this._goToPage(
-                    this.props.navigation.state.params.mathCategory,
-                    3
-                  )
-                }
-              />
-            </Row>
-            <Row>
-              <BigButton
-                title="5"
-                onPress={() =>
-                  this._goToPage(
-                    this.props.navigation.state.params.mathCategory,
-                    5
-                  )
-                }
-              />
-            </Row>
-            <Row>
-              <BigButton
-                title="7"
-                onPress={() =>
-                  this._goToPage(
-                    this.props.navigation.state.params.mathCategory,
-                    7
-                  )
-                }
-              />
-            </Row>
-            <Row>
-              <BigButton
-                title="9"
-                onPress={() =>
-                  this._goToPage(
-                    this.props.navigation.state.params.mathCategory,
-                    9
-                  )
-                }
-              />
-            </Row>
-            <Row>
-              <BigButton
-                title="11"
-                onPress={() =>
-                  this._goToPage(
-                    this.props.navigation.state.params.mathCategory,
-                    11
-                  )
-                }
-              />
-            </Row>
-          </Col>
-          <Col style={styles.columnStyle}>
-            <Row>
-              <BigButton
-                title="4"
-                onPress={() =>
-                  this._goToPage(
-                    this.props.navigation.state.params.mathCategory,
-                    4
-                  )
-                }
-              />
-            </Row>
-            <Row>
-              <BigButton
-                title="6"
-                onPress={() =>
-                  this._goToPage(
-                    this.props.navigation.state.params.mathCategory,
-                    6
-                  )
-                }
-              />
-            </Row>
-            <Row>
-              <BigButton
-                title="8"
-                onPress={() =>
-                  this._goToPage(
-                    this.props.navigation.state.params.mathCategory,
-                    8
-                  )
-                }
-              />
-            </Row>
-            <Row>
-              <BigButton
-                title="10"
-                onPress={() =>
-                  this._goToPage(
-                    this.props.navigation.state.params.mathCategory,
-                    10
-                  )
-                }
-              />
-            </Row>
-            <Row>
-              <BigButton
-                title="12"
-                onPress={() =>
-                  this._goToPage(
-                    this.props.navigation.state.params.mathCategory,
-                    12
-                  )
-                }
-              />
-            </Row>
-          </Col>
-        </Row>
-      </Grid>
+      <ImageBackground
+        source={require('../assets/images/circles.png')}
+        style={{ width: '100%', height: '100%', backgroundColor: 'white' }}
+        imageStyle={{ opacity: 0.1 }}
+      >
+        <Grid>
+          <Row size={6}>
+            <Col style={styles.columnStyle}>
+              <Row>
+                <BigButton
+                  title="3"
+                  onPress={() =>
+                    this._goToPage(
+                      this.props.navigation.state.params.mathCategory,
+                      3
+                    )
+                  }
+                />
+              </Row>
+              <Row>
+                <BigButton
+                  title="5"
+                  onPress={() =>
+                    this._goToPage(
+                      this.props.navigation.state.params.mathCategory,
+                      5
+                    )
+                  }
+                />
+              </Row>
+              <Row>
+                <BigButton
+                  title="7"
+                  onPress={() =>
+                    this._goToPage(
+                      this.props.navigation.state.params.mathCategory,
+                      7
+                    )
+                  }
+                />
+              </Row>
+              <Row>
+                <BigButton
+                  title="9"
+                  onPress={() =>
+                    this._goToPage(
+                      this.props.navigation.state.params.mathCategory,
+                      9
+                    )
+                  }
+                />
+              </Row>
+              <Row>
+                <BigButton
+                  title="11"
+                  onPress={() =>
+                    this._goToPage(
+                      this.props.navigation.state.params.mathCategory,
+                      11
+                    )
+                  }
+                />
+              </Row>
+            </Col>
+            <Col style={styles.columnStyle}>
+              <Row>
+                <BigButton
+                  title="4"
+                  onPress={() =>
+                    this._goToPage(
+                      this.props.navigation.state.params.mathCategory,
+                      4
+                    )
+                  }
+                />
+              </Row>
+              <Row>
+                <BigButton
+                  title="6"
+                  onPress={() =>
+                    this._goToPage(
+                      this.props.navigation.state.params.mathCategory,
+                      6
+                    )
+                  }
+                />
+              </Row>
+              <Row>
+                <BigButton
+                  title="8"
+                  onPress={() =>
+                    this._goToPage(
+                      this.props.navigation.state.params.mathCategory,
+                      8
+                    )
+                  }
+                />
+              </Row>
+              <Row>
+                <BigButton
+                  title="10"
+                  onPress={() =>
+                    this._goToPage(
+                      this.props.navigation.state.params.mathCategory,
+                      10
+                    )
+                  }
+                />
+              </Row>
+              <Row>
+                <BigButton
+                  title="12"
+                  onPress={() =>
+                    this._goToPage(
+                      this.props.navigation.state.params.mathCategory,
+                      12
+                    )
+                  }
+                />
+              </Row>
+            </Col>
+          </Row>
+        </Grid>
+      </ImageBackground>
     );
   }
 }

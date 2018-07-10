@@ -109,6 +109,7 @@ class Timelines extends React.Component {
           options={{
             style: {
               paddingTop: 10,
+              backgroundColor: 'white',
             },
           }}
           circleColor="#2DC76D"

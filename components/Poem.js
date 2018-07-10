@@ -2,7 +2,7 @@ import React from 'react';
 import PropType from 'prop-types';
 import { Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
-import { poems } from '../assets/poems';
+import poems from '../assets/poems';
 
 const styles = StyleSheet.create({
   center: {

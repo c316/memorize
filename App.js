@@ -44,11 +44,11 @@ const TimelineStack = StackNavigator(
 /* eslint new-cap: "off" */
 const MyApp = TabNavigator(
   {
-    Home: {
-      screen: HomeScreen,
-    },
     Verses: {
       screen: VersesScreen,
+    },
+    Home: {
+      screen: HomeScreen,
     },
     MathFacts: {
       screen: MathScreens,

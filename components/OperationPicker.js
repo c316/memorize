@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import {
+  ImageBackground,
+  View,
+  StyleSheet,
+  TouchableOpacity
+} from 'react-native';
 import { Text } from 'react-native-elements';
 
 const styles = StyleSheet.create({
@@ -46,24 +51,30 @@ class OperationPicker extends React.Component {
       },
     ];
     return (
-      <View>
-        {list.map(item => (
-          <TouchableOpacity
-            key={item.title}
-            style={styles.pickerCard}
-            onPress={() => this._goToPage(item.title)}
-          >
-            <Text h2 style={styles.textCenter}>
-              {item.title}
-            </Text>
-            <Text h1 style={styles.textCenter}>
-              {item.title === 'Addition' ? '+' : null}
-              {item.title === 'Subtraction' ? '-' : null}
-              {item.title === 'Multiplication' ? 'x' : null}
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </View>
+      <ImageBackground
+        source={require('../assets/images/circles.png')}
+        style={{ width: '100%', height: '100%', backgroundColor: 'white' }}
+        imageStyle={{ opacity: 0.1 }}
+      >
+        <View style={{}}>
+          {list.map(item => (
+            <TouchableOpacity
+              key={item.title}
+              style={styles.pickerCard}
+              onPress={() => this._goToPage(item.title)}
+            >
+              <Text h2 style={styles.textCenter}>
+                {item.title}
+              </Text>
+              <Text h1 style={styles.textCenter}>
+                {item.title === 'Addition' ? '+' : null}
+                {item.title === 'Subtraction' ? '-' : null}
+                {item.title === 'Multiplication' ? 'x' : null}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+      </ImageBackground>
     );
   }
 }

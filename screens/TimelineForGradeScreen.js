@@ -3,10 +3,6 @@ import { Button } from 'react-native';
 import { Icon } from 'react-native-elements';
 import Timelines from '../components/Timelines';
 
-const LogoTitle = () => (
-  <Icon name="history" color="white" style={{ width: 30, height: 30 }} />
-);
-
 export default class TimelineForGradeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     const params = navigation.state.params || {};

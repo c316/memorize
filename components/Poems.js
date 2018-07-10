@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, View, ScrollView } from 'react-native';
+import { ImageBackground, Platform, View, ScrollView } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 import poems from '../assets/poems';
 import Poem from './Poem';
@@ -156,7 +156,15 @@ class Poems extends React.Component {
     );
 
     return (
-      <View>{this.state.showPoems ? firstCondition() : secondCondition()}</View>
+      <ImageBackground
+        source={require('../assets/images/circles.png')}
+        style={{ width: '100%', height: '100%', backgroundColor: 'white' }}
+        imageStyle={{ opacity: 0.1 }}
+      >
+        <View>
+          {this.state.showPoems ? firstCondition() : secondCondition()}
+        </View>
+      </ImageBackground>
     );
   }
 }

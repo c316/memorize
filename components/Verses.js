@@ -1,20 +1,128 @@
 import React from 'react';
 import {
   Dimensions,
-  Platform,
   Text,
   View,
   TouchableHighlight,
   Image,
   StyleSheet,
-  Linking
+  Linking,
+  SafeAreaView,
+  ImageBackground
 } from 'react-native';
 import { Icon } from 'react-native-elements';
-import { verses } from '../assets/verses';
+import verses from '../assets/verses';
 
-import { getWeek, moderateScale, verticalScale } from '../miscFunctions';
+import { getWeek, moderateScale } from '../miscFunctions';
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
+
+const styles = StyleSheet.create({
+  box: {
+    alignItems: 'stretch',
+    width: '100%',
+    backgroundColor: '#7540EE',
+    shadowOffset: { height: -1 },
+    shadowColor: 'grey',
+    shadowOpacity: 1,
+    elevation: -1,
+  },
+  headerBox: {
+    flex: 1,
+    width: '100%',
+  },
+  container: {
+    display: 'flex',
+    alignItems: 'baseline',
+    height: '100%',
+  },
+  imageStyle: {
+    shadowOffset: { height: 6 },
+    shadowColor: 'grey',
+    shadowOpacity: 0.5,
+    overflow: 'visible',
+    height: 160,
+    alignSelf: 'center',
+    marginTop: 50,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+  verseText: {
+    flex: 1,
+    fontSize: moderateScale(20),
+    alignSelf: 'flex-start',
+    marginLeft: width * 0.05,
+    marginRight: width * 0.05,
+    marginTop: 15,
+    marginBottom: 35,
+    color: 'rgba(37, 38, 94, 0.8)',
+  },
+  verse: {
+    fontSize: moderateScale(26),
+    color: 'rgba(37, 38, 94, 1)',
+    letterSpacing: 0.78,
+    alignSelf: 'center',
+  },
+  verseDates: {
+    fontSize: 24,
+    textAlign: 'center',
+    color: 'white',
+  },
+  esvCredit: {
+    margin: 8,
+    fontSize: 9,
+    textAlign: 'center',
+    color: 'white',
+  },
+  headerTitle: {
+    flex: 2,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  headerUnderline: {
+    alignItems: 'center',
+    borderBottomColor: 'rgba(117, 64, 238, 1)',
+    borderBottomWidth: 2,
+    shadowOffset: { height: 2 },
+    shadowColor: 'rgba(117, 64, 238, 0.8)',
+    shadowOpacity: 1,
+    elevation: 3,
+    backgroundColor: 'black',
+    borderRadius: 5,
+    marginTop: 10,
+    marginBottom: 20,
+  },
+  controlsBlock: {
+    height: 125,
+    justifyContent: 'flex-end',
+    alignItems: 'stretch',
+    width: '100%',
+    backgroundColor: '#7540EE',
+    shadowOffset: { height: -1 },
+    shadowColor: 'grey',
+    shadowOpacity: 1,
+    elevation: -1,
+  },
+  verseBlock: {
+    marginTop: 20,
+    alignSelf: 'center',
+  },
+  dot: {
+    height: 14,
+    width: 14,
+    borderRadius: 14 / 2,
+    backgroundColor: '#FF7052',
+    left: 10,
+    bottom: 15,
+    borderWidth: 2,
+    borderColor: 'white',
+  },
+});
 
 class Verses extends React.Component {
   constructor(props) {
@@ -192,142 +300,90 @@ class Verses extends React.Component {
     case 'Romans':
       bookImagePath = require('../assets/images/bible/Romans.png');
       break;
+
+    default:
+      bookImagePath = null;
     }
 
     return (
-      <View style={styles.fullContainer}>
-        <View style={styles.container}>
+      <ImageBackground
+        source={require('../assets/images/circles.png')}
+        style={{ width: '100%', height: '100%' }}
+        imageStyle={{ opacity: 0.1 }}
+      >
+        <SafeAreaView style={styles.container}>
           <Image
-            style={{
-              width: 215,
-              height: 140,
-            }}
+            style={styles.imageStyle}
             resizeMode="contain"
             source={bookImagePath}
             title={useThisVerse.book}
           />
-          <Text style={styles.h2}>{useThisVerse.text}</Text>
-          <TouchableHighlight
-            onPress={() => {
-              Linking.openURL(useThisVerse.verseURL).catch(err =>
-                console.error('An error occurred', err));
-            }}
-            activeOpacity={75 / 100}
-            underlayColor="rgb(210,210,210)"
-          >
-            <Text style={styles.h3}>
-              {`${useThisVerse.book} ${useThisVerse.chapter}:${
-                useThisVerse.startVerse
-              }${endVerse} (ESV)`}
-            </Text>
-          </TouchableHighlight>
-        </View>
 
-        <Text style={styles.verseDates}>
-          Verse Dates:{' '}
-          {`${this._getVerseDates().dateFrom} - ${
-            this._getVerseDates().dateTo
-          }`}
-          {useThisVerse.customDateRange ? '*' : ''}
-        </Text>
-        <View style={styles.nextPreviousContainer}>
-          {this.state.showVerse === 0 ? null : (
-            <Icon
-              color="#074e86"
-              size={60}
-              name="chevron-left"
-              onPress={() => this._previousVerse()}
-            />
-          )}
-          {this.state.showVerse === verses.length - 1 ? null : (
-            <Icon
-              color="#074e86"
-              size={60}
-              name="chevron-right"
-              onPress={() => this._nextVerse()}
-            />
-          )}
-        </View>
-        <Text style={styles.esvCredit}>
-          ESV brought to you by Crossway (a publishing ministry of Good News
-          Publishers)
-        </Text>
-      </View>
+          <View style={styles.verseBlock}>
+            <TouchableHighlight
+              onPress={() => {
+                Linking.openURL(useThisVerse.verseURL).catch(err =>
+                  console.error('An error occurred', err));
+              }}
+              activeOpacity={75 / 100}
+              underlayColor="rgb(210,210,210)"
+            >
+              <Text style={styles.verse}>
+                {`${useThisVerse.book} ${useThisVerse.chapter}:${
+                  useThisVerse.startVerse
+                }${endVerse} (ESV)`}
+              </Text>
+            </TouchableHighlight>
+            <View style={styles.headerUnderline} />
+          </View>
+          <View style={styles.headerBox}>
+            <Text style={styles.verseText}>{useThisVerse.text}</Text>
+          </View>
+          <View style={styles.controlsBlock}>
+            <View style={[styles.headerTitle]}>
+              {this.state.showVerse === 0 ? (
+                <Text />
+              ) : (
+                <Icon
+                  color="white"
+                  size={30}
+                  name="chevron-left"
+                  onPress={() => this._previousVerse()}
+                />
+              )}
+              <Text style={styles.verseDates}>
+                {`${this._getVerseDates().dateFrom} - ${
+                  this._getVerseDates().dateTo
+                }`}
+                {useThisVerse.customDateRange ? (
+                  <View style={{}}>
+                    <View style={styles.dot} />
+                  </View>
+                ) : (
+                  <Text title="" />
+                )}
+              </Text>
+
+              {this.state.showVerse === verses.length - 1 ? (
+                <Text title="" />
+              ) : (
+                <Icon
+                  color="white"
+                  size={30}
+                  name="chevron-right"
+                  onPress={() => this._nextVerse()}
+                />
+              )}
+            </View>
+            <Text style={styles.esvCredit}>
+              ESV brought to you by Crossway (a publishing ministry of Good News
+              Publishers)
+            </Text>
+          </View>
+        </SafeAreaView>
+      </ImageBackground>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  fullContainer: {
-    width,
-    height,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  container: {
-    width,
-    height: verticalScale(400),
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  h1: {
-    fontSize: moderateScale(22),
-    textAlign: 'center',
-    fontWeight: 'bold',
-  },
-  h2: {
-    fontSize: moderateScale(20),
-    textAlign: 'center',
-    margin: 10,
-  },
-  h3: {
-    fontSize: moderateScale(18),
-    textAlign: 'center',
-    fontWeight: 'bold',
-  },
-  button: {
-    backgroundColor: 'firebrick',
-    borderColor: 'firebrick',
-    borderWidth: 10,
-    margin: 20,
-    justifyContent: 'center',
-    padding: 10,
-    paddingHorizontal: 20,
-    borderRadius: 25,
-    height: 50,
-    opacity: 1,
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  verseDates: {
-    fontSize: 16,
-  },
-  nextPreviousContainer: {
-    width: moderateScale(300),
-    flexDirection: 'row',
-    alignContent: 'center',
-    justifyContent: 'space-between',
-    bottom: Platform.OS === 'ios' ? 0 : 35,
-  },
-  esvCredit: {
-    margin: 10,
-    bottom: Platform.OS === 'ios' ? 0 : 35,
-    fontSize: 10,
-    textAlign: 'center',
-  },
-});
 
 export default Verses;

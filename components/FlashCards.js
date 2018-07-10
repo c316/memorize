@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableOpacity, View, StyleSheet } from 'react-native';
+import {
+  ImageBackground,
+  TouchableOpacity,
+  View,
+  StyleSheet
+} from 'react-native';
 import { Divider, Text } from 'react-native-elements';
 
 const styles = StyleSheet.create({
@@ -114,46 +119,52 @@ class FlashCards extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <TouchableOpacity
-          style={styles.problemCardContainer}
-          onPress={() => this.showAnswerOrGetNextProblem()}
-        >
-          <View style={styles.problemContainer}>
-            <View>
-              <Text h1 style={[styles.alignTextRight, styles.blueColorText]}>
-                {this.state.numerator}
-              </Text>
-              <Text
-                style={[
-                  { textDecorationLine: 'underline' },
-                  styles.alignTextRight,
-                ]}
-                h1
-              >
-                <Text style={[styles.alignTextRight, styles.blueColorText]}>
-                  {this.state.operation} {this.state.denomenator}
+      <ImageBackground
+        source={require('../assets/images/circlesForMath.png')}
+        style={{ width: '100%', height: '100%', backgroundColor: 'white' }}
+        imageStyle={{ opacity: 1 }}
+      >
+        <View style={styles.container}>
+          <TouchableOpacity
+            style={styles.problemCardContainer}
+            onPress={() => this.showAnswerOrGetNextProblem()}
+          >
+            <View style={styles.problemContainer}>
+              <View>
+                <Text h1 style={[styles.alignTextRight, styles.blueColorText]}>
+                  {this.state.numerator}
                 </Text>
-              </Text>
-              <Text h1 style={[styles.alignTextRight, styles.blueColorText]}>
-                &nbsp;{this.state.showAnswer ? this.state.answer : null}
-              </Text>
+                <Text
+                  style={[
+                    { textDecorationLine: 'underline' },
+                    styles.alignTextRight,
+                  ]}
+                  h1
+                >
+                  <Text style={[styles.alignTextRight, styles.blueColorText]}>
+                    {this.state.operation} {this.state.denomenator}
+                  </Text>
+                </Text>
+                <Text h1 style={[styles.alignTextRight, styles.blueColorText]}>
+                  &nbsp;{this.state.showAnswer ? this.state.answer : null}
+                </Text>
+              </View>
             </View>
+          </TouchableOpacity>
+          <View style={styles.addSomeMargin}>
+            <Divider
+              style={{
+                backgroundColor: 'grey',
+                marginBottom: 10,
+              }}
+            />
+            <Text h4 style={styles.titleText}>
+              Touch anywhere above the line to see the solution, touch again to
+              go to the next problem.
+            </Text>
           </View>
-        </TouchableOpacity>
-        <View style={styles.addSomeMargin}>
-          <Divider
-            style={{
-              backgroundColor: 'grey',
-              marginBottom: 10,
-            }}
-          />
-          <Text h4 style={styles.titleText}>
-            Touch anywhere above the line to see the solution, touch again to go
-            to the next problem.
-          </Text>
         </View>
-      </View>
+      </ImageBackground>
     );
   }
 }
