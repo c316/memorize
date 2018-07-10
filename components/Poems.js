@@ -3,6 +3,7 @@ import { ImageBackground, Platform, View, ScrollView } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 import poems from '../assets/poems';
 import Poem from './Poem';
+import PoemHeader from './PoemHeader';
 
 class Poems extends React.Component {
   constructor(props) {
@@ -86,12 +87,15 @@ class Poems extends React.Component {
     const firstCondition = () => {
       if (this.state.poem) {
         return (
-          <Poem
-            poem={this.state.poem}
-            onPress={() => {
-              this._clearPoemState();
-            }}
-          />
+          <React.Fragment>
+            <PoemHeader poem={this.state.poem} />
+            <Poem
+              poem={this.state.poem}
+              onPress={() => {
+                this._clearPoemState();
+              }}
+            />
+          </React.Fragment>
         );
       }
       return (
@@ -117,7 +121,7 @@ class Poems extends React.Component {
                     key={l._id}
                     title={l.title}
                     onPress={() => {
-                      this._showPoem(l._id);
+                      this._showPoem(l);
                     }}
                   />
                 );
@@ -137,7 +141,7 @@ class Poems extends React.Component {
         {grades.map((l, i) => (
           <ListItem
             titleStyle={{
-              color: 'rgba(0,0,0,.87)',
+              color: 'rgba(0, 0, 0, 0.87)',
             }}
             chevronColor="#074e86"
             key={i}

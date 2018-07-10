@@ -10,13 +10,17 @@ import React from 'react';
 import { StatusBar, View } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { StackNavigator, TabNavigator } from 'react-navigation';
+import { styles } from './styles/styles';
+
 import HomeScreen from './screens/HomeScreen';
-import PoemsScreen from './screens/PoemsScreen';
 import VersesScreen from './screens/VersesScreen';
 import MathScreens from './screens/MathScreens';
 import TimelineGradeSelectionScreen from './screens/TimelineGradeSelectionScreen';
-import { styles } from './styles/styles';
 import TimelineForGradeScreen from './screens/TimelineForGradeScreen';
+
+import PoemScreen from './screens/PoemScreen';
+import PoemGradeSelectionScreen from './screens/PoemGradeSelectionScreen';
+import PoemSelectionScreen from './screens/PoemSelectionScreen';
 
 const TimelineStack = StackNavigator(
   {
@@ -34,6 +38,32 @@ const TimelineStack = StackNavigator(
         backgroundColor: '#2DC76D',
       },
       headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+  }
+);
+
+const PoemStack = StackNavigator(
+  {
+    PoemGradeSelectionScreen: {
+      screen: PoemGradeSelectionScreen,
+    },
+    PoemSelectionScreen: {
+      screen: PoemSelectionScreen,
+    },
+    PoemScreen: {
+      screen: PoemScreen,
+    },
+  },
+  {
+    initialRouteName: 'PoemGradeSelectionScreen',
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: 'white',
+      },
+      headerTintColor: '#4A4A4A',
       headerTitleStyle: {
         fontWeight: 'bold',
       },
@@ -65,7 +95,13 @@ const MyApp = TabNavigator(
       },
     },
     Poems: {
-      screen: PoemsScreen,
+      screen: PoemStack,
+      navigationOptions: {
+        tabBarLabel: 'Poems',
+        tabBarIcon: () => (
+          <Icon name="create" color="rgba(0, 0, 0, 0.5)" size={24} />
+        ),
+      },
     },
   },
   {
