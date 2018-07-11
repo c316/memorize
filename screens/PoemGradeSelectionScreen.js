@@ -86,15 +86,15 @@ export default class PoemGradeSelectionScreen extends React.Component {
           {grades.map((l, i) => (
             <ListItem
               titleStyle={{
-                color: 'rgba(0,0,0,.87)',
+                color: '#25265E',
               }}
-              chevronColor="#074e86"
+              chevronColor="#2DC76D"
               key={i}
               title={l.name}
               leftIcon={{
                 name: l.icon ? l.icon : null,
                 type: l.type ? l.type : null,
-                color: '#074e86',
+                color: '#2DC76D',
               }}
               onPress={() => {
                 this._showPoemsForGrade(l.grade);

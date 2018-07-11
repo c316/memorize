@@ -3,7 +3,6 @@
 *  code cleanup
 *    separate components into files, one for each screen
 *    separate screen components to use better parent/child prop passing, so you can reuse components
-*  deep linking verses
 * */
 
 import React from 'react';
@@ -66,6 +65,7 @@ const PoemStack = StackNavigator(
       headerTintColor: '#4A4A4A',
       headerTitleStyle: {
         fontWeight: 'bold',
+        marginHorizontal: 10,
       },
     },
   }
@@ -76,9 +76,6 @@ const MyApp = TabNavigator(
   {
     Verses: {
       screen: VersesScreen,
-    },
-    Home: {
-      screen: HomeScreen,
     },
     MathFacts: {
       screen: MathScreens,
@@ -102,6 +99,9 @@ const MyApp = TabNavigator(
           <Icon name="create" color="rgba(0, 0, 0, 0.5)" size={24} />
         ),
       },
+    },
+    Home: {
+      screen: HomeScreen,
     },
   },
   {

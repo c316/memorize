@@ -5,7 +5,7 @@ import poems from '../assets/poems';
 
 class PoemSelectionScreen extends React.Component {
   static navigationOptions = ({ navigationOptions }) => ({
-    title: 'Poems',
+    title: 'Poems ',
     headerStyle: {
       backgroundColor: navigationOptions.headerTintColor,
     },
@@ -30,9 +30,9 @@ class PoemSelectionScreen extends React.Component {
               return (
                 <ListItem
                   titleStyle={{
-                    color: 'rgba(0,0,0,.87)',
+                    color: '#25265E',
                   }}
-                  chevronColor="#074e86"
+                  chevronColor="#7540EE"
                   key={l._id}
                   title={l.title}
                   onPress={() => {

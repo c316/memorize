@@ -3,17 +3,13 @@ import { ImageBackground, Platform } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
 export default class TimelineGradeSelectionScreen extends React.Component {
-  static navigationOptions = ({ navigation, navigationOptions }) => {
-    const { params } = navigation.state;
-
-    return {
-      title: params ? params.otherParam : 'Select a Grade',
-      headerStyle: {
-        backgroundColor: navigationOptions.headerTintColor,
-      },
-      headerTintColor: navigationOptions.headerStyle.backgroundColor,
-    };
-  };
+  static navigationOptions = ({ navigationOptions }) => ({
+    title: 'Select a Grade',
+    headerStyle: {
+      backgroundColor: navigationOptions.headerTintColor,
+    },
+    headerTintColor: navigationOptions.headerStyle.backgroundColor,
+  });
   _showTimelinesForGrade(grade, type) {
     this.props.navigation.navigate('TimelineGradeScreen', {
       grade,
@@ -78,15 +74,15 @@ export default class TimelineGradeSelectionScreen extends React.Component {
           {grades.map((l, i) => (
             <ListItem
               titleStyle={{
-                color: 'rgba(0,0,0,.87)',
+                color: '#25265E',
               }}
-              chevronColor="#074e86"
+              chevronColor="#2DC76D"
               key={i}
               title={l.name}
               leftIcon={{
                 name: l.icon ? l.icon : null,
                 type: l.type ? l.type : null,
-                color: '#074e86',
+                color: '#2DC76D',
               }}
               onPress={() => {
                 this._showTimelinesForGrade(l.grade, l.timelineType);
