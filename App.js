@@ -13,13 +13,15 @@ import { styles } from './styles/styles';
 
 import HomeScreen from './screens/HomeScreen';
 import VersesScreen from './screens/VersesScreen';
-import MathScreens from './screens/MathScreens';
 import TimelineGradeSelectionScreen from './screens/TimelineGradeSelectionScreen';
 import TimelineForGradeScreen from './screens/TimelineForGradeScreen';
 
 import PoemScreen from './screens/PoemScreen';
 import PoemGradeSelectionScreen from './screens/PoemGradeSelectionScreen';
 import PoemSelectionScreen from './screens/PoemSelectionScreen';
+
+import MathPracticeScreen from './screens/MathPracticeScreen';
+import MathQuizScreen from './screens/MathQuizScreen';
 
 const TimelineStack = StackNavigator(
   {
@@ -71,18 +73,38 @@ const PoemStack = StackNavigator(
   }
 );
 
+const MathStack = StackNavigator(
+  {
+    MathPracticeScreen: {
+      screen: MathPracticeScreen,
+    },
+    MathQuizScreen: {
+      screen: MathQuizScreen,
+    },
+  },
+  {
+    initialRouteName: 'MathPracticeScreen',
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: 'white',
+      },
+      headerTintColor: '#4A4A4A',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+        marginHorizontal: 10,
+      },
+    },
+  }
+);
+
 /* eslint new-cap: "off" */
 const MyApp = TabNavigator(
   {
+    MathFacts: {
+      screen: MathStack,
+    },
     Verses: {
       screen: VersesScreen,
-    },
-    MathFacts: {
-      screen: MathScreens,
-      navigationOptions: {
-        tabBarLabel: 'Math',
-        tabBarIcon: () => <Icon name="add" color="#5A95FF" size={20} />,
-      },
     },
     Timeline: {
       screen: TimelineStack,
