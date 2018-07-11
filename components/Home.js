@@ -10,8 +10,9 @@ import {
   SafeAreaView,
   View
 } from 'react-native';
+import { moderateScale, scale } from '../miscFunctions';
 
-const { width } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
@@ -23,29 +24,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  h1: {
-    fontSize: 22,
-    textAlign: 'center',
-    fontWeight: 'bold',
-  },
-  h2: {
-    fontSize: 20,
-    textAlign: 'center',
-    marginTop: 10,
-  },
-  h3: {
-    fontSize: 18,
-    textAlign: 'center',
-  },
   mainVerse: {
     top: 10,
   },
   madeBy: {
+    marginTop: 5,
     fontSize: 16,
     color: 'rgba(37, 38, 94, 0.6)',
     textAlign: 'center',
@@ -78,24 +61,21 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignContent: 'flex-end',
   },
-  right: {
-    left: '15%',
-  },
   headerBox: {
     display: 'flex',
     alignItems: 'stretch',
-    height: 135,
+    height: height * 0.2,
     width: '100%',
     backgroundColor: 'rgba(208, 2, 27, 0.85)',
     elevation: 1,
-    marginTop: 30,
+    marginTop: moderateScale(20),
   },
   headerTitle: {
     flex: 1,
     justifyContent: 'space-around',
     alignItems: 'center',
     marginTop: 5,
-    marginBottom: 12,
+    marginBottom: moderateScale(12),
   },
   headerUnderline: {
     alignItems: 'center',
@@ -113,7 +93,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 15,
     color: 'white',
-    fontSize: 34,
+    fontSize: moderateScale(24),
     letterSpacing: 3,
   },
   subText: {
@@ -130,15 +110,15 @@ const styles = StyleSheet.create({
   },
   verse: {
     textAlign: 'left',
-    margin: 15,
+    marginHorizontal: 15,
     fontSize: 24,
     letterSpacing: 1,
     fontWeight: '300',
     color: 'rgba(37, 38, 94, 1)',
   },
   verseReference: {
-    margin: 15,
-    fontSize: 24,
+    margin: moderateScale(15),
+    fontSize: moderateScale(20),
     letterSpacing: 1,
     fontWeight: '400',
     color: 'rgba(37, 38, 94, 1)',
@@ -161,13 +141,7 @@ const Home = () => (
         underlayColor="rgb(210,210,210)"
         style={styles.top}
       >
-        <Text style={styles.madeBy}>
-          Made with{' '}
-          <Text style={{ color: 'rgba(208, 2, 27, 0.6)', fontSize: 14 }}>
-            ♥
-          </Text>{' '}
-          by JoshJoe
-        </Text>
+        <Text style={styles.madeBy}>Made by JoshJoe</Text>
       </TouchableHighlight>
       <View style={styles.headerBox}>
         <View style={[styles.headerTitle]}>
@@ -178,8 +152,8 @@ const Home = () => (
       </View>
       <Image
         style={{
-          width: 250,
-          height: 259,
+          width: scale(200),
+          height: scale(200),
           shadowOffset: { height: 6 },
           shadowColor: 'grey',
           shadowOpacity: 0.5,
@@ -200,9 +174,7 @@ const Home = () => (
         underlayColor="rgb(210,210,210)"
         style={styles.mainVerse}
       >
-        <Text style={[styles.right, styles.verseReference]}>
-          Psalm 119:11 (ESV)
-        </Text>
+        <Text style={[styles.verseReference]}>Psalm 119:11 (ESV)</Text>
       </TouchableHighlight>
     </SafeAreaView>
   </ImageBackground>

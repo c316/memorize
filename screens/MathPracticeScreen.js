@@ -3,7 +3,8 @@ import {
   ImageBackground,
   TouchableOpacity,
   View,
-  StyleSheet
+  StyleSheet,
+  SafeAreaView
 } from 'react-native';
 import {
   Icon,
@@ -17,20 +18,14 @@ const styles = StyleSheet.create({
   container: {
     display: 'flex',
   },
-  titleText: {
-    margin: 20,
-    fontWeight: '200',
-  },
   problemCardContainer: {
     justifyContent: 'center',
-    minHeight: '50%',
   },
   problemContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
   },
   tallContainer: {
-    height: '50%',
     justifyContent: 'center',
   },
   addSomeMargin: {
@@ -43,7 +38,7 @@ const styles = StyleSheet.create({
     color: '#25265E',
   },
   largeNumbers: {
-    fontSize: 72,
+    fontSize: 60,
   },
   instructions: {
     backgroundColor: '#D8D8D8',
@@ -143,7 +138,7 @@ class MathPracticeScreen extends React.Component {
         style={{ width: '100%', height: '100%', backgroundColor: 'white' }}
         imageStyle={{ opacity: 1 }}
       >
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
           <View style={styles.instructions}>
             <Text style={{ fontSize: 16, lineHeight: 20 }}>
               Touch the problem to reveal the answer. Touch again to go to the
@@ -196,7 +191,7 @@ class MathPracticeScreen extends React.Component {
           <View style={[styles.addSomeMargin, styles.selectors]}>
             <Divider
               style={{
-                backgroundColor: 'grey',
+                backgroundColor: '#5A95FF',
                 marginBottom: 10,
               }}
             />
@@ -235,7 +230,7 @@ class MathPracticeScreen extends React.Component {
               }
             />
           </View>
-        </View>
+        </SafeAreaView>
       </ImageBackground>
     );
   }

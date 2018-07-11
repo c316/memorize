@@ -8,7 +8,7 @@
 import React from 'react';
 import { StatusBar, View } from 'react-native';
 import { Icon } from 'react-native-elements';
-import { StackNavigator, TabNavigator } from 'react-navigation';
+import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation';
 import { styles } from './styles/styles';
 
 import HomeScreen from './screens/HomeScreen';
@@ -83,8 +83,10 @@ const MathStack = StackNavigator(
     },
   },
   {
+    headerMode: 'none',
     initialRouteName: 'MathPracticeScreen',
     navigationOptions: {
+      headerVisible: false,
       headerStyle: {
         backgroundColor: 'white',
       },
@@ -100,6 +102,9 @@ const MathStack = StackNavigator(
 /* eslint new-cap: "off" */
 const MyApp = TabNavigator(
   {
+    Home: {
+      screen: HomeScreen,
+    },
     MathFacts: {
       screen: MathStack,
     },
@@ -122,9 +127,6 @@ const MyApp = TabNavigator(
         ),
       },
     },
-    Home: {
-      screen: HomeScreen,
-    },
   },
   {
     tabBarOptions: {
@@ -142,6 +144,8 @@ const MyApp = TabNavigator(
       },
       showIcon: true,
     },
+    tabBarComponent: TabBarBottom,
+    tabBarPosition: 'bottom',
   }
 );
 

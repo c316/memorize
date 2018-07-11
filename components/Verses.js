@@ -5,6 +5,7 @@ import {
   View,
   TouchableHighlight,
   Image,
+  Platform,
   StyleSheet,
   Linking,
   SafeAreaView,
@@ -356,9 +357,13 @@ class Verses extends React.Component {
                   this._getVerseDates().dateTo
                 }`}
                 {useThisVerse.customDateRange ? (
-                  <View style={{}}>
-                    <View style={styles.dot} />
-                  </View>
+                  Platform.OS === 'ios' ? (
+                    <View>
+                      <View style={styles.dot} />
+                    </View>
+                  ) : (
+                    <Text> *</Text>
+                  )
                 ) : (
                   <Text title="" />
                 )}

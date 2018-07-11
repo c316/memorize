@@ -58,6 +58,7 @@ class Timelines extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.showAllEvents !== this.state.showAllEvents) {
       this.setState({
+        currentEvent: this.state.timelineData.reverse()[0],
         showAllEvents: nextProps.showAllEvents,
         shownEvents: nextProps.showAllEvents
           ? this.state.timelineData
@@ -72,8 +73,10 @@ class Timelines extends React.Component {
     if (timelineData.length < index) {
       return;
     }
+
     const showTheseEvents = this.state.shownEvents;
-    showTheseEvents.push(timelineData[index + 1]);
+    showTheseEvents.unshift(timelineData[index + 1]);
+
     this.setState({
       currentEvent: timelineData[index + 1],
       shownEvents: showTheseEvents,
@@ -87,9 +90,7 @@ class Timelines extends React.Component {
       return;
     }
     const showTheseEvents = this.state.shownEvents;
-    if (showTheseEvents) {
-      showTheseEvents.pop();
-    }
+    showTheseEvents.shift();
     this.setState({
       currentEvent: timelineData[index - 1],
       shownEvents: showTheseEvents,
@@ -99,11 +100,13 @@ class Timelines extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Header
-          currentEvent={this.state.currentEvent}
-          nextEvent={() => this.nextEvent()}
-          previousEvent={() => this.previousEvent()}
-        />
+        {this.state.showAllEvents ? null : (
+          <Header
+            currentEvent={this.state.currentEvent}
+            nextEvent={() => this.nextEvent()}
+            previousEvent={() => this.previousEvent()}
+          />
+        )}
         <Timeline
           data={this.state.shownEvents}
           options={{

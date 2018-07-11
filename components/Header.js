@@ -8,7 +8,7 @@ const headerStyles = StyleSheet.create({
   headerBox: {
     display: 'flex',
     alignItems: 'stretch',
-    height: 190,
+    minHeight: 190,
     backgroundColor: '#2DC76D',
     shadowOffset: { height: 1 },
     shadowColor: 'grey',
