@@ -11,6 +11,8 @@ const styles = StyleSheet.create({
   poem: {
     fontSize: 22,
     margin: 10,
+    marginLeft: 20,
+    marginRight: 20,
   },
 });
 
