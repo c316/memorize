@@ -4,8 +4,8 @@ import Home from '../components/Home';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    tabBarLabel: 'Home',
-    tabBarIcon: () => <Icon name="home" color="#D0021B" size={24} />,
+    tabBarLabel: 'About',
+    tabBarIcon: () => <Icon name="info-outline" color="#787993" size={24} />,
   };
 
   render() {
