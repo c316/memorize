@@ -2,9 +2,9 @@ import React from 'react';
 import {
   Alert,
   ImageBackground,
-  TouchableOpacity,
   View,
-  StyleSheet
+  StyleSheet,
+  TextInput
 } from 'react-native';
 import { Icon, Divider, Text, Button } from 'react-native-elements';
 
@@ -16,16 +16,12 @@ const styles = StyleSheet.create({
     margin: 20,
     fontWeight: '200',
   },
-  problemCardContainer: {
-    justifyContent: 'center',
-    minHeight: '40%',
-  },
   problemContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
   },
   tallContainer: {
-    height: '50%',
+    height: '30%',
     justifyContent: 'center',
   },
   addSomeMargin: {
@@ -38,7 +34,7 @@ const styles = StyleSheet.create({
     color: '#25265E',
   },
   largeNumbers: {
-    fontSize: 72,
+    fontSize: 64,
   },
   instructions: {
     backgroundColor: '#D8D8D8',
@@ -49,20 +45,19 @@ const styles = StyleSheet.create({
   questionNumber: {
     fontSize: 20,
     fontWeight: '100',
-    bottom: 12,
-    left: 10,
   },
   divider: {
     fontSize: 30,
     fontWeight: '100',
     margin: 1,
-    bottom: 6,
+    top: 2,
+    right: 8,
   },
   totalQuestions: {
     fontSize: 20,
     fontWeight: '100',
-    top: 12,
-    right: 12,
+    top: 25,
+    right: 15,
   },
 });
 
@@ -80,7 +75,6 @@ class MathPracticeScreen extends React.Component {
       incorrect: 0,
       timeRemaining: 60,
       completed: false,
-      showAnswer: false,
       answer: '',
       numerator: '',
       denomenator: '',
@@ -159,11 +153,22 @@ class MathPracticeScreen extends React.Component {
     });
   }
 
-  showAnswerOrGetNextProblem() {
-    const { showAnswer } = this.state;
-    this.setState({ showAnswer: !showAnswer });
-    if (showAnswer) {
-      this.generateNewProblem();
+  _skipQuestion() {
+    if (this.state.questionNumber < 20) {
+      this.setState(
+        {
+          incorrect: this.state.incorrect + 1,
+          questionNumber: this.state.questionNumber + 1,
+        },
+        () => {
+          this.generateNewProblem();
+        }
+      );
+    } else {
+      this.setState({
+        incorrect: this.state.incorrect + 1,
+        completed: true,
+      });
     }
   }
 
@@ -182,12 +187,27 @@ class MathPracticeScreen extends React.Component {
               next problem. Touch Skip to skip this problem.
             </Text>
           </View>
-          <TouchableOpacity
-            style={styles.problemCardContainer}
-            onPress={() => this.showAnswerOrGetNextProblem()}
-          >
-            <View style={styles.problemContainer}>
-              <View>
+
+          <Text style={{ color: 'blue', textAlign: 'left', marginLeft: 10, paddingTop: 10 }}>
+            Time Remaining: {this.state.timeRemaining}
+          </Text>
+          <View style={styles.problemContainer}>
+            <View style={{ width: 180 }}>
+              <Text
+                style={[
+                  styles.largeNumbers,
+                  styles.alignTextRight,
+                  styles.blueColorText,
+                ]}
+              >
+                {this.state.numerator}
+              </Text>
+              <Text
+                style={[
+                  { textDecorationLine: 'underline' },
+                  styles.alignTextRight,
+                ]}
+              >
                 <Text
                   style={[
                     styles.largeNumbers,
@@ -195,36 +215,23 @@ class MathPracticeScreen extends React.Component {
                     styles.blueColorText,
                   ]}
                 >
-                  {this.state.numerator}
+                  {this.state.operation} {this.state.denomenator}
                 </Text>
-                <Text
-                  style={[
-                    { textDecorationLine: 'underline' },
-                    styles.alignTextRight,
-                  ]}
-                >
-                  <Text
-                    style={[
-                      styles.largeNumbers,
-                      styles.alignTextRight,
-                      styles.blueColorText,
-                    ]}
-                  >
-                    {this.state.operation} {this.state.denomenator}
-                  </Text>
-                </Text>
-                <Text
-                  style={[
-                    styles.largeNumbers,
-                    styles.alignTextRight,
-                    styles.blueColorText,
-                  ]}
-                >
-                  &nbsp;{this.state.showAnswer ? this.state.answer : null}
-                </Text>
+              </Text>
+              <View
+                style={{
+                  alignItems: 'flex-end',
+                }}
+              >
+                <TextInput
+                  autofocus
+                  keyboardType="number-pad"
+                  textAlign="right"
+                  style={{ fontSize: 72, width: 90, height: 75, borderColor: 'gray', borderWidth: 1 }}
+                />
               </View>
             </View>
-          </TouchableOpacity>
+          </View>
           <View style={[styles.addSomeMargin]}>
             <Divider
               style={{
@@ -232,11 +239,6 @@ class MathPracticeScreen extends React.Component {
                 marginBottom: 10,
               }}
             />
-            <Text
-              style={{ color: 'blue', textAlign: 'center', marginBottom: 15 }}
-            >
-              Time Remaining: {this.state.timeRemaining}
-            </Text>
             <View style={{ alignItems: 'center' }}>
               <Text>
                 <Button
@@ -254,18 +256,11 @@ class MathPracticeScreen extends React.Component {
                   textStyle={{ fontSize: 16 }}
                   title="Skip"
                   backgroundColor="white"
-                  onPress={() =>
-                    this.props.navigation.navigate('MathQuizScreen', {
-                      mathCategory: this.state.mathCategory,
-                      selectedLevel: this.state.selectedLevel,
-                    })
-                  }
+                  onPress={() => this._skipQuestion()}
                 />
-                <View>
-                  <Text style={styles.questionNumber}>
-                    {this.state.questionNumber}
-                  </Text>
-                </View>
+                <Text style={styles.questionNumber}>
+                  {this.state.questionNumber}
+                </Text>
                 <View transform={[{ skewY: '-45deg' }]}>
                   <Text style={styles.divider}>__</Text>
                 </View>
