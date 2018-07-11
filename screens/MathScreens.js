@@ -1,26 +1,25 @@
-import { StackNavigator } from 'react-navigation';
 
-import OperationPicker from '../components/OperationPicker';
-import FlashCards from '../components/FlashCards';
-import NumberGrid from '../components/NumberGrid';
+class MathScreen extends React.Component {
+  static navigationOptions = {
+    tabBarLabel: 'Math',
+    tabBarIcon: () => <Icon name="add" color="#5A95FF" size={20} />,
+  };
+  constructor(props) {
+    super(props);
 
-/* eslint new-cap: "off" */
-const MathScreens = StackNavigator({
-  OperationPicker: {
-    screen: OperationPicker,
-    navigationOptions: () => ({
-      title: 'Pick an operation',
-    }),
-  },
-  NumberGrid: {
-    screen: NumberGrid,
-    navigationOptions: () => ({
-      title: 'Pick a level',
-    }),
-  },
-  FlashCards: {
-    screen: FlashCards,
-  },
-});
+    this.state = {
+      showAnswer: false,
+      answer: '',
+      numerator: '',
+      denomenator: '',
+      operation: '+',
+      mathCategory: 'Addition',
+      selectedLevel: 3,
+      selectedNumberIndex: 0,
+      mode: 0,
+    };
+  }
 
-export default MathScreens;
+  componentWillMount() {
+    this.generateNewProblem();
+  }
