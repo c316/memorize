@@ -8,7 +8,11 @@ import {
   SafeAreaView,
   Platform
 } from 'react-native';
-import { Icon, Divider, Text, Button } from 'react-native-elements';
+import {
+  Icon, Divider, Text, Button
+} from 'react-native-elements';
+
+import { moderateScale } from '../miscFunctions';
 
 const styles = StyleSheet.create({
   container: {
@@ -31,7 +35,7 @@ const styles = StyleSheet.create({
     color: '#25265E',
   },
   largeNumbers: {
-    fontSize: 60,
+    fontSize: moderateScale(60),
   },
   instructions: {
     backgroundColor: '#D8D8D8',
@@ -76,6 +80,7 @@ class MathPracticeScreen extends React.Component {
     tabBarLabel: 'Math',
     tabBarIcon: () => <Icon name="add" color="#5A95FF" size={20} />,
   };
+
   constructor(props) {
     super(props);
 
@@ -103,7 +108,9 @@ class MathPracticeScreen extends React.Component {
     Alert.alert(
       'Start the Quiz?',
       `Selected Level: ${this.state.selectedLevel}
-      Selected Category: ${this.state.mathCategory}`,
+Selected Category: ${this.state.mathCategory}
+
+      Enter an answer and touch Submit to go to the next problem. Touch Skip to skip this problem. Click the practice button to practice some more.`,
       [
         {
           text: 'Go Back',
@@ -115,6 +122,7 @@ class MathPracticeScreen extends React.Component {
       { cancelable: false }
     );
   }
+
   componentWillUnmount() {
     clearInterval(this.intervalId);
     clearTimeout(this.timeoutId);
@@ -226,6 +234,7 @@ class MathPracticeScreen extends React.Component {
       { cancelable: false }
     );
   }
+
   _submitAnswer() {
     const correct = this.state.correctAnswer === Number(this.state.answer);
     this.setState(
@@ -253,12 +262,6 @@ class MathPracticeScreen extends React.Component {
       >
         <SafeAreaView style={styles.container}>
           <View style={styles.instructions}>
-            <Text style={{ fontSize: 16, lineHeight: 20 }}>
-              Enter an answer and touch{' '}
-              <Text style={{ fontWeight: '500' }}>Submit</Text> to go to the
-              next problem. Touch Skip to skip this problem. Click the practice
-              button to practice some more.
-            </Text>
             {Platform.OS === 'ios' ? (
               <Button
                 color="#25265E"
@@ -287,9 +290,9 @@ class MathPracticeScreen extends React.Component {
               paddingTop: 10,
             }}
           >
-            Time Remaining: {this.state.timeRemaining}
+            {`Time Remaining: ${this.state.timeRemaining}
+Problem: ${this.state.questionNumber} / 20`}
           </Text>
-
           <View style={styles.problemContainer}>
             <View style={{ width: 180 }}>
               <Text
@@ -314,7 +317,9 @@ class MathPracticeScreen extends React.Component {
                     styles.blueColorText,
                   ]}
                 >
-                  {this.state.operation} {this.state.denomenator}
+                  {this.state.operation}
+                  {' '}
+                  {this.state.denomenator}
                 </Text>
               </Text>
               <View
@@ -350,9 +355,9 @@ class MathPracticeScreen extends React.Component {
                 marginBottom: 10,
               }}
             />
-            <View style={{ alignItems: 'center' }}>
-              {Platform.OS === 'ios' ? (
-                <Text>
+            <View style={{ alignItems: 'center', marginTop: 15 }}>
+              <View style={styles.specialContainer}>
+                <View style={styles.specialButtonContainer}>
                   <Button
                     containerViewStyle={{
                       width: 100,
@@ -370,15 +375,16 @@ class MathPracticeScreen extends React.Component {
                     backgroundColor="white"
                     onPress={() => this._skipQuestion()}
                   />
-                  <Text style={styles.questionNumber}>
-                    {this.state.questionNumber}
-                  </Text>
-                  <View transform={[{ skewY: '-45deg' }]}>
-                    <Text style={styles.divider}>__</Text>
-                  </View>
-                  <View style={{}}>
-                    <Text style={styles.totalQuestions}>20</Text>
-                  </View>
+                </View>
+                <View
+                  style={[
+                    styles.specialButtonContainer,
+                    {
+                      alignItems: 'flex-end',
+                      justifyContent: 'flex-start',
+                    },
+                  ]}
+                >
                   <Button
                     containerViewStyle={{
                       width: 120,
@@ -386,8 +392,8 @@ class MathPracticeScreen extends React.Component {
                     }}
                     buttonStyle={{
                       borderRadius: 8,
-                      padding: 5,
-                      marginLeft: 30,
+                      paddingTop: 6,
+                      paddingBottom: 6,
                     }}
                     textStyle={{ fontSize: 16 }}
                     color="white"
@@ -395,47 +401,8 @@ class MathPracticeScreen extends React.Component {
                     backgroundColor="#5A95FF"
                     onPress={() => this._submitAnswer()}
                   />
-                </Text>
-              ) : (
-                <View style={styles.specialContainer}>
-                  <View style={styles.specialButtonContainer}>
-                    <Button
-                      color="#25265E"
-                      buttonStyle={{
-                        borderRadius: 8,
-                        borderColor: 'silver',
-                        borderWidth: 1,
-                      }}
-                      textStyle={{ fontSize: 16 }}
-                      title="Skip"
-                      backgroundColor="white"
-                      onPress={() => this._skipQuestion()}
-                    />
-                  </View>
-                  <Text
-                    style={[
-                      styles.specialButtonContainer,
-                      styles.specialTextContainer,
-                    ]}
-                  >
-                    {' '}
-                    {this.state.questionNumber} / 20
-                  </Text>
-                  <View style={styles.specialButtonContainer}>
-                    <Button
-                      containerViewStyle={{}}
-                      buttonStyle={{
-                        borderRadius: 8,
-                      }}
-                      textStyle={{ fontSize: 16 }}
-                      color="white"
-                      title="Submit"
-                      backgroundColor="#5A95FF"
-                      onPress={() => this._submitAnswer()}
-                    />
-                  </View>
                 </View>
-              )}
+              </View>
             </View>
           </View>
         </SafeAreaView>
