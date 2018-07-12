@@ -1,9 +1,9 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
-import Timeline from 'react-native-timeline-listview';
+import React from "react";
+import { StyleSheet } from "react-native";
+import Timeline from "react-native-timeline-listview";
 
-import historyTimeline from '../assets/timelines';
-import Header from './Header';
+import historyTimeline from "../assets/timelines";
+import Header from "./Header";
 
 const styles = StyleSheet.create({
   timeContainerStyle: {
@@ -13,18 +13,18 @@ const styles = StyleSheet.create({
   },
   timeStyle: {
     fontSize: 10,
-    fontWeight: '100',
+    fontWeight: "100",
     letterSpacing: -0.4,
   },
   titleStyle: {
-    fontWeight: '300',
+    fontWeight: "300",
     marginTop: -15,
     marginBottom: 20,
     fontSize: 20,
   },
   descriptionStyle: {
-    fontWeight: '200',
-    fontStyle: 'italic',
+    fontWeight: "200",
+    fontStyle: "italic",
     fontSize: 16,
     marginTop: 10,
     marginBottom: 20,
@@ -39,7 +39,7 @@ class Timelines extends React.Component {
 
   componentWillMount() {
     const { grade, showAllEvents, type } = this.props;
-    const timelineData = historyTimeline.filter((event) => {
+    const timelineData = historyTimeline.filter(event => {
       if (type) {
         return event.grade === grade && event.type === type;
       }
@@ -70,7 +70,7 @@ class Timelines extends React.Component {
   nextEvent() {
     const { timelineData } = this.state;
     const index = timelineData.indexOf(this.state.currentEvent);
-    if (timelineData.length < index) {
+    if (timelineData.length === index + 1) {
       return;
     }
 
@@ -112,7 +112,7 @@ class Timelines extends React.Component {
           options={{
             style: {
               paddingTop: 10,
-              backgroundColor: 'white',
+              backgroundColor: "white",
             },
           }}
           circleColor="#2DC76D"
