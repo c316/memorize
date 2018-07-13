@@ -85,6 +85,7 @@ class MathPracticeScreen extends React.Component {
     super(props);
 
     this.state = {
+      numberOfQuestions: 20,
       questionNumber: 0,
       correct: 0,
       incorrect: 0,
@@ -187,7 +188,7 @@ Selected Category: ${this.state.mathCategory}
   _skipQuestion() {
     this.setState({ answer: null });
 
-    if (this.state.questionNumber === 20) {
+    if (this.state.questionNumber === this.state.numberOfQuestions) {
       this.setState(
         {
           incorrect: this.state.incorrect + 1,
@@ -210,13 +211,13 @@ Selected Category: ${this.state.mathCategory}
 
   _completeQuiz() {
     clearInterval(this.intervalId);
+    clearTimeout(this.timeoutId);
+    console.log({incorrect: this.state.incorrect, correct: this.state.correct, numberOfQuestions: this.state.numberOfQuestions})
     Alert.alert(
       'Quiz Complete',
       `Level: ${this.state.selectedLevel}\nCategory: ${
         this.state.mathCategory
-      }\nCorrect Answers: ${this.state.correct}\nIncorrect Answers: ${
-        this.state.incorrect
-      }\nTime Remaining: ${this.state.timeRemaining}`,
+      }\nCorrect Answers: ${this.state.correct}\nIncorrect Answers: ${20 - ( this.state.incorrect + this.state.correct) + this.state.incorrect}\nTime Remaining: ${this.state.timeRemaining}`,
       [
         {
           text: 'Go Back',
@@ -226,7 +227,6 @@ Selected Category: ${this.state.mathCategory}
         {
           text: 'Start Over',
           onPress: () => {
-            clearTimeout(this.timeoutId);
             this._getStarted();
           },
         },
@@ -244,7 +244,7 @@ Selected Category: ${this.state.mathCategory}
         incorrect: correct ? this.state.incorrect : this.state.incorrect + 1,
       },
       () => {
-        if (this.state.questionNumber === 20) {
+        if (this.state.questionNumber === this.state.numberOfQuestions) {
           this._completeQuiz();
         } else {
           this.generateNewProblem();
@@ -291,7 +291,7 @@ Selected Category: ${this.state.mathCategory}
             }}
           >
             {`Time Remaining: ${this.state.timeRemaining}
-Problem: ${this.state.questionNumber} / 20`}
+Problem: ${this.state.questionNumber} / ${this.state.numberOfQuestions}`}
           </Text>
           <View style={styles.problemContainer}>
             <View style={{ width: 180 }}>
