@@ -161,9 +161,9 @@ Selected Category: ${this.state.mathCategory}
 
     if (randomBool) {
       numerator = Math.floor(Math.random() * (this.state.selectedLevel + 1));
-      denomenator = Math.floor(Math.random() * 13);
+      denomenator = this.state.selectedLevel;
     } else {
-      numerator = Math.floor(Math.random() * 13);
+      numerator = this.state.selectedLevel;
       denomenator = Math.floor(Math.random() * (this.state.selectedLevel + 1));
     }
 
@@ -212,7 +212,6 @@ Selected Category: ${this.state.mathCategory}
   _completeQuiz() {
     clearInterval(this.intervalId);
     clearTimeout(this.timeoutId);
-    console.log({incorrect: this.state.incorrect, correct: this.state.correct, numberOfQuestions: this.state.numberOfQuestions})
     Alert.alert(
       'Quiz Complete',
       `Level: ${this.state.selectedLevel}\nCategory: ${
