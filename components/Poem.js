@@ -1,5 +1,7 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import {
+  ScrollView, StyleSheet, Text, View
+} from 'react-native';
 
 const styles = StyleSheet.create({
   center: {
@@ -19,7 +21,9 @@ const styles = StyleSheet.create({
 export default ({ poem }) => (
   <ScrollView style={styles.scroll}>
     <View style={styles.center}>
-      <Text style={styles.poem}>{poem && poem.poem}</Text>
+      <Text style={styles.poem}>
+        {poem && poem.poem}
+      </Text>
     </View>
   </ScrollView>
 );
