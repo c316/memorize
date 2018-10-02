@@ -1,23 +1,26 @@
 {
   "expo": {
     "name": "CPLS Memorize",
-    "icon": "./assets/images/CPLS-Lion-logo-512x512.png",
+    
     "githubUrl": "https://github.com/c316/memorize",
     "orientation": "portrait",
     "splash": {
       "resizeMode": "cover",
       "image": "./assets/images/splashScreen.png"
     },
-    "version": "2.4.4",
+    "version": "2.4.5",
     "slug": "cpls-memorize",
     "sdkVersion": "28.0.0",
     "ios": {
-      "bundleIdentifier": "com.joshjoe.memorize"
+      "bundleIdentifier": "com.joshjoe.memorize",
+      "icon": "./assets/images/ios-icon.png",
+      "supportsTablet": true
     },
     "android": {
       "package": "com.joshjoe.memorize",
-      "versionCode": 102404,
-      "permissions": ["com.android.launcher.permission.INSTALL_SHORTCUT"]
+      "versionCode": 102405,
+      "permissions": ["com.android.launcher.permission.INSTALL_SHORTCUT"],
+      "icon": "./assets/images/CPLS-Lion-logo-512x512.png"
     },
     "loading": {
       "icon": "./assets/images/CPLS-Lion-logo-512x512.png"
