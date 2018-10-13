@@ -21,7 +21,9 @@
     "android": "react-native-scripts android --lan",
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js --watch",
-    "mocha": "mocha --compilers js:babel-core/register"
+    "mocha": "mocha --compilers js:babel-core/register",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "jest": {
     "preset": "jest-expo"
@@ -33,6 +35,8 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-28.0.0.tar.gz",
     "react-native-elements": "^0.19.1",
     "react-native-timeline-listview": "^0.2.3",
-    "react-navigation": "^1.6.1"
-  }
+    "react-navigation": "^1.6.1",
+    "snyk": "^1.103.4"
+  },
+  "snyk": true
 }
