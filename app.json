@@ -1,14 +1,13 @@
 {
   "expo": {
     "name": "CPLS Memorize",
-    
     "githubUrl": "https://github.com/c316/memorize",
     "orientation": "portrait",
     "splash": {
       "resizeMode": "cover",
       "image": "./assets/images/splashScreen.png"
     },
-    "version": "2.4.5",
+    "version": "2.4.6",
     "slug": "cpls-memorize",
     "sdkVersion": "28.0.0",
     "ios": {
