@@ -4,7 +4,10 @@
     "browser": true,
     "es6": true
   },
-  "globals": {},
+  "globals": {
+    "it": true,
+    "describe": true
+  },
   "parserOptions": {
     "ecmaVersion": 2017,
     "sourceType": "module"
