@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  scroll: {},
   poem: {
     fontSize: 22,
     margin: 10,
@@ -21,9 +20,7 @@ const styles = StyleSheet.create({
 export default ({ poem }) => (
   <ScrollView style={styles.scroll}>
     <View style={styles.center}>
-      <Text style={styles.poem}>
-        {poem && poem.poem}
-      </Text>
+      <Text style={styles.poem}>{poem && poem.poem}</Text>
     </View>
   </ScrollView>
 );
