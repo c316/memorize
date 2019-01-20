@@ -2224,4 +2224,283 @@ Though her portion be the scaffold, and upon the throne be wrong;
 Yet that scaffold sways the future, and behind the dim unknown,
 Standeth God within the shadow, keeping watch above His own.`,
   },
+  {
+    _id: '92620143248157754',
+    order: 8,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 1',
+    poem:
+      'Q. What is the chief end of man?\n\nA. Man’s chief end is to glorify God, and to enjoy him forever.',
+  },
+  {
+    _id: '12333066057959893',
+    order: 9,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 2',
+    poem:
+      'Q. What rule has God given to direct us how we may glorify and enjoy him?\n\nA. The Word of God, which is contained in the Scriptures of the Old and New Testaments, is the only rule to direct us how we may glorify and enjoy him.',
+  },
+  {
+    _id: '39233051235123536',
+    order: 10,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 3',
+    poem:
+      'Q. What do the Scriptures principally teach?\n\nA. The Scriptures principally teach, what man is to believe concerning God, and what duty God requires of man.',
+  },
+  {
+    _id: '01713606260323940',
+    order: 11,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 4',
+    poem:
+      'Q. What is God?\n\nA. God is a Spirit, infinite, eternal, and unchangeable, in his being, wisdom, power, holiness, justice, goodness, and truth.',
+  },
+  {
+    _id: '70918211095251875',
+    order: 12,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 5',
+    poem:
+      'Q. Are there more Gods than one?\n\nA. There is but one only, the living and true God.',
+  },
+  {
+    _id: '12158431986869510',
+    order: 13,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 6',
+    poem:
+      'Q. How many persons are there in the Godhead?\n\nA. There are three persons in the Godhead: the Father, the Son, and the Holy Spirit; and these three are one God, the same in substance, equal in power and glory.',
+  },
+  {
+    _id: '34zge1dgi37atx82duelsr',
+    order: 14,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 7',
+    poem:
+      'Q. What are the decrees of God?\n\nA. The decrees of God are his eternal purpose, according to the counsel of his will, whereby, for his own glory, he has foreordained whatsoever comes to pass.',
+  },
+  {
+    _id: 'ly1xjx0qy7ufaqxc',
+    order: 15,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 8',
+    poem:
+      'Q. How doth God execute his decrees?\n\nA. God carries out his decrees in the works of creation and providence.',
+  },
+  {
+    _id: 'fjt4ain7g2b4xml4',
+    order: 16,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 9',
+    poem:
+      'Q. What is the work of creation?\n\nA. The work of creation is God’s making all things of nothing, by the word of his power, in six days, and all very good.',
+  },
+  {
+    _id: '5qwuovguwoii2zyv',
+    order: 17,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 10',
+    poem:
+      'Q. 10. How did God create man?\n\nA. God created man male and female, in his own image, in knowledge, righteousness, and holiness, with dominion over the creatures.',
+  },
+  {
+    _id: 'h5n465gwejkqimi6',
+    order: 18,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 11',
+    poem:
+      'Q. What is sin?\n\nA. Sin is disobeying or not conforming to God’s law in any way.',
+  },
+  {
+    _id: 'a3dtn0tevy18zoii',
+    order: 19,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 12',
+    poem:
+      'Q. Who is the Redeemer of God’s elect?\n\nA. The only Redeemer of God’s elect is the Lord Jesus Christ, the eternal Son of God, who became man. He was and continues to be, God and man in two distinct natures and one person, forever.',
+  },
+  {
+    _id: 'xbdf7oug6nd642rw',
+    order: 20,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 13',
+    poem:
+      'Q. How did Christ, being the Son of God, become man?\n\nA. Christ, the Son of God, became man, by taking to himself a true body, and a reasonable soul, being conceived by the power of the Holy Ghost, in the womb of the Virgin Mary, and born of her, yet without sin.',
+  },
+  {
+    _id: '2mfhsm6mzep8mdkz',
+    order: 21,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 14',
+    poem:
+      'Q. What offices doth Christ execute as our Redeemer?\n\nA. As our redeemer, Christ is a prophet, priest, and king in both his humiliation and his exaltation.',
+  },
+  {
+    _id: '7dg3s8uz2m2h2q5u',
+    order: 22,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 15',
+    poem:
+      'Q. How doth Christ execute the office of a prophet?\n\nA. As a prophet, Christ reveals the will of God to us for our salvation by his word and Spirit.',
+  },
+  {
+    _id: 'mxe7t2xxm3nr2n5b',
+    order: 23,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 16',
+    poem:
+      'Q. How doth Christ execute the office of a priest?\n\nA. As a priest, Christ offered himself up once as a sacrifice to satisfy divine justice, and reconcile us to God, and he continually intercedes for us.',
+  },
+  {
+    _id: '0kzbbanot6vzs4vq',
+    order: 24,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 17',
+    poem:
+      'Q. How doth Christ execute the office of a king?\n\nA. As a king, Christ brings us under his power, rules, and defends us, and restrains and conquers all his and all our enemies.',
+  },
+  {
+    _id: 'tja2uh7tq4hno4cy',
+    order: 25,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 18',
+    poem:
+      'Q. What is justification?\n\nA. Justification is an act of God’s free grace, wherein he pardons all our sins, and accepts us as righteous in His sight, only for the righteousness of Christ imputed to us, and is received by faith alone.',
+  },
+  {
+    _id: '840nmyiku1t9nd4y',
+    order: 26,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 19',
+    poem:
+      'Q. What is adoption?\n\nA. Adoption is an act of God’s free grace, by which we become his sons with all the rights and privileges of the sons of God.',
+  },
+  {
+    _id: 'jf1c2yegyqw5sqe6',
+    order: 27,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 20',
+    poem:
+      'Q. What is sanctification?\n\nA. Sanctification is the work of God’s free grace, whereby we are renewed in the whole man after the image of God, and are enabled more and more to die unto sin, and live unto righteousness.',
+  },
+  {
+    _id: 'p8lja9ihbnaux81s',
+    order: 28,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 21',
+    poem:
+      'Q. What are the benefits which in this life do accompany or flow from justification, adoption, and sanctification?\n\nA. The benefits which in this life do accompany or flow from justification, adoption, and sanctification, are, assurance of God’s love, peace of conscience, joy in the Holy Spirit, increase of grace, and perseverance therein to the end.',
+  },
+  {
+    _id: '7ie407l8ovuw2hy1',
+    order: 29,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 22',
+    poem:
+      'Q. What is the duty which God requires of man?\n\nA. The duty which God requires of man is obedience to his revealed will.',
+  },
+  {
+    _id: 'buyso8a1goir423d',
+    order: 30,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 23',
+    poem:
+      'Q. Is any man able perfectly to keep the commandments of God?\n\nA. No mere man, since the fall, is able in this life perfectly to keep the commandments of God, but breaks them daily in thought, word, and deed.',
+  },
+  {
+    _id: 'b7617ga5n5isi7mw',
+    order: 31,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 24',
+    poem:
+      'Q. What doth every sin deserve?\n\nA. Every sin deserves God’s wrath and curse, both in this life, and that which is to come.',
+  },
+  {
+    _id: 'cd9wf2p4q7vk5cdp',
+    order: 32,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 25',
+    poem:
+      'Q. What doth God require of us, that we may escape his wrath and curse, which we\ndeserve for our sin?\n\nA. To escape the wrath and curse of God, which we deserve for our sin, God requires of us faith in Jesus Christ, repentance unto life, with the diligent use of all the outward means whereby Christ uses to bring us the benefits of redemption.',
+  },
+  {
+    _id: 'hk58xsy9jmlwbvbo',
+    order: 33,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 26',
+    poem:
+      'Q. What is faith in Jesus Christ?\n\nA. Faith in Jesus Christ is a saving grace, whereby we receive and rest upon him alone for salvation, as he is offered to us in the gospel.',
+  },
+  {
+    _id: 'hrv1t8t9gms2ctef',
+    order: 34,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 27',
+    poem:
+      'Q. What makes the Word effective for salvation?\n\nA. The Spirit of God causes the reading and especially the preaching of the Word, to convince and convert sinners, and to build them up in holiness and comfort, through faith, to salvation.',
+  },
+  {
+    _id: 'z72rpmedtlg19k9o',
+    order: 35,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 28',
+    poem:
+      'Q. What is a sacrament?\n\nA. A sacrament is a holy ordinance established by Christ in which Christ and the benefits of the new covenant are represented, sealed, and applied to believers by physical signs',
+  },
+  {
+    _id: 'dtj94a5xzdorg0fz',
+    order: 36,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 29',
+    poem:
+      'Q. What is baptism?\n\nA. Baptism is a sacrament, wherein the washing with water in the name of the Father, and of the Son, and of the Holy Spirit, is a sign and seal that we are joined to Christ, that we receive the benefits of the covenant of grace, and that we are engaged to be the Lord’s.',
+  },
+  {
+    _id: 'gnyi5vm8cixiaxyw',
+    order: 37,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 30',
+    poem:
+      'Q. What is the Lord’s Supper?\n\nA. The Lord’s Supper is a sacrament in which bread and wine are given and received as Christ directed to proclaim his death. Those who receive the Lord’s Supper in the right way share in his body and blood with all his benefits, not merely physically but by faith, and become spiritually stronger and grow in grace.',
+  },
+  {
+    _id: 'mkwicsc9mjjwc8f9',
+    order: 38,
+    grade: '8',
+    author: '',
+    title: 'Catechism - Week 31',
+    poem:
+      'Q. What is prayer?\n\nA. Prayer is offering up our desires to God in the name of Christ for things that agree with his will, confessing our sins, and thankfully acknowledging his mercies.',
+  },
 ];
