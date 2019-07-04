@@ -10,7 +10,7 @@ import {
   StyleSheet,
   Linking,
   SafeAreaView,
-  ImageBackground
+  ImageBackground,
 } from 'react-native';
 import { Icon } from 'react-native-elements';
 import verses from '../assets/verses';
@@ -27,16 +27,16 @@ const styles = StyleSheet.create({
     shadowOffset: { height: -1 },
     shadowColor: 'grey',
     shadowOpacity: 1,
-    elevation: -1
+    elevation: -1,
   },
   headerBox: {
     flex: 1,
-    width: '100%'
+    width: '100%',
   },
   container: {
     display: 'flex',
     alignItems: 'baseline',
-    height: '100%'
+    height: '100%',
   },
   imageStyle: {
     shadowOffset: { height: 6 },
@@ -45,12 +45,12 @@ const styles = StyleSheet.create({
     overflow: 'visible',
     height: 160,
     alignSelf: 'center',
-    marginTop: 50
+    marginTop: 50,
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
-    marginBottom: 5
+    marginBottom: 5,
   },
   verseText: {
     flex: 1,
@@ -60,31 +60,31 @@ const styles = StyleSheet.create({
     marginRight: width * 0.05,
     marginTop: 15,
     marginBottom: 35,
-    color: 'rgba(37, 38, 94, 0.8)'
+    color: 'rgba(37, 38, 94, 0.8)',
   },
   verse: {
     fontSize: moderateScale(26),
     color: 'rgba(37, 38, 94, 1)',
     letterSpacing: 0.78,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   verseDates: {
     fontSize: 24,
     textAlign: 'center',
-    color: 'white'
+    color: 'white',
   },
   esvCredit: {
     margin: 8,
     fontSize: 9,
     textAlign: 'center',
-    color: 'white'
+    color: 'white',
   },
   headerTitle: {
     flex: 2,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    marginTop: 10
+    marginTop: 10,
   },
   headerUnderline: {
     alignItems: 'center',
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     borderRadius: 5,
     marginTop: 10,
-    marginBottom: 20
+    marginBottom: 20,
   },
   controlsBlock: {
     height: 125,
@@ -108,11 +108,11 @@ const styles = StyleSheet.create({
     shadowOffset: { height: -1 },
     shadowColor: 'grey',
     shadowOpacity: 1,
-    elevation: -1
+    elevation: -1,
   },
   verseBlock: {
     marginTop: 20,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   dot: {
     height: 14,
@@ -122,8 +122,8 @@ const styles = StyleSheet.create({
     left: 10,
     bottom: 15,
     borderWidth: 2,
-    borderColor: 'white'
-  }
+    borderColor: 'white',
+  },
 });
 
 class Verses extends React.Component {
@@ -131,6 +131,7 @@ class Verses extends React.Component {
     super(props);
     this.state = { showVerse: 0 };
   }
+
   componentWillMount() {
     const week = getWeek();
     const year = new Date().getFullYear();
@@ -170,6 +171,7 @@ class Verses extends React.Component {
     const verseIndex = this.state.showVerse;
     this.setState({ showVerse: verseIndex + 1 });
   }
+
   _previousVerse() {
     // Set the verse to the previous verse
     const verseIndex = this.state.showVerse;
@@ -194,18 +196,18 @@ class Verses extends React.Component {
       'September',
       'October',
       'November',
-      'December'
+      'December',
     ];
 
     const startDate = new Date(
       `${useThisVerse.dateRange.start.month + 1}/${
         useThisVerse.dateRange.start.day
-      }/${useThisVerse.year}`
+      }/${useThisVerse.year}`,
     );
     const endDate = new Date(
       `${useThisVerse.dateRange.end.month + 1}/${
         useThisVerse.dateRange.end.day
-      }/${useThisVerse.year}`
+      }/${useThisVerse.year}`,
     );
 
     const dateFrom = `${
@@ -239,6 +241,9 @@ class Verses extends React.Component {
         break;
       case '1 Peter':
         bookImagePath = require('../assets/images/bible/1Peter.png');
+        break;
+      case '2 Peter':
+        bookImagePath = require('../assets/images/bible/2Peter.png');
         break;
       case '1 Thessalonians':
         bookImagePath = require('../assets/images/bible/1Thessalonians.png');
@@ -294,6 +299,9 @@ class Verses extends React.Component {
       case 'Nahum':
         bookImagePath = require('../assets/images/bible/Nahum.png');
         break;
+      case 'Nehemiah':
+        bookImagePath = require('../assets/images/bible/Nehemiah.png');
+        break;
       case 'Numbers':
         bookImagePath = require('../assets/images/bible/Numbers.png');
         break;
@@ -304,6 +312,9 @@ class Verses extends React.Component {
         bookImagePath = require('../assets/images/bible/Proverbs.png');
         break;
       case 'Psalm':
+        bookImagePath = require('../assets/images/bible/Psalm.png');
+        break;
+      case 'Psalms':
         bookImagePath = require('../assets/images/bible/Psalm.png');
         break;
       case 'Romans':
@@ -332,7 +343,7 @@ class Verses extends React.Component {
             <TouchableHighlight
               onPress={() => {
                 Linking.openURL(useThisVerse.verseURL).catch(err =>
-                  console.error('An error occurred', err)
+                  console.error('An error occurred', err),
                 );
               }}
               activeOpacity={75 / 100}
@@ -366,13 +377,7 @@ class Verses extends React.Component {
                   this._getVerseDates().dateTo
                 }`}
                 {useThisVerse.customDateRange ? (
-                  Platform.OS === 'ios' ? (
-                    <View>
-                      <View style={styles.dot} />
-                    </View>
-                  ) : (
-                    <Text> *</Text>
-                  )
+                  <Text> *</Text>
                 ) : (
                   <Text title="" />
                 )}
