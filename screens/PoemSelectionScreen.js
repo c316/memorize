@@ -24,26 +24,24 @@ class PoemSelectionScreen extends React.Component {
     } = this.props.navigation.state;
     return (
       <ScrollView>
-        <List containerStyle={{ marginTop: 0 }}>
-          {poems.map((l) => {
-            if (Number(l.grade) === grade) {
-              return (
-                <ListItem
-                  titleStyle={{
-                    color: '#25265E',
-                  }}
-                  chevronColor="#7540EE"
-                  key={l._id}
-                  title={l.title}
-                  onPress={() => {
-                    this._showPoem(l._id);
-                  }}
-                />
-              );
-            }
-            return null;
-          })}
-        </List>
+        {poems.map((l) => {
+          if (Number(l.grade) === grade) {
+            return (
+              <ListItem
+                titleStyle={{
+                  color: '#25265E',
+                }}
+                chevronColor="#7540EE"
+                key={l._id}
+                title={l.title}
+                onPress={() => {
+                  this._showPoem(l._id);
+                }}
+              />
+            );
+          }
+          return null;
+        })}
       </ScrollView>
     );
   }

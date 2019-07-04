@@ -5,76 +5,67 @@
 *    separate screen components to use better parent/child prop passing, so you can reuse components
 * */
 
-import React from "react";
-import { StatusBar, View } from "react-native";
-import { Icon } from "react-native-elements";
-import { StackNavigator, TabNavigator, TabBarBottom } from "react-navigation";
-import { styles } from "./styles/styles";
+import React from 'react';
+import { StatusBar, View } from 'react-native';
+import { Icon } from 'react-native-elements';
+import { createAppContainer, createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import { styles } from './styles/styles';
 
-import HomeScreen from "./screens/HomeScreen";
-import VersesScreen from "./screens/VersesScreen";
-import TimelineGradeSelectionScreen from "./screens/TimelineGradeSelectionScreen";
-import TimelineForGradeScreen from "./screens/TimelineForGradeScreen";
+import HomeScreen from './screens/HomeScreen';
+import VersesScreen from './screens/VersesScreen';
+import TimelineGradeSelectionScreen from './screens/TimelineGradeSelectionScreen';
+import TimelineForGradeScreen from './screens/TimelineForGradeScreen';
 
-import PoemScreen from "./screens/PoemScreen";
-import PoemGradeSelectionScreen from "./screens/PoemGradeSelectionScreen";
-import PoemSelectionScreen from "./screens/PoemSelectionScreen";
+import PoemScreen from './screens/PoemScreen';
+import PoemGradeSelectionScreen from './screens/PoemGradeSelectionScreen';
+import PoemSelectionScreen from './screens/PoemSelectionScreen';
 
-import MathPracticeScreen from "./screens/MathPracticeScreen";
-import MathQuizScreen from "./screens/MathQuizScreen";
+import MathPracticeScreen from './screens/MathPracticeScreen';
+import MathQuizScreen from './screens/MathQuizScreen';
 
-const TimelineStack = StackNavigator(
+const TimelineStack = createStackNavigator(
   {
-    TimelineGradeSelectionScreen: {
-      screen: TimelineGradeSelectionScreen,
-    },
+    TimelineGradeSelectionScreen,
     TimelineGradeScreen: {
       screen: TimelineForGradeScreen,
     },
   },
   {
-    initialRouteName: "TimelineGradeSelectionScreen",
-    navigationOptions: {
+    initialRouteName: 'TimelineGradeSelectionScreen',
+    defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: "#2DC76D",
-        paddingRight: 10,
+        backgroundColor: '#2DC76D',
       },
-      headerTintColor: "#fff",
+      headerTintColor: '#fff',
       headerTitleStyle: {
-        fontWeight: "bold",
+        fontWeight: 'bold',
       },
     },
   }
 );
 
-const PoemStack = StackNavigator(
+const PoemStack = createStackNavigator(
   {
-    PoemGradeSelectionScreen: {
-      screen: PoemGradeSelectionScreen,
-    },
-    PoemSelectionScreen: {
-      screen: PoemSelectionScreen,
-    },
-    PoemScreen: {
-      screen: PoemScreen,
-    },
+    PoemGradeSelectionScreen,
+    PoemSelectionScreen,
+    PoemScreen,
   },
   {
-    initialRouteName: "PoemGradeSelectionScreen",
-    navigationOptions: {
+    initialRouteName: 'PoemGradeSelectionScreen',
+    defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: "white",
+        backgroundColor: 'white',
       },
-      headerTintColor: "#4A4A4A",
+      headerTintColor: '#4A4A4A',
       headerTitleStyle: {
-        fontWeight: "bold",
+        fontWeight: 'bold',
         marginHorizontal: 10,
       },
     },
   }
 );
 
-const MathStack = StackNavigator(
+const MathStack = createStackNavigator(
   {
     MathPracticeScreen: {
       screen: MathPracticeScreen,
@@ -84,16 +75,16 @@ const MathStack = StackNavigator(
     },
   },
   {
-    headerMode: "none",
-    initialRouteName: "MathPracticeScreen",
-    navigationOptions: {
+    headerMode: 'none',
+    initialRouteName: 'MathPracticeScreen',
+    defaultNavigationOptions: {
       headerVisible: false,
       headerStyle: {
-        backgroundColor: "white",
+        backgroundColor: 'white',
       },
-      headerTintColor: "#4A4A4A",
+      headerTintColor: '#4A4A4A',
       headerTitleStyle: {
-        fontWeight: "bold",
+        fontWeight: 'bold',
         marginHorizontal: 10,
       },
     },
@@ -101,7 +92,7 @@ const MathStack = StackNavigator(
 );
 
 /* eslint new-cap: "off" */
-const MyApp = TabNavigator(
+const MyApp = createBottomTabNavigator(
   {
     Verses: {
       screen: VersesScreen,
@@ -109,7 +100,7 @@ const MyApp = TabNavigator(
     Poems: {
       screen: PoemStack,
       navigationOptions: {
-        tabBarLabel: "Poems",
+        tabBarLabel: 'Poems',
         tabBarIcon: () => (
           <Icon name="create" color="rgba(0, 0, 0, 0.5)" size={24} />
         ),
@@ -117,11 +108,17 @@ const MyApp = TabNavigator(
     },
     MathFacts: {
       screen: MathStack,
+      navigationOptions: {
+        tabBarLabel: 'Math Facts',
+        tabBarIcon: () => (
+          <Icon name="add" color="#2089dc" size={24} />
+        ),
+      },
     },
     Timeline: {
       screen: TimelineStack,
       navigationOptions: {
-        tabBarLabel: "Timelines",
+        tabBarLabel: 'Timelines',
         tabBarIcon: () => <Icon name="history" color="#2DC76D" size={20} />,
       },
     },
@@ -133,29 +130,30 @@ const MyApp = TabNavigator(
     tabBarOptions: {
       style: {
         paddingBottom: 2,
-        backgroundColor: "#FFF",
+        backgroundColor: '#FFF',
       },
       tabStyle: {
-        backgroundColor: "#FDFEFE",
+        backgroundColor: '#FDFEFE',
       },
-      activeTintColor: "firebrick",
-      inactiveTintColor: "#1c5fa0",
+      activeTintColor: 'firebrick',
+      inactiveTintColor: '#1c5fa0',
       indicatorStyle: {
-        backgroundColor: "firebrick",
+        backgroundColor: 'firebrick',
       },
       showIcon: true,
     },
-    tabBarComponent: TabBarBottom,
-    tabBarPosition: "bottom",
+    tabBarPosition: 'bottom',
   }
 );
+
+const AppContainer = createAppContainer(MyApp);
 
 const App = () => (
   <View style={styles.container}>
     <View>
       <StatusBar hidden backgroundColor="transparent" translucent />
     </View>
-    <MyApp />
+    <AppContainer />
   </View>
 );
 

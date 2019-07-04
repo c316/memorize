@@ -7,9 +7,9 @@
       "resizeMode": "cover",
       "image": "./assets/images/splashScreen.png"
     },
-    "version": "2.4.6",
+    "version": "2.5.0",
     "slug": "cpls-memorize",
-    "sdkVersion": "28.0.0",
+    "sdkVersion": "33.0.0",
     "ios": {
       "bundleIdentifier": "com.joshjoe.memorize",
       "icon": "./assets/images/ios-icon.png",
@@ -17,7 +17,7 @@
     },
     "android": {
       "package": "com.joshjoe.memorize",
-      "versionCode": 102405,
+      "versionCode": 102408,
       "permissions": ["com.android.launcher.permission.INSTALL_SHORTCUT"],
       "icon": "./assets/images/CPLS-Lion-logo-512x512.png"
     },

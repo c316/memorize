@@ -69,10 +69,6 @@ const styles = StyleSheet.create({
   specialButtonContainer: {
     flex: 1,
   },
-  specialTextContainer: {
-    marginLeft: 20,
-    marginTop: 20,
-  },
 });
 
 class MathPracticeScreen extends React.Component {
@@ -354,24 +350,20 @@ Problem: ${this.state.questionNumber} / ${this.state.numberOfQuestions}`}
                 marginBottom: 10,
               }}
             />
-            <View style={{ alignItems: 'center', marginTop: 15 }}>
+            <View style={{ alignItems: 'center', marginTop: 30 }}>
               <View style={styles.specialContainer}>
                 <View style={styles.specialButtonContainer}>
                   <Button
-                    containerViewStyle={{
-                      width: 100,
-                      height: 30,
+                    containerStyle={{
+                      width: 150,
+                      height: 45,
                     }}
-                    color="#25265E"
                     buttonStyle={{
                       borderRadius: 8,
-                      padding: 5,
-                      borderColor: 'silver',
-                      borderWidth: 1,
+                      backgroundColor: 'grey',
                     }}
                     textStyle={{ fontSize: 16 }}
                     title="Skip"
-                    backgroundColor="white"
                     onPress={() => this._skipQuestion()}
                   />
                 </View>
@@ -385,19 +377,15 @@ Problem: ${this.state.questionNumber} / ${this.state.numberOfQuestions}`}
                   ]}
                 >
                   <Button
-                    containerViewStyle={{
-                      width: 120,
-                      height: 30,
+                    containerStyle={{
+                      width: 200,
+                      height: 45,
                     }}
                     buttonStyle={{
                       borderRadius: 8,
-                      paddingTop: 6,
-                      paddingBottom: 6,
                     }}
                     textStyle={{ fontSize: 16 }}
-                    color="white"
                     title="Submit"
-                    backgroundColor="#5A95FF"
                     onPress={() => this._submitAnswer()}
                   />
                 </View>

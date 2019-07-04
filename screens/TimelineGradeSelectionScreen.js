@@ -67,29 +67,24 @@ export default class TimelineGradeSelectionScreen extends React.Component {
         style={{ width: '100%', height: '100%', backgroundColor: 'white' }}
         imageStyle={{ opacity: 0.1 }}
       >
-        <List
-          style={{ marginTop: Platform.OS === 'ios' ? 20 : 0 }}
-          containerStyle={{ marginTop: 0 }}
-        >
-          {grades.map((l, i) => (
-            <ListItem
-              titleStyle={{
-                color: '#25265E',
-              }}
-              chevronColor="#2DC76D"
-              key={i}
-              title={l.name}
-              leftIcon={{
-                name: l.icon ? l.icon : null,
-                type: l.type ? l.type : null,
-                color: '#2DC76D',
-              }}
-              onPress={() => {
-                this._showTimelinesForGrade(l.grade, l.timelineType);
-              }}
-            />
-          ))}
-        </List>
+        {grades.map((l, i) => (
+          <ListItem
+            titleStyle={{
+              color: '#25265E',
+            }}
+            chevronColor="#2DC76D"
+            key={i}
+            title={l.name}
+            leftIcon={{
+              name: l.icon ? l.icon : null,
+              type: l.type ? l.type : null,
+              color: '#2DC76D',
+            }}
+            onPress={() => {
+              this._showTimelinesForGrade(l.grade, l.timelineType);
+            }}
+          />
+        ))}
       </ImageBackground>
     );
   }
