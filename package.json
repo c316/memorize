@@ -6,11 +6,11 @@
     "babel-eslint": "^10.0.2",
     "eslint": "^6.0.1",
     "eslint-config-airbnb": "^17.1.1",
-    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
     "jest-expo": "~33.0.2",
-    "mocha": "^6.1.4",
+    "mocha": "^6.2.0",
     "react-test-renderer": "16.8.6"
   },
   "main": "node_modules/expo/AppEntry.js",
@@ -33,6 +33,6 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
     "react-native-elements": "^1.1.0",
     "react-native-timeline-flatlist": "^0.3.1",
-    "react-navigation": "^3.11.0"
+    "react-navigation": "^3.11.1"
   }
 }
