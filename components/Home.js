@@ -49,11 +49,11 @@ const styles = StyleSheet.create({
   headerBox: {
     display: 'flex',
     alignItems: 'stretch',
-    height: height * 0.18,
+    height: '23%',
     width: '100%',
     backgroundColor: 'rgba(208, 2, 27, 0.85)',
     elevation: 1,
-    paddingTop: moderateScale(28),
+    marginTop: 10,
   },
   headerTitle: {
     flex: 1,
@@ -79,9 +79,9 @@ const styles = StyleSheet.create({
     letterSpacing: 3,
   },
   subText: {
-    color: 'rgba(255, 255, 255, 0.6)',
+    color: 'rgba(255, 255, 255, 0.9)',
     fontSize: 12,
-    fontWeight: '100',
+    fontWeight: '400',
     flexGrow: 1,
     flexShrink: 1,
     flexBasis: 'auto',
@@ -131,7 +131,9 @@ const Home = () => (
           <Text style={[styles.headerText]}>CPLS Memorize</Text>
         </View>
         <View style={styles.headerUnderline} />
-        <Text style={styles.subText}>Hide His Word in Your Heart</Text>
+        <View style={[styles.headerTitle]}>
+          <Text style={styles.subText}>Hide His Word in Your Heart</Text>
+        </View>
       </View>
       <Image
         style={{
