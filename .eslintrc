@@ -112,14 +112,6 @@
       }
     ],
     "comma-style": [2, "last"],
-    "comma-dangle": [
-      "error",
-      {
-        "arrays": "always-multiline",
-        "objects": "always-multiline",
-        "functions": "never"
-      }
-    ],
     "eol-last": 2,
     "func-names": 0,
     "func-style": [2, "expression"],

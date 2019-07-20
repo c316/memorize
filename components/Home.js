@@ -10,9 +10,11 @@ import {
   SafeAreaView,
   View,
 } from 'react-native';
+import Constants from 'expo-constants';
 import { moderateScale, scale } from '../miscFunctions';
 
 const { width, height } = Dimensions.get('window');
+const { version } = Constants.manifest;
 
 const styles = StyleSheet.create({
   container: {
@@ -47,11 +49,11 @@ const styles = StyleSheet.create({
   headerBox: {
     display: 'flex',
     alignItems: 'stretch',
-    height: height * 0.2,
+    height: height * 0.18,
     width: '100%',
     backgroundColor: 'rgba(208, 2, 27, 0.85)',
     elevation: 1,
-    marginTop: moderateScale(20),
+    paddingTop: moderateScale(28),
   },
   headerTitle: {
     flex: 1,
@@ -91,7 +93,7 @@ const styles = StyleSheet.create({
   verse: {
     textAlign: 'left',
     marginHorizontal: 15,
-    fontSize: 24,
+    fontSize: 22,
     letterSpacing: 1,
     fontWeight: '300',
     color: 'rgba(37, 38, 94, 1)',
@@ -133,8 +135,8 @@ const Home = () => (
       </View>
       <Image
         style={{
-          width: scale(200),
-          height: scale(200),
+          width: scale(150),
+          height: scale(150),
           shadowOffset: { height: 6 },
           shadowColor: 'grey',
           shadowOpacity: 0.5,
@@ -159,6 +161,7 @@ const Home = () => (
       >
         <Text style={[styles.verseReference]}>Psalm 119:11 (ESV)</Text>
       </TouchableHighlight>
+      <Text style={{ top: 100 }}>Version: {version}</Text>
     </SafeAreaView>
   </ImageBackground>
 );
