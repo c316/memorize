@@ -567,30 +567,42 @@ The pleasant land of counterpane.`,
     order: 1,
     grade: '3',
     author: 'Unknown',
-    title: 'Being Third',
-    poem: `If we all tried to be 3rd
+    title: 'The Apostles’ Creed',
+    poem: `I believe in God the Father Almighty,
 
-instead of number one
-
-There’d be a lot less fighting,
-
-(There’d be a lot more fun!)
-
-God would have the first place
-
-in everybody’s heart,
-
-Others would come second
-
-right from the very start.
-
-So let’s all try to be 3rd
-
-and watch the year unfold…
-
-And see how many blessings
-
-that being 3rd will hold!!!`,
+    Maker of heaven and earth,
+    
+    And in Jesus Christ his only Son our Lord,
+    
+    Who was conceived by the Holy Ghost,
+    
+    Born of the Virgin Mary,
+    
+    Suffered under Pontius Pilate,
+    
+    Was crucified, dead, and buried.
+    
+    He descended into hell;
+    
+    The third day He rose again from the dead;
+    
+    He ascended into heaven,
+    
+    And sitteth on the right hand of God the Father Almighty;
+    
+    From thence he shall come to judge the quick and the dead.
+    
+    I believe in the Holy Ghost;
+    
+    The Holy catholic Church, the Communion of Saints;
+    
+    The Forgiveness of sins;
+    
+    The Resurrection of the body,
+    
+    And the Life everlasting.
+    
+    Amen.`,
   },
   {
     _id: 'eivXmZ5ePpRz2YrL6',
