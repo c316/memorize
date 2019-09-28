@@ -1,6 +1,6 @@
 import React from 'react';
-import { ImageBackground, Platform } from 'react-native';
-import { List, ListItem } from 'react-native-elements';
+import { ImageBackground } from 'react-native';
+import { ListItem } from 'react-native-elements';
 
 export default class TimelineGradeSelectionScreen extends React.Component {
   static navigationOptions = ({ navigationOptions }) => ({

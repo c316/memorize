@@ -4,14 +4,14 @@ import {
   TouchableOpacity,
   View,
   StyleSheet,
-  SafeAreaView
+  SafeAreaView,
 } from 'react-native';
 import {
   Icon,
   Divider,
   Text,
   ButtonGroup,
-  Button
+  Button,
 } from 'react-native-elements';
 
 const styles = StyleSheet.create({
@@ -117,7 +117,7 @@ class MathPracticeScreen extends React.Component {
         mathCategory: index === 0 ? 'Addition' : 'Multiplication',
         operation: index === 0 ? '+' : 'x',
       },
-      () => this.generateNewProblem()
+      () => this.generateNewProblem(),
     );
   }
 
@@ -127,7 +127,7 @@ class MathPracticeScreen extends React.Component {
         selectedLevel: index + 3,
         selectedNumberIndex: index,
       },
-      () => this.generateNewProblem()
+      () => this.generateNewProblem(),
     );
   }
 
