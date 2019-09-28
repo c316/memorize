@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from 'react-native';
-import { Icon } from 'react-native-elements';
+import { Button } from 'react-native-elements';
 import Timelines from '../components/Timelines';
 
 export default class TimelineForGradeScreen extends React.Component {
@@ -9,14 +8,14 @@ export default class TimelineForGradeScreen extends React.Component {
 
     return {
       tabBarLabel: 'Timelines',
-      tabBarIcon: () => <Icon name="history" color="white" size={20} />,
       headerRight: (
         <Button
-          onPress={
-            params.showHideAllEvents || (() => console.log('placeholder'))
-          }
+          onPress={params.showHideAllEvents}
           title="Show/Hide All"
-          color='white'
+          titleStyle={{
+            color: 'white',
+          }}
+          type="clear"
         />
       ),
     };
