@@ -155,8 +155,41 @@ export default [
     grade: '1',
     author: 'Sara Coleridge',
     title: 'The Months',
-    poem:
-      'August brings the sheaves of corn,\nThen the harvest home is born.\n\nWarm September brings the fruit,\nSportsmen then begin to shoot.\n\nFresh October brings the pheasant,\nThen to gather nuts is pleasant.\n\nDull November brings the blast’\nThen the leaves are whirling fast.\n\nChill December brings the sleet,\nBlazing fire and Christmas treat.\n\nJanuary brings the snow,\nMakes our feet and fingers glow.\n\nFebruary brings the rain,\nThaws the frozen lake again.\n\nMarch brings breezes, loud and shrill,\nStir the dancing daffodil.\n\nApril brings the primrose sweet,\nScatters daisies at our feet.\n\nMay brings flocks of pretty lambs,\nSkipping by their fleecy dams.',
+    poem: `January brings the snow,
+makes our feet and fingers glow.
+
+February brings the rain,
+Thaws the frozen lake again.
+
+March brings breezes loud and shrill,
+stirs the dancing daffodil.
+
+April brings the primrose sweet,
+Scatters daises at our feet.
+
+May brings flocks of pretty lambs,
+Skipping by their fleecy damns.
+
+June brings tulips, lilies, roses,
+Fills the children's hand with posies.
+
+Hot July brings cooling showers,
+Apricots and gillyflowers.
+
+August brings the sheaves of corn,
+Then the harvest home is borne.
+
+Warm September brings the fruit,
+Sportsmen then begin to shoot.
+
+Fresh October brings the pheasents,
+Then to gather nuts is pleasent.
+
+Dull November brings the blast,
+Then the leaves are whirling fast.
+
+Chill December brings the sleet,
+Blazing fire, and Christmas treat.`,
   },
   {
     _id: '9tpQz43wSbG4ThHdW',
