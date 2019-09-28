@@ -1,14 +1,18 @@
 /* TODO:
-*  Touch book icon shows book about
-*  code cleanup
-*    separate components into files, one for each screen
-*    separate screen components to use better parent/child prop passing, so you can reuse components
-* */
+ *  Touch book icon shows book about
+ *  code cleanup
+ *    separate components into files, one for each screen
+ *    separate screen components to use better parent/child prop passing, so you can reuse components
+ * */
 
 import React from 'react';
 import { StatusBar, View } from 'react-native';
 import { Icon } from 'react-native-elements';
-import { createAppContainer, createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import {
+  createAppContainer,
+  createStackNavigator,
+  createBottomTabNavigator,
+} from 'react-navigation';
 import { styles } from './styles/styles';
 
 import HomeScreen from './screens/HomeScreen';
@@ -22,6 +26,7 @@ import PoemSelectionScreen from './screens/PoemSelectionScreen';
 
 import MathPracticeScreen from './screens/MathPracticeScreen';
 import MathQuizScreen from './screens/MathQuizScreen';
+import SpellingGradeSelectionScreen from './screens/SpellingGradeSelectionScreen';
 
 const TimelineStack = createStackNavigator(
   {
@@ -41,7 +46,7 @@ const TimelineStack = createStackNavigator(
         fontWeight: 'bold',
       },
     },
-  }
+  },
 );
 
 const PoemStack = createStackNavigator(
@@ -62,7 +67,7 @@ const PoemStack = createStackNavigator(
         marginHorizontal: 10,
       },
     },
-  }
+  },
 );
 
 const MathStack = createStackNavigator(
@@ -88,7 +93,25 @@ const MathStack = createStackNavigator(
         marginHorizontal: 10,
       },
     },
-  }
+  },
+);
+
+const SpellingStack = createStackNavigator(
+  {
+    SpellingGradeSelectionScreen,
+  },
+  {
+    initialRouteName: 'SpellingGradeSelectionScreen',
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#a9233e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+  },
 );
 
 /* eslint new-cap: "off" */
@@ -110,9 +133,7 @@ const MyApp = createBottomTabNavigator(
       screen: MathStack,
       navigationOptions: {
         tabBarLabel: 'Math Facts',
-        tabBarIcon: () => (
-          <Icon name="add" color="#2089dc" size={24} />
-        ),
+        tabBarIcon: () => <Icon name="add" color="#2089dc" size={24} />,
       },
     },
     Timeline: {
@@ -120,6 +141,13 @@ const MyApp = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'Timelines',
         tabBarIcon: () => <Icon name="history" color="#2DC76D" size={20} />,
+      },
+    },
+    Spelling: {
+      screen: SpellingStack,
+      navigationOptions: {
+        tabBarLabel: 'Spelling',
+        tabBarIcon: () => <Icon name="spellcheck" color="#a9233e" size={20} />,
       },
     },
     About: {
@@ -143,7 +171,7 @@ const MyApp = createBottomTabNavigator(
       showIcon: true,
     },
     tabBarPosition: 'bottom',
-  }
+  },
 );
 
 const AppContainer = createAppContainer(MyApp);
