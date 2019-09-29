@@ -10,60 +10,60 @@ export default (props) => {
       grade: 0,
     },
     {
-      name: 'First Grade',
+      name: 'First',
       icon: 'numeric-1-box',
       type: 'material-community',
       grade: 1,
     },
     {
-      name: 'Second Grade',
+      name: 'Second',
       icon: 'numeric-2-box',
       type: 'material-community',
       grade: 2,
     },
     {
-      name: 'Third Grade',
+      name: 'Third',
       icon: 'numeric-3-box',
       type: 'material-community',
       grade: 3,
     },
     {
-      name: 'Fourth Grade',
+      name: 'Fourth',
       icon: 'numeric-4-box',
       type: 'material-community',
       grade: 4,
     },
     {
-      name: 'Fifth Grade',
+      name: 'Fifth',
       icon: 'numeric-5-box',
       type: 'material-community',
       grade: 5,
     },
     {
-      name: 'Sixth Grade',
+      name: 'Sixth',
       icon: 'numeric-6-box',
       type: 'material-community',
       grade: 6,
     },
     {
-      name: 'Seventh Grade',
+      name: 'Seventh',
       icon: 'numeric-7-box',
       type: 'material-community',
       grade: 7,
     },
     {
-      name: 'Eighth Grade',
+      name: 'Eighth',
       icon: 'numeric-8-box',
       type: 'material-community',
       grade: 8,
     },
   ];
 
-  const { showGrades, textColor } = props;
+  const { screenName, showGrades, textColor } = props;
   return grades
     .filter((item) => {
       if (showGrades && showGrades.length) {
-        if (showGrades.includes(item.grade)) {
+        if (showGrades.includes(item.name.toLowerCase())) {
           return item;
         }
         return null;
@@ -83,7 +83,7 @@ export default (props) => {
           color: textColor,
         }}
         onPress={() => {
-          NavigationService.navigate('SpellingForGradeScreen', {
+          NavigationService.navigate(screenName, {
             grade: l.grade,
           });
         }}

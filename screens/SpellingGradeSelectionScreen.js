@@ -12,8 +12,9 @@ export default class SpellingGradeSelectionScreen extends React.Component {
     return (
       <BackgroundImage>
         <GradeSelector
+          screenName="SpellingForGradeScreen"
+          showGrades={['first', 'second', 'third', 'fourth']}
           textColor={constants.colors.red}
-          showGrades={[1, 2, 3, 4]}
         />
       </BackgroundImage>
     );

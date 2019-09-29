@@ -23,6 +23,7 @@ import MathQuizScreen from './screens/MathQuizScreen';
 
 import SpellingGradeSelectionScreen from './screens/SpellingGradeSelectionScreen';
 import SpellingForGradeScreen from './screens/SpellingForGradeScreen';
+import SpellingScreen from './screens/SpellingScreen';
 
 const TimelineStack = createStackNavigator(
   {
@@ -96,6 +97,7 @@ const SpellingStack = createStackNavigator(
   {
     SpellingGradeSelectionScreen,
     SpellingForGradeScreen,
+    SpellingScreen,
   },
   {
     initialRouteName: 'SpellingGradeSelectionScreen',

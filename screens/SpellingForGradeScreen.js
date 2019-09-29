@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text, View } from 'react-native';
+import { ScrollView } from 'react-native';
+import { ListItem } from 'react-native-elements';
+
+import constants from '../constants';
+import { first, second, third, fourth, fifth } from '../assets/spelling';
 
 export default class SpellingForGradeScreen extends React.Component {
   static navigationOptions = (screenProps) => ({
@@ -10,17 +14,39 @@ export default class SpellingForGradeScreen extends React.Component {
   render() {
     const { navigation } = this.props;
     const grade = navigation.getParam('grade');
-
+    let spellingList = first;
+    if (grade === 2) {
+      spellingList = second;
+    }
+    if (grade === 3) {
+      spellingList = third;
+    }
+    if (grade === 4) {
+      spellingList = fourth;
+    }
+    if (grade === 5) {
+      spellingList = fifth;
+    }
     return (
-      <View>
-        {/* TODO:
-          1. list number
-          2. Item number
-          3. Spelling word
-          4. Line sepearator
-        */}
-        <Text>{grade}</Text>
-      </View>
+      <ScrollView>
+        {spellingList.map((l, i) => (
+          <ListItem
+            key={i.toString()}
+            titleStyle={{
+              color: constants.colors.red,
+            }}
+            title={`List: ${i + 1}`}
+            onPress={() => {
+              navigation.navigate('SpellingScreen', {
+                spellingList: l,
+                listNumber: i + 1,
+              });
+            }}
+            chevronColor={constants.colors.red}
+            chevron
+          />
+        ))}
+      </ScrollView>
     );
   }
 }
