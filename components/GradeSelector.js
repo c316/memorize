@@ -1,5 +1,7 @@
 import React from 'react';
 import { ListItem } from 'react-native-elements';
+import NavigationService from '../Navigation';
+import constants from '../constants';
 
 export default (props) => {
   const grades = [
@@ -72,7 +74,7 @@ export default (props) => {
       <ListItem
         key={i.toString()}
         titleStyle={{
-          color: '#25265E',
+          color: constants.colors.red,
         }}
         title={l.name}
         leftIcon={{
@@ -81,7 +83,9 @@ export default (props) => {
           color: textColor,
         }}
         onPress={() => {
-          this._showPoemsForGrade(l.grade);
+          NavigationService.navigate('SpellingForGradeScreen', {
+            grade: l.grade,
+          });
         }}
         chevronColor={textColor}
         chevron
