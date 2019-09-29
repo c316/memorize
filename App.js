@@ -1,10 +1,3 @@
-/* TODO:
- *  Touch book icon shows book about
- *  code cleanup
- *    separate components into files, one for each screen
- *    separate screen components to use better parent/child prop passing, so you can reuse components
- * */
-
 import React from 'react';
 import { StatusBar, View } from 'react-native';
 import { Icon } from 'react-native-elements';
@@ -14,6 +7,7 @@ import {
   createBottomTabNavigator,
 } from 'react-navigation';
 import { styles } from './styles/styles';
+import NavigationService from './Navigation';
 
 import HomeScreen from './screens/HomeScreen';
 import VersesScreen from './screens/VersesScreen';
@@ -26,7 +20,9 @@ import PoemSelectionScreen from './screens/PoemSelectionScreen';
 
 import MathPracticeScreen from './screens/MathPracticeScreen';
 import MathQuizScreen from './screens/MathQuizScreen';
+
 import SpellingGradeSelectionScreen from './screens/SpellingGradeSelectionScreen';
+import SpellingForGradeScreen from './screens/SpellingForGradeScreen';
 
 const TimelineStack = createStackNavigator(
   {
@@ -99,6 +95,7 @@ const MathStack = createStackNavigator(
 const SpellingStack = createStackNavigator(
   {
     SpellingGradeSelectionScreen,
+    SpellingForGradeScreen,
   },
   {
     initialRouteName: 'SpellingGradeSelectionScreen',
@@ -181,7 +178,11 @@ const App = () => (
     <View>
       <StatusBar hidden backgroundColor="transparent" translucent />
     </View>
-    <AppContainer />
+    <AppContainer
+      ref={(navigatorRef) => {
+        NavigationService.setTopLevelNavigator(navigatorRef);
+      }}
+    />
   </View>
 );
 
