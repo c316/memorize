@@ -73,7 +73,7 @@ export default class TimelineGradeSelectionScreen extends React.Component {
               color: '#25265E',
             }}
             chevronColor="#2DC76D"
-            key={i}
+            key={i.toString()}
             title={l.name}
             leftIcon={{
               name: l.icon ? l.icon : null,

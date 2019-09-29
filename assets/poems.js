@@ -1,6 +1,3 @@
-import React from 'react';
-import { Text } from 'react-native';
-
 export default [
   {
     _id: 'fFjk4wdWCWoQaDfQA',

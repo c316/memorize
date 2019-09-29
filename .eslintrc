@@ -44,7 +44,6 @@
     "use-isnan": 2,
     "block-scoped-var": 0,
     "consistent-return": 2,
-    "curly": [2, "multi-line"],
     "default-case": 2,
     "dot-notation": [
       2,
@@ -161,6 +160,8 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "import/no-named-as-default": 0,
     "import/no-named-as-default-member": 0,
-    "global-require": 0
+    "global-require": 0,
+    "implicit-arrow-linebreak": 0,
+    "object-curly-newline": 0
   }
 }
