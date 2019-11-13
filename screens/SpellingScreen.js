@@ -1,24 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { ScrollView } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import constants from '../constants';
-
-const styles = StyleSheet.create({
-  headerTitle: {
-    alignItems: 'center',
-    marginTop: 10,
-  },
-  headerUnderline: {
-    alignItems: 'center',
-    borderBottomColor: 'white',
-    borderBottomWidth: 2,
-    shadowOffset: { height: 3 },
-    shadowColor: 'grey',
-    shadowOpacity: 1,
-    elevation: 3,
-  },
-});
 
 class SpellingScreen extends React.Component {
   static navigationOptions = (screenProps) => ({

@@ -11,7 +11,7 @@ function navigate(routeName, params) {
     NavigationActions.navigate({
       routeName,
       params,
-    }),
+    })
   );
 }
 
@@ -20,7 +20,7 @@ function push(routeName, params) {
     StackActions.push({
       routeName,
       params,
-    }),
+    })
   );
 }
 
@@ -32,7 +32,7 @@ function popStack() {
   _navigator.dispatch(
     StackActions.pop({
       n: 1,
-    }),
+    })
   );
 }
 

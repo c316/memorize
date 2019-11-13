@@ -89,7 +89,6 @@
     "wrap-iife": [2, "any"],
     "yoda": 2,
     "max-len": 0,
-    "indent": [2, 2],
     "brace-style": [
       2,
       "1tbs",
