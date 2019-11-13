@@ -1,3 +1,27 @@
+export const kindergarten = [
+  ['one', 'two', 'three', 'four', 'five'],
+  ['six', 'seven', 'eight', 'nine', 'ten'],
+  ['zero', 'red', 'orange', 'yellow', 'green'],
+  ['blue', 'purple', 'brown', 'black', 'white'],
+  ['day', 'eat', 'find', 'get', 'have'],
+  ['I', 'jump', 'like', 'make', 'new'],
+  ['on', 'play', 'ran', 'said', 'that'],
+  ['to', 'too', 'under', 'want', 'yes'],
+  ['all', 'big', 'came', 'did', 'for'],
+  ['go', 'he', 'in', 'little', 'me'],
+  ['no', 'our', 'please', 'ride', 'saw'],
+  ['the ', 'up', 'was', 'we', 'you'],
+  ['an', 'am', 'come', 'down', 'funny'],
+  ['good', 'help', 'into', 'look', 'must'],
+  ['not', 'out', 'pretty', 'run', 'say'],
+  ['there', 'us', 'well', 'went', 'are'],
+  ['at', 'but', 'could', 'do', 'here'],
+  ['is', 'love', 'my', 'now', 'see'],
+  ['they', 'will', 'with', 'ate', 'how'],
+  ['away', 'it', 'she', 'this', 'so', 'soon'],
+  ['who', 'what', 'when', 'where', 'why'],
+];
+
 export const first = [
   ['pot', 'lot', 'hot', 'not', 'in', 'tin', 'pin', 'no*', 'I*', 'the*'],
   ['at', 'cat', 'pat', 'hat', 'an', 'can', 'pan', 'tan', 'and*', 'said*'],

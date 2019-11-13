@@ -4,17 +4,27 @@ import { ScrollView } from 'react-native';
 import { ListItem } from 'react-native-elements';
 
 import constants from '../constants';
-import { first, second, third, fourth, fifth } from '../assets/spelling';
+import {
+  kindergarten,
+  first,
+  second,
+  third,
+  fourth,
+  fifth,
+} from '../assets/spelling';
 
 export default class SpellingForGradeScreen extends React.Component {
-  static navigationOptions = (screenProps) => ({
+  static navigationOptions = screenProps => ({
     title: `Grade: ${screenProps.navigation.state.params.grade}`,
   });
 
   render() {
     const { navigation } = this.props;
     const grade = navigation.getParam('grade');
-    let spellingList = first;
+    let spellingList = kindergarten;
+    if (grade === 1) {
+      spellingList = first;
+    }
     if (grade === 2) {
       spellingList = second;
     }
