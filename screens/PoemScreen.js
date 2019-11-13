@@ -1,7 +1,9 @@
 import React from 'react';
+import { ScrollView } from 'react-native';
 import PoemHeader from '../components/PoemHeader';
 import Poem from '../components/Poem';
 import poems from '../assets/poems';
+import PrintMe from '../components/PrintMe';
 
 class PoemScreen extends React.Component {
   static navigationOptions = ({ navigationOptions }) => ({
@@ -20,10 +22,20 @@ class PoemScreen extends React.Component {
       return null;
     });
     return (
-      <React.Fragment>
-        <PoemHeader poem={poem} />
-        <Poem poem={poem} />
-      </React.Fragment>
+      <>
+        <ScrollView style={{ marginBottom: 60 }}>
+          <PoemHeader poem={poem} />
+          <Poem poem={poem} />
+        </ScrollView>
+        <PrintMe
+          title={`${poem.title}
+          <div>${poem.author}</div>
+        `}
+          content={poem.poem}
+          iconPosistion="bottom"
+          large={false}
+        />
+      </>
     );
   }
 }

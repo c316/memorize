@@ -6,7 +6,6 @@ import {
   ScrollView,
   TouchableHighlight,
   Image,
-  Platform,
   StyleSheet,
   Linking,
   SafeAreaView,
@@ -16,6 +15,8 @@ import { Icon } from 'react-native-elements';
 import verses from '../assets/verses';
 
 import { getWeek, moderateScale } from '../miscFunctions';
+import constants from '../constants';
+import PrintMe from './PrintMe';
 
 const { width } = Dimensions.get('window');
 
@@ -136,7 +137,7 @@ class Verses extends React.Component {
     const week = getWeek();
     const year = new Date().getFullYear();
     // Find the first verse that matches today's year and week
-    const thisVerse = verses.find(verse => {
+    const thisVerse = verses.find((verse) => {
       if (verse.week === week && verse.year === year) {
         return verse;
       }
@@ -145,7 +146,7 @@ class Verses extends React.Component {
 
     let nearestGreaterWeekVerse;
     if (!thisVerse) {
-      nearestGreaterWeekVerse = verses.find(verse => {
+      nearestGreaterWeekVerse = verses.find((verse) => {
         if (verse.week > week && verse.year === year) {
           return verse;
         }
@@ -157,7 +158,7 @@ class Verses extends React.Component {
 
     let index;
     if (useThisVerse) {
-      index = verses.findIndex(x => x._id === useThisVerse._id);
+      index = verses.findIndex((x) => x._id === useThisVerse._id);
     } else {
       index = verses.length - 1;
     }
@@ -202,12 +203,12 @@ class Verses extends React.Component {
     const startDate = new Date(
       `${useThisVerse.dateRange.start.month + 1}/${
         useThisVerse.dateRange.start.day
-      }/${useThisVerse.year}`,
+      }/${useThisVerse.year}`
     );
     const endDate = new Date(
       `${useThisVerse.dateRange.end.month + 1}/${
         useThisVerse.dateRange.end.day
-      }/${useThisVerse.year}`,
+      }/${useThisVerse.year}`
     );
 
     const dateFrom = `${
@@ -325,6 +326,8 @@ class Verses extends React.Component {
         bookImagePath = null;
     }
 
+    const verseTitle = `${useThisVerse.book} ${useThisVerse.chapter}:${useThisVerse.startVerse}${endVerse} (ESV)`;
+
     return (
       <ImageBackground
         source={require('../assets/images/circles.png')}
@@ -342,24 +345,21 @@ class Verses extends React.Component {
           <View style={styles.verseBlock}>
             <TouchableHighlight
               onPress={() => {
-                Linking.openURL(useThisVerse.verseURL).catch(err =>
-                  console.error('An error occurred', err),
-                );
+                Linking.openURL(useThisVerse.verseURL).catch((err) => {
+                  console.error('An error occurred', err);
+                });
               }}
               activeOpacity={75 / 100}
               underlayColor="rgb(210,210,210)"
             >
-              <Text style={styles.verse}>
-                {`${useThisVerse.book} ${useThisVerse.chapter}:${
-                  useThisVerse.startVerse
-                }${endVerse} (ESV)`}
-              </Text>
+              <Text style={styles.verse}>{verseTitle}</Text>
             </TouchableHighlight>
             <View style={styles.headerUnderline} />
           </View>
           <ScrollView style={styles.headerBox}>
             <Text style={styles.verseText}>{useThisVerse.text}</Text>
           </ScrollView>
+          <PrintMe title={verseTitle} content={useThisVerse.text} />
           <View style={styles.controlsBlock}>
             <View style={[styles.headerTitle]}>
               {this.state.showVerse === 0 ? (
