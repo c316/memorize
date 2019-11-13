@@ -22,6 +22,8 @@ export default class PoemGradeSelectionScreen extends React.Component {
       {
         name: 'Kindergarten',
         grade: 0,
+        icon: 'alpha-k-box',
+        type: 'material-community',
       },
       {
         name: 'First Grade',

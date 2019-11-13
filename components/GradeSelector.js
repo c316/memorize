@@ -3,10 +3,12 @@ import { ListItem } from 'react-native-elements';
 import NavigationService from '../Navigation';
 import constants from '../constants';
 
-export default (props) => {
+export default props => {
   const grades = [
     {
       name: 'Kindergarten',
+      icon: 'alpha-k-box',
+      type: 'material-community',
       grade: 0,
     },
     {
@@ -61,7 +63,7 @@ export default (props) => {
 
   const { screenName, showGrades, textColor } = props;
   return grades
-    .filter((item) => {
+    .filter(item => {
       if (showGrades && showGrades.length) {
         if (showGrades.includes(item.name.toLowerCase())) {
           return item;
