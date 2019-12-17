@@ -742,8 +742,8 @@ If I were a shepherd,
 I would give Him a lamb.
 If I were a wise man,
 I would do my part.
-But what can I give Him?
-I will give Him my heart.`,
+What can I give Him?
+Give my heart.`,
   },
   {
     _id: '6DgJq9hXKqwfQRaP6',
