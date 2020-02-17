@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 35,
     color: 'rgba(37, 38, 94, 0.8)',
+    height: 250,
   },
   verse: {
     fontSize: moderateScale(26),
