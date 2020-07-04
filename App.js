@@ -6,6 +6,7 @@ import {
   createStackNavigator,
   createBottomTabNavigator,
 } from 'react-navigation';
+import * as Segment from 'expo-analytics-segment';
 import { styles } from './styles/styles';
 import NavigationService from './Navigation';
 
@@ -25,6 +26,8 @@ import SpellingGradeSelectionScreen from './screens/SpellingGradeSelectionScreen
 import SpellingForGradeScreen from './screens/SpellingForGradeScreen';
 import SpellingScreen from './screens/SpellingScreen';
 
+Segment.setEnabledAsync(false);
+
 const TimelineStack = createStackNavigator(
   {
     TimelineGradeSelectionScreen,
@@ -43,7 +46,7 @@ const TimelineStack = createStackNavigator(
         fontWeight: 'bold',
       },
     },
-  },
+  }
 );
 
 const PoemStack = createStackNavigator(
@@ -64,7 +67,7 @@ const PoemStack = createStackNavigator(
         marginHorizontal: 10,
       },
     },
-  },
+  }
 );
 
 const MathStack = createStackNavigator(
@@ -90,7 +93,7 @@ const MathStack = createStackNavigator(
         marginHorizontal: 10,
       },
     },
-  },
+  }
 );
 
 const SpellingStack = createStackNavigator(
@@ -110,7 +113,7 @@ const SpellingStack = createStackNavigator(
         fontWeight: 'bold',
       },
     },
-  },
+  }
 );
 
 /* eslint new-cap: "off" */
@@ -170,7 +173,7 @@ const MyApp = createBottomTabNavigator(
       showIcon: true,
     },
     tabBarPosition: 'bottom',
-  },
+  }
 );
 
 const AppContainer = createAppContainer(MyApp);

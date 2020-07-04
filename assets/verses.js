@@ -10,7 +10,7 @@ export default [
     startVerse: '6',
     endVerse: '',
     text:
-      'Jesus said to him, “I am the way, and the truth, and the life. No one comes to the Father\nexcept through me.”',
+      'Jesus said to him, “I am the way, and the truth, and the life. No one comes to the Father except through me.”',
     verseURL: 'https://www.bible.com/bible/59/JHN.14.6',
   },
   {
@@ -24,7 +24,7 @@ export default [
     startVerse: '18a',
     endVerse: '',
     text:
-      'For Christ also suffered once for sins, the righteous for the unrighteous, that he might\nbring us to God,',
+      'For Christ also suffered once for sins, the righteous for the unrighteous, that he might bring us to God,',
     verseURL: 'https://www.bible.com/bible/59/1pe.3.18',
   },
 
@@ -66,7 +66,7 @@ export default [
     startVerse: '16',
     endVerse: '',
     text:
-      'For God so loved the world, that he gave his only Son, that whoever believes in him\nshould not perish but have eternal life.',
+      'For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life.',
     verseURL: 'https://www.bible.com/bible/59/JHN.3.16',
   },
   {
@@ -80,7 +80,7 @@ export default [
     startVerse: '26',
     endVerse: '',
     text:
-      'But the Helper, the Holy Spirit, whom the Father will send in my name, he will teach you\nall things...',
+      'But the Helper, the Holy Spirit, whom the Father will send in my name, he will teach you all things...',
     verseURL: 'https://www.bible.com/bible/59/JHN.14.26',
   },
   {
@@ -94,7 +94,7 @@ export default [
     startVerse: '22',
     endVerse: '23',
     text:
-      'But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness,\ngentleness, self-control; against such things there is no law.',
+      'But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control; against such things there is no law.',
     verseURL: 'https://www.bible.com/bible/59/gal.5.22-23',
   },
   {
@@ -122,7 +122,7 @@ export default [
     startVerse: '14',
     endVerse: '',
     text:
-      'The grace of the Lord Jesus Christ and the love of God and the fellowship of the Holy\nSpirit be with you all.',
+      'The grace of the Lord Jesus Christ and the love of God and the fellowship of the Holy Spirit be with you all.',
     verseURL: 'https://www.bible.com/bible/59/2co.13.14',
   },
   {
@@ -150,8 +150,8 @@ export default [
     startVerse: '14',
     endVerse: '',
     text:
-      'And this is the confidence that we have toward him, that if we ask anything according to\nhis will he hears us.',
-    verseURL: 'https://www.bible.com/bible/59/1jh.5.14',
+      'And this is the confidence that we have toward him, that if we ask anything according to his will he hears us.',
+    verseURL: 'https://www.bible.com/bible/59/1JN.5.14',
   },
   {
     _id: 'nj56mrxpeehapwvm',
@@ -192,7 +192,7 @@ export default [
     startVerse: '4',
     endVerse: '',
     text:
-      '“It is written, “’Man shall not live by bread alone, but by every word that comes from the\nmouth of God.’”',
+      '“It is written, “’Man shall not live by bread alone, but by every word that comes from the mouth of God.’”',
     verseURL: 'https://www.bible.com/bible/59/mat.4.4',
   },
   {
@@ -233,7 +233,7 @@ export default [
     startVerse: '1',
     endVerse: '2',
     text:
-      'I lift up my eyes to the hills. From whence does my help come? My help comes from the\nLORD, who made heaven and earth.',
+      'I lift up my eyes to the hills. From whence does my help come? My help comes from the LORD, who made heaven and earth.',
     verseURL: 'https://www.bible.com/bible/59/psa.121.1-2',
   },
   {
@@ -247,7 +247,7 @@ export default [
     startVerse: '16',
     endVerse: '',
     text:
-      'By this we know love, that he laid down his life for us, and we ought to lay down our\nlives for the brothers.',
+      'By this we know love, that he laid down his life for us, and we ought to lay down our lives for the brothers.',
     verseURL: 'https://www.bible.com/bible/59/1jh.3.16',
   },
   {
@@ -261,8 +261,8 @@ export default [
     startVerse: '19',
     endVerse: '',
     text:
-      'And my God will supply every need of yours according to his riches in glory in Christ\nJesus.',
-    verseURL: 'https://www.bible.com/bible/59/phi.4.19',
+      'And my God will supply every need of yours according to his riches in glory in Christ Jesus.',
+    verseURL: 'https://www.bible.com/bible/59/php.4.19',
   },
   {
     _id: 'eimxi6gzzohfv64p',
@@ -275,8 +275,8 @@ export default [
     startVerse: '7',
     endVerse: '',
     text:
-      'The LORD is good, a stronghold in the day of trouble; he knows those who take refuge in\nhim.',
-    verseURL: 'https://www.bible.com/bible/59/nah.1.7',
+      'The LORD is good, a stronghold in the day of trouble; he knows those who take refuge in him.',
+    verseURL: 'https://www.bible.com/bible/59/nam.1.7',
   },
   {
     _id: 'wt4sl3wtpmujhb41',
@@ -289,7 +289,7 @@ export default [
     startVerse: '13',
     endVerse: '',
     text: 'I can do all things through him who strengthens me.',
-    verseURL: 'https://www.bible.com/bible/59/phi.4.13',
+    verseURL: 'https://www.bible.com/bible/59/php.4.13',
   },
   {
     _id: '034z2854663fd5qb',
@@ -371,7 +371,7 @@ export default [
     startVerse: '1b',
     endVerse: '',
     text:
-      '…present your bodies as a living sacrifice, holy and acceptable to God, which is your\nspiritual worship.',
+      '…present your bodies as a living sacrifice, holy and acceptable to God, which is your spiritual worship.',
     verseURL: 'https://www.bible.com/bible/59/rom.12.1',
   },
   {
@@ -385,7 +385,7 @@ export default [
     startVerse: '10',
     endVerse: '',
     text:
-      '“One who is faithful in a very little is also faithful in much, and one who is dishonest in a\nvery little is also dishonest in much.”',
+      '“One who is faithful in a very little is also faithful in much, and one who is dishonest in a very little is also dishonest in much.”',
     verseURL: 'https://www.bible.com/bible/59/luk.16.10',
   },
   {
@@ -399,8 +399,8 @@ export default [
     startVerse: '13',
     endVerse: '',
     text:
-      "And you will be hated by all for my name's sake. But the one who endures to the end will\nbe saved.",
-    verseURL: 'https://www.bible.com/bible/59/mar.13.13',
+      "And you will be hated by all for my name's sake. But the one who endures to the end will be saved.",
+    verseURL: 'https://www.bible.com/bible/59/mrk.13.13',
   },
   {
     _id: 'faqr762u5ol8c3dp',
@@ -413,7 +413,7 @@ export default [
     startVerse: '8',
     endVerse: '',
     text: 'Anyone who does not love does not know God, because God is love.',
-    verseURL: 'https://www.bible.com/bible/59/1JHN.4.8',
+    verseURL: 'https://www.bible.com/bible/59/1JN.4.8',
   },
   {
     _id: 'x8ab4ipakllwopo8',
@@ -426,8 +426,8 @@ export default [
     startVerse: '9',
     endVerse: '',
     text:
-      'If we confess our sins, he is faithful and just to forgive us our sins and to cleanse us from\nall unrighteousness.',
-    verseURL: 'https://www.bible.com/bible/59/1JHN.1.9',
+      'If we confess our sins, he is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.',
+    verseURL: 'https://www.bible.com/bible/59/1JN.1.9',
   },
   {
     _id: '41rdxu6y8ps2ef9q',
@@ -440,7 +440,7 @@ export default [
     startVerse: '16',
     endVerse: '',
     text:
-      'All Scripture is breathed out by God and profitable for teaching, for reproof, for\ncorrection, and for training in righteousness,',
+      'All Scripture is breathed out by God and profitable for teaching, for reproof, for correction, and for training in righteousness,',
     verseURL: 'https://www.bible.com/bible/59/2ti.3.16',
   },
   {

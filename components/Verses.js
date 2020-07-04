@@ -327,7 +327,7 @@ class Verses extends React.Component {
         bookImagePath = null;
     }
 
-    const verseTitle = `${useThisVerse.book} ${useThisVerse.chapter}:${useThisVerse.startVerse}${endVerse} (ESV)`;
+    const verseTitle = `${useThisVerse.book} ${useThisVerse.chapter}:${useThisVerse.startVerse}${endVerse}`;
 
     return (
       <ImageBackground
@@ -353,7 +353,12 @@ class Verses extends React.Component {
               activeOpacity={75 / 100}
               underlayColor="rgb(210,210,210)"
             >
-              <Text style={styles.verse}>{verseTitle}</Text>
+              <Text style={styles.verse}>
+                {verseTitle}
+                <Text style={{ ...styles.verse, fontSize: moderateScale(12) }}>
+                  (ESV)
+                </Text>
+              </Text>
             </TouchableHighlight>
             <View style={styles.headerUnderline} />
           </View>
