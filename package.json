@@ -20,7 +20,9 @@
     "android": "expo android --lan",
     "ios": "expo ios",
     "test": "jest --watch",
-    "mocha": "mocha --compilers js:babel-core/register"
+    "mocha": "mocha --compilers js:babel-core/register",
+    "build:android": "expo build:android",
+    "build:ios": "expo build:ios"
   },
   "jest": {
     "preset": "jest-expo"
