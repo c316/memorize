@@ -238,7 +238,7 @@ export default [
   },
   {
     _id: '7p5p5kp4m16zan83',
-    year: 2020,
+    year: 2021,
     week: 52,
     customDateRange: false,
     dateRange: { start: { month: 0, day: 4 }, end: { month: 0, day: 8 } },
@@ -252,7 +252,7 @@ export default [
   },
   {
     _id: '9c8y32zgwjuh5zth',
-    year: 2020,
+    year: 2021,
     week: 1,
     customDateRange: false,
     dateRange: { start: { month: 0, day: 11 }, end: { month: 0, day: 15 } },
@@ -266,7 +266,7 @@ export default [
   },
   {
     _id: 'eimxi6gzzohfv64p',
-    year: 2020,
+    year: 2021,
     week: 2,
     customDateRange: true,
     dateRange: { start: { month: 0, day: 19 }, end: { month: 0, day: 22 } },
@@ -280,7 +280,7 @@ export default [
   },
   {
     _id: 'wt4sl3wtpmujhb41',
-    year: 2020,
+    year: 2021,
     week: 3,
     customDateRange: false,
     dateRange: { start: { month: 0, day: 25 }, end: { month: 0, day: 29 } },
@@ -293,7 +293,7 @@ export default [
   },
   {
     _id: '034z2854663fd5qb',
-    year: 2020,
+    year: 2021,
     week: 4,
     customDateRange: false,
     dateRange: { start: { month: 1, day: 1 }, end: { month: 1, day: 5 } },
@@ -306,7 +306,7 @@ export default [
   },
   {
     _id: 'hndk7rvpts2jdoul',
-    year: 2020,
+    year: 2021,
     week: 5,
     customDateRange: true,
     dateRange: { start: { month: 1, day: 9 }, end: { month: 1, day: 12 } },
@@ -320,7 +320,7 @@ export default [
   },
   {
     _id: 'rgii82ml5epp9fb5',
-    year: 2020,
+    year: 2021,
     week: 6,
     customDateRange: false,
     dateRange: { start: { month: 1, day: 15 }, end: { month: 1, day: 19 } },
@@ -334,7 +334,7 @@ export default [
   },
   {
     _id: 'vet2s2233ob66g5j',
-    year: 2020,
+    year: 2021,
     week: 7,
     customDateRange: false,
     dateRange: { start: { month: 1, day: 22 }, end: { month: 1, day: 26 } },
@@ -348,7 +348,7 @@ export default [
   },
   {
     _id: 'weiqd2u56tumq6in',
-    year: 2020,
+    year: 2021,
     week: 8,
     customDateRange: true,
     dateRange: { start: { month: 2, day: 1 }, end: { month: 2, day: 4 } },
@@ -362,7 +362,7 @@ export default [
   },
   {
     _id: '19dtig1ncygcph96',
-    year: 2020,
+    year: 2021,
     week: 10,
     customDateRange: false,
     dateRange: { start: { month: 2, day: 15 }, end: { month: 2, day: 19 } },
@@ -376,7 +376,7 @@ export default [
   },
   {
     _id: 'v1qdq7nm0s8gkqr0',
-    year: 2020,
+    year: 2021,
     week: 11,
     customDateRange: false,
     dateRange: { start: { month: 2, day: 22 }, end: { month: 2, day: 26 } },
@@ -390,7 +390,7 @@ export default [
   },
   {
     _id: 'k8enefit6a1xyjzi',
-    year: 2020,
+    year: 2021,
     week: 13,
     customDateRange: false,
     dateRange: { start: { month: 3, day: 5 }, end: { month: 3, day: 9 } },
@@ -404,7 +404,7 @@ export default [
   },
   {
     _id: 'faqr762u5ol8c3dp',
-    year: 2020,
+    year: 2021,
     week: 14,
     customDateRange: false,
     dateRange: { start: { month: 3, day: 12 }, end: { month: 3, day: 16 } },
@@ -417,7 +417,7 @@ export default [
   },
   {
     _id: 'x8ab4ipakllwopo8',
-    year: 2020,
+    year: 2021,
     week: 15,
     customDateRange: false,
     dateRange: { start: { month: 3, day: 19 }, end: { month: 3, day: 23 } },
@@ -431,7 +431,7 @@ export default [
   },
   {
     _id: '41rdxu6y8ps2ef9q',
-    year: 2020,
+    year: 2021,
     week: 16,
     customDateRange: false,
     dateRange: { start: { month: 3, day: 26 }, end: { month: 3, day: 30 } },
@@ -445,7 +445,7 @@ export default [
   },
   {
     _id: '2xp9qzhtutmwz5j2',
-    year: 2020,
+    year: 2021,
     week: 17,
     customDateRange: false,
     dateRange: { start: { month: 4, day: 3 }, end: { month: 4, day: 7 } },
@@ -458,7 +458,7 @@ export default [
   },
   {
     _id: 'exelvco0jsjkskpb',
-    year: 2020,
+    year: 2021,
     week: 18,
     customDateRange: false,
     dateRange: { start: { month: 4, day: 10 }, end: { month: 4, day: 14 } },
@@ -471,7 +471,7 @@ export default [
   },
   {
     _id: '9n60aodrhqx8cz5z',
-    year: 2020,
+    year: 2021,
     week: 20,
     customDateRange: false,
     dateRange: { start: { month: 4, day: 11 }, end: { month: 4, day: 15 } },
