@@ -21,9 +21,6 @@
       "permissions": ["com.android.launcher.permission.INSTALL_SHORTCUT"],
       "icon": "./assets/images/CPLS-Lion-logo-512x512.png"
     },
-    "loading": {
-      "icon": "./assets/images/CPLS-Lion-logo-512x512.png"
-    },
     "packagerOpts": {
       "sourceExts": []
     },
