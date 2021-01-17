@@ -15,7 +15,6 @@ import { Icon } from 'react-native-elements';
 import verses from '../assets/verses';
 
 import { getWeek, moderateScale } from '../miscFunctions';
-import constants from '../constants';
 import PrintMe from './PrintMe';
 
 const { width } = Dimensions.get('window');
