@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImageBackground } from 'react-native';
-import { ListItem } from 'react-native-elements';
+import { Icon, ListItem } from 'react-native-elements';
 
 export default class TimelineGradeSelectionScreen extends React.Component {
   static navigationOptions = ({ navigationOptions }) => ({
@@ -69,21 +69,27 @@ export default class TimelineGradeSelectionScreen extends React.Component {
       >
         {grades.map((l, i) => (
           <ListItem
-            titleStyle={{
-              color: '#25265E',
-            }}
-            chevronColor="#2DC76D"
             key={i.toString()}
-            title={l.name}
-            leftIcon={{
-              name: l.icon ? l.icon : null,
-              type: l.type ? l.type : null,
-              color: '#2DC76D',
-            }}
             onPress={() => {
               this._showTimelinesForGrade(l.grade, l.timelineType);
             }}
-          />
+          >
+            <Icon
+              name={l.icon ? l.icon : null}
+              type={l.type ? l.type : null}
+              color="#2DC76D"
+            />
+            <ListItem.Content>
+              <ListItem.Title
+                style={{
+                  color: '#25265E',
+                }}
+              >
+                {l.name}
+              </ListItem.Title>
+            </ListItem.Content>
+            <Icon type="font-awesome-5" name="chevron-right" color="#2DC76D" />
+          </ListItem>
         ))}
       </ImageBackground>
     );

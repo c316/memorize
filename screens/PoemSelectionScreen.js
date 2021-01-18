@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { ListItem } from 'react-native-elements';
+import { Icon, ListItem } from 'react-native-elements';
 import poems from '../assets/poems';
 
 class PoemSelectionScreen extends React.Component {
@@ -28,7 +28,6 @@ class PoemSelectionScreen extends React.Component {
           if (Number(l.grade) === grade) {
             return (
               <ListItem
-                chevronColor="#7540EE"
                 key={l._id}
                 onPress={() => {
                   this._showPoem(l._id);
@@ -43,6 +42,11 @@ class PoemSelectionScreen extends React.Component {
                     {l.title}
                   </ListItem.Title>
                 </ListItem.Content>
+                <Icon
+                  type="font-awesome-5"
+                  name="chevron-right"
+                  color="#4A4A4A"
+                />
               </ListItem>
             );
           }

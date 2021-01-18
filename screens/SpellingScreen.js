@@ -22,14 +22,17 @@ class SpellingScreen extends React.Component {
       <>
         <ScrollView>
           {spellingList.map((word, i) => (
-            <ListItem
-              key={i.toString()}
-              titleStyle={{
-                color: constants.colors.red,
-              }}
-              title={`${i + 1}. ${word}`}
-              topDivider
-            />
+            <ListItem key={i.toString()} topDivider>
+              <ListItem.Content>
+                <ListItem.Title
+                  style={{
+                    color: constants.colors.red,
+                  }}
+                >
+                  {`${i + 1}. ${word}`}
+                </ListItem.Title>
+              </ListItem.Content>
+            </ListItem>
           ))}
         </ScrollView>
         <PrintMe

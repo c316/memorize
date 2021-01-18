@@ -87,23 +87,22 @@ export default class PoemGradeSelectionScreen extends React.Component {
             onPress={() => {
               this._showPoemsForGrade(l.grade);
             }}
-            chevronColor="#2DC76D"
-            chevron
           >
             <Icon
               name={l.icon ? l.icon : null}
               type={l.type ? l.type : null}
-              color="#2DC76D"
+              color="#4A4A4A"
             />
             <ListItem.Content>
               <ListItem.Title
                 style={{
-                  color: '#25265E',
+                  color: '#4A4A4A',
                 }}
               >
                 {l.name}
               </ListItem.Title>
             </ListItem.Content>
+            <Icon type="font-awesome-5" name="chevron-right" color="#4A4A4A" />
           </ListItem>
         ))}
       </ImageBackground>

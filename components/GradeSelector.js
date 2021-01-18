@@ -1,9 +1,9 @@
 import React from 'react';
-import { ListItem } from 'react-native-elements';
+import { Icon, ListItem } from 'react-native-elements';
 import NavigationService from '../Navigation';
 import constants from '../constants';
 
-export default props => {
+export default (props) => {
   const grades = [
     {
       name: 'Kindergarten',
@@ -63,7 +63,7 @@ export default props => {
 
   const { screenName, showGrades, textColor } = props;
   return grades
-    .filter(item => {
+    .filter((item) => {
       if (showGrades && showGrades.length) {
         if (showGrades.includes(item.name.toLowerCase())) {
           return item;
@@ -78,19 +78,21 @@ export default props => {
         titleStyle={{
           color: constants.colors.red,
         }}
-        title={l.name}
-        leftIcon={{
-          name: l.icon ? l.icon : null,
-          type: l.type ? l.type : null,
-          color: textColor,
-        }}
         onPress={() => {
           NavigationService.navigate(screenName, {
             grade: l.grade,
           });
         }}
-        chevronColor={textColor}
-        chevron
-      />
+      >
+        <Icon
+          name={l.icon ? l.icon : null}
+          type={l.type ? l.type : null}
+          color={textColor}
+        />
+        <ListItem.Content>
+          <ListItem.Title>{l.name}</ListItem.Title>
+        </ListItem.Content>
+        <Icon name="chevron-right" type="font-awesome" color={textColor} />
+      </ListItem>
     ));
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar, View } from 'react-native';
-import { FontAwesome5 } from '@expo/vector-icons';
+import { Icon } from 'react-native-elements';
 import {
   createAppContainer,
   createStackNavigator,
@@ -127,7 +127,8 @@ const MyApp = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'Poems',
         tabBarIcon: () => (
-          <FontAwesome5
+          <Icon
+            type="font-awesome-5"
             name="pencil-alt"
             color="rgba(0, 0, 0, 0.5)"
             size={24}
@@ -140,7 +141,7 @@ const MyApp = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'Math Facts',
         tabBarIcon: () => (
-          <FontAwesome5 name="plus" color="#2089dc" size={24} />
+          <Icon type="font-awesome-5" name="plus" color="#2089dc" size={24} />
         ),
       },
     },
@@ -149,7 +150,12 @@ const MyApp = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'Timelines',
         tabBarIcon: () => (
-          <FontAwesome5 name="history" color="#2DC76D" size={20} />
+          <Icon
+            type="font-awesome-5"
+            name="history"
+            color="#2DC76D"
+            size={20}
+          />
         ),
       },
     },
@@ -158,7 +164,12 @@ const MyApp = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'Spelling',
         tabBarIcon: () => (
-          <FontAwesome5 name="spell-check" color="#a9233e" size={20} />
+          <Icon
+            type="font-awesome-5"
+            name="spell-check"
+            color="#a9233e"
+            size={20}
+          />
         ),
       },
     },

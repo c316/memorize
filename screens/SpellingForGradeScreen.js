@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView } from 'react-native';
-import { ListItem } from 'react-native-elements';
+import { Icon, ListItem } from 'react-native-elements';
 
 import constants from '../constants';
 import {
@@ -14,7 +14,7 @@ import {
 } from '../assets/spelling';
 
 export default class SpellingForGradeScreen extends React.Component {
-  static navigationOptions = screenProps => ({
+  static navigationOptions = (screenProps) => ({
     title: `Grade: ${screenProps.navigation.state.params.grade}`,
   });
 
@@ -42,19 +42,28 @@ export default class SpellingForGradeScreen extends React.Component {
         {spellingList.map((l, i) => (
           <ListItem
             key={i.toString()}
-            titleStyle={{
-              color: constants.colors.red,
-            }}
-            title={`List: ${i + 1}`}
             onPress={() => {
               navigation.navigate('SpellingScreen', {
                 spellingList: l,
                 listNumber: i + 1,
               });
             }}
-            chevronColor={constants.colors.red}
-            chevron
-          />
+          >
+            <ListItem.Content>
+              <ListItem.Title
+                style={{
+                  color: constants.colors.red,
+                }}
+              >
+                {`List: ${i + 1}`}
+              </ListItem.Title>
+            </ListItem.Content>
+            <Icon
+              name="chevron-right"
+              type="font-awesome"
+              color={constants.colors.red}
+            />
+          </ListItem>
         ))}
       </ScrollView>
     );
