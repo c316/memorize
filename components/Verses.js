@@ -11,7 +11,7 @@ import {
   SafeAreaView,
   ImageBackground,
 } from 'react-native';
-import { Icon } from 'react-native-elements';
+import { FontAwesome5 } from '@expo/vector-icons';
 import verses from '../assets/verses';
 
 import { getWeek, moderateScale } from '../miscFunctions';
@@ -370,7 +370,7 @@ class Verses extends React.Component {
               {this.state.showVerse === 0 ? (
                 <Text />
               ) : (
-                <Icon
+                <FontAwesome5
                   color="white"
                   size={30}
                   name="chevron-left"
@@ -391,7 +391,7 @@ class Verses extends React.Component {
               {this.state.showVerse === verses.length - 1 ? (
                 <Text title="" />
               ) : (
-                <Icon
+                <FontAwesome5
                   color="white"
                   size={30}
                   name="chevron-right"

@@ -6,13 +6,8 @@ import {
   StyleSheet,
   SafeAreaView,
 } from 'react-native';
-import {
-  Icon,
-  Divider,
-  Text,
-  ButtonGroup,
-  Button,
-} from 'react-native-elements';
+import { Divider, Text, ButtonGroup, Button } from 'react-native-elements';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const styles = StyleSheet.create({
   container: {
@@ -51,7 +46,7 @@ const styles = StyleSheet.create({
 class MathPracticeScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Math',
-    tabBarIcon: () => <Icon name="add" color="#5A95FF" size={20} />,
+    tabBarIcon: () => <FontAwesome5 name="plus" color="#5A95FF" size={20} />,
   };
   constructor(props) {
     super(props);
@@ -117,7 +112,7 @@ class MathPracticeScreen extends React.Component {
         mathCategory: index === 0 ? 'Addition' : 'Multiplication',
         operation: index === 0 ? '+' : 'x',
       },
-      () => this.generateNewProblem(),
+      () => this.generateNewProblem()
     );
   }
 
@@ -127,7 +122,7 @@ class MathPracticeScreen extends React.Component {
         selectedLevel: index + 3,
         selectedNumberIndex: index,
       },
-      () => this.generateNewProblem(),
+      () => this.generateNewProblem()
     );
   }
 
@@ -197,7 +192,7 @@ class MathPracticeScreen extends React.Component {
             />
             <ButtonGroup
               containerStyle={{ marginBottom: 30 }}
-              onPress={index => this._updateLevel(index)}
+              onPress={(index) => this._updateLevel(index)}
               buttons={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
               selectedTextStyle={{ color: 'white' }}
               selectedButtonStyle={{
@@ -207,7 +202,7 @@ class MathPracticeScreen extends React.Component {
               selectedIndex={this.state.selectedNumberIndex}
             />
             <ButtonGroup
-              onPress={index => this._updateOperation(index)}
+              onPress={(index) => this._updateOperation(index)}
               buttons={['Addition', 'Multiplication']}
               selectedTextStyle={{ color: 'white' }}
               containerStyle={{ borderRadius: 20, marginBottom: 30 }}

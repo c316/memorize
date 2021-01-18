@@ -28,16 +28,22 @@ class PoemSelectionScreen extends React.Component {
           if (Number(l.grade) === grade) {
             return (
               <ListItem
-                titleStyle={{
-                  color: '#25265E',
-                }}
                 chevronColor="#7540EE"
                 key={l._id}
-                title={l.title}
                 onPress={() => {
                   this._showPoem(l._id);
                 }}
-              />
+              >
+                <ListItem.Content>
+                  <ListItem.Title
+                    style={{
+                      color: '#25265E',
+                    }}
+                  >
+                    {l.title}
+                  </ListItem.Title>
+                </ListItem.Content>
+              </ListItem>
             );
           }
           return null;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dimensions, StyleSheet, Text, View } from 'react-native';
-import { Icon } from 'react-native-elements';
+import { FontAwesome5 } from '@expo/vector-icons';
 import { moderateScale } from '../miscFunctions';
 
 const { width } = Dimensions.get('window');
@@ -67,7 +67,7 @@ const headerStyles = StyleSheet.create({
 const Header = ({ currentEvent, nextEvent, previousEvent }) => (
   <View style={headerStyles.headerBox}>
     <View style={[headerStyles.headerTitle]}>
-      <Icon
+      <FontAwesome5
         color="white"
         size={30}
         name="chevron-left"
@@ -75,7 +75,7 @@ const Header = ({ currentEvent, nextEvent, previousEvent }) => (
         containerStyle={{ right: 5 }}
       />
       <Text style={[headerStyles.titleText]}>{currentEvent.title}</Text>
-      <Icon
+      <FontAwesome5
         color="white"
         size={30}
         name="chevron-right"

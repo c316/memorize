@@ -33,7 +33,6 @@ class PoemScreen extends React.Component {
         `}
           content={poem.poem}
           iconPosistion="bottom"
-          large={false}
         />
       </>
     );

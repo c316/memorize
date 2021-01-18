@@ -6,11 +6,10 @@ import {
   StyleSheet,
   TextInput,
   SafeAreaView,
-  Platform
+  Platform,
 } from 'react-native';
-import {
-  Icon, Divider, Text, Button
-} from 'react-native-elements';
+import { Divider, Text, Button } from 'react-native-elements';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 import { moderateScale } from '../miscFunctions';
 
@@ -74,7 +73,7 @@ const styles = StyleSheet.create({
 class MathPracticeScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Math',
-    tabBarIcon: () => <Icon name="add" color="#5A95FF" size={20} />,
+    tabBarIcon: () => <FontAwesome5 name="plus" color="#5A95FF" size={20} />,
   };
 
   constructor(props) {
@@ -212,7 +211,9 @@ Selected Category: ${this.state.mathCategory}
       'Quiz Complete',
       `Level: ${this.state.selectedLevel}\nCategory: ${
         this.state.mathCategory
-      }\nCorrect Answers: ${this.state.correct}\nIncorrect Answers: ${20 - ( this.state.incorrect + this.state.correct) + this.state.incorrect}\nTime Remaining: ${this.state.timeRemaining}`,
+      }\nCorrect Answers: ${this.state.correct}\nIncorrect Answers: ${
+        20 - (this.state.incorrect + this.state.correct) + this.state.incorrect
+      }\nTime Remaining: ${this.state.timeRemaining}`,
       [
         {
           text: 'Go Back',
@@ -312,9 +313,7 @@ Problem: ${this.state.questionNumber} / ${this.state.numberOfQuestions}`}
                     styles.blueColorText,
                   ]}
                 >
-                  {this.state.operation}
-                  {' '}
-                  {this.state.denomenator}
+                  {this.state.operation} {this.state.denomenator}
                 </Text>
               </Text>
               <View
@@ -336,7 +335,7 @@ Problem: ${this.state.questionNumber} / ${this.state.numberOfQuestions}`}
                     borderColor: 'gray',
                     borderWidth: 1,
                   }}
-                  onChangeText={value => this.setState({ answer: value })}
+                  onChangeText={(value) => this.setState({ answer: value })}
                   value={this.state.answer}
                   onSubmitEditing={() => this._submitAnswer()}
                 />

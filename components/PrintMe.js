@@ -15,7 +15,8 @@ export default ({
     <View style={{ position: 'absolute', right: 0, [iconPosistion]: 0 }}>
       <Icon
         raised
-        name="print"
+        type="feather"
+        name="printer"
         color={constants.colors.cplsRed}
         onPress={() => {
           return Print.printAsync({

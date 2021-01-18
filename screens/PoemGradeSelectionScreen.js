@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImageBackground } from 'react-native';
-import { ListItem } from 'react-native-elements';
+import { Icon, ListItem } from 'react-native-elements';
 
 export default class PoemGradeSelectionScreen extends React.Component {
   static navigationOptions = ({ navigationOptions }) => ({
@@ -84,21 +84,27 @@ export default class PoemGradeSelectionScreen extends React.Component {
         {grades.map((l, i) => (
           <ListItem
             key={i.toString()}
-            titleStyle={{
-              color: '#25265E',
-            }}
-            title={l.name}
-            leftIcon={{
-              name: l.icon ? l.icon : null,
-              type: l.type ? l.type : null,
-              color: '#2DC76D',
-            }}
             onPress={() => {
               this._showPoemsForGrade(l.grade);
             }}
             chevronColor="#2DC76D"
             chevron
-          />
+          >
+            <Icon
+              name={l.icon ? l.icon : null}
+              type={l.type ? l.type : null}
+              color="#2DC76D"
+            />
+            <ListItem.Content>
+              <ListItem.Title
+                style={{
+                  color: '#25265E',
+                }}
+              >
+                {l.name}
+              </ListItem.Title>
+            </ListItem.Content>
+          </ListItem>
         ))}
       </ImageBackground>
     );
