@@ -1,4 +1,9 @@
 import React from 'react';
+
+import AppLoading from 'expo-app-loading';
+import * as Font from 'expo-font';
+import { Asset } from 'expo-asset';
+import { FontAwesome5, Feather } from '@expo/vector-icons';
 import { StatusBar, View } from 'react-native';
 import { Icon } from 'react-native-elements';
 import {
@@ -197,19 +202,55 @@ const MyApp = createBottomTabNavigator(
   }
 );
 
-const AppContainer = createAppContainer(MyApp);
+function cacheImages(images) {
+  return images.map((image) => {
+    if (typeof image === 'string') {
+      return Image.prefetch(image);
+    } else {
+      return Asset.fromModule(image).downloadAsync();
+    }
+  });
+}
 
-const App = () => (
-  <View style={styles.container}>
-    <View>
-      <StatusBar hidden backgroundColor="transparent" translucent />
-    </View>
-    <AppContainer
-      ref={(navigatorRef) => {
-        NavigationService.setTopLevelNavigator(navigatorRef);
-      }}
-    />
-  </View>
-);
+function cacheFonts(fonts) {
+  return fonts.map((font) => Font.loadAsync(font));
+}
+const App = createAppContainer(MyApp);
 
-export default App;
+export default class AppContainer extends React.Component {
+  state = {
+    isReady: false,
+  };
+
+  async _loadAssetsAsync() {
+    const fontAssets = cacheFonts([FontAwesome5.font, Feather.font]);
+
+    await Promise.all([...fontAssets]);
+  }
+
+  render() {
+    const { isReady } = this.state;
+    if (!isReady) {
+      return (
+        <AppLoading
+          startAsync={this._loadAssetsAsync}
+          onFinish={() => this.setState({ isReady: true })}
+          onError={console.warn}
+        />
+      );
+    }
+
+    return (
+      <View style={styles.container}>
+        <View>
+          <StatusBar hidden backgroundColor="transparent" translucent />
+        </View>
+        <App
+          ref={(navigatorRef) => {
+            NavigationService.setTopLevelNavigator(navigatorRef);
+          }}
+        />
+      </View>
+    );
+  }
+}
