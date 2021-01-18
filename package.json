@@ -1,6 +1,6 @@
 {
   "name": "memorize",
-  "version": "2.7.1",
+  "version": "2.7.2",
   "private": true,
   "devDependencies": {
     "babel-eslint": "^10.1.0",
